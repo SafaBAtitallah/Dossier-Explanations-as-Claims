@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the accompanying article."
+title: "DOSSIER: Subgraph-Indexed Retrieval and Grounding Verification for Explainable Intrusion Detection"
+type: software
+authors:
+  - family-names: Driss
+    given-names: Maha
+    affiliation: "College of Engineering and Advanced Computing, Alfaisal University, Riyadh, Saudi Arabia"
+  - family-names: Saidam
+    given-names: Wahaj
+    affiliation: "Robotics and Internet of Things Laboratory, Prince Sultan University, Riyadh, Saudi Arabia"
+  - family-names: Ben Atitallah
+    given-names: Safa
+    affiliation: "Robotics and Internet of Things Laboratory, Prince Sultan University, Riyadh, Saudi Arabia"
+  - family-names: Boulila
+    given-names: Wadii
+    affiliation: "Robotics and Internet of Things Laboratory, Prince Sultan University, Riyadh, Saudi Arabia"
+keywords:
+  - retrieval-augmented generation
+  - grounding verification
+  - hallucination detection
+  - graph neural networks
+  - network intrusion detection
+  - explainable AI
+preferred-citation:
+  type: article
+  title: "Explanations as Claims: Subgraph-Indexed Retrieval and Grounding Verification for Explainable Intrusion Detection"
+  authors:
+    - family-names: Driss
+      given-names: Maha
+    - family-names: Saidam
+      given-names: Wahaj
+    - family-names: Ben Atitallah
+      given-names: Safa
+    - family-names: Boulila
+      given-names: Wadii
+  journal: "Machine Learning and Knowledge Extraction"
+  year: 2026
+  notes: "Manuscript submitted to Machine Learning and Knowledge Extraction (MDPI)."

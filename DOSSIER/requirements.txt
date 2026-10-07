@@ -1,0 +1,29 @@
+# Versions recorded in the environment used for the reported experiments
+# (Python 3.12.9, NVIDIA Quadro RTX 8000, CUDA 12.1, driver 560.28.03).
+#
+# PyTorch: install the build matching your platform first, e.g. for CUDA 12.1
+#   pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cu121
+torch==2.5.1
+torch_geometric==2.7.0
+faiss-cpu==1.13.2
+numpy==2.2.6
+pandas==2.3.3
+scipy==1.17.0
+scikit-learn==1.8.0
+matplotlib==3.10.7
+seaborn==0.13.2
+networkx==3.5
+requests==2.32.5
+
+# Explanation-quality metrics
+rouge-score==0.1.2
+bert-score==0.3.13
+transformers==4.57.1
+nltk==3.9.4
+
+# Optional: only used if the local Ollama server is unreachable (see README).
+# All reported explanations were produced by Ollama; this fallback was never triggered.
+anthropic==0.107.0
+
+# Notebook runtime
+jupyter

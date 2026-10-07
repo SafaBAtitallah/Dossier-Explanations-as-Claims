@@ -1,0 +1,5199 @@
+{
+  "metadata": {
+    "generated_at": "2026-06-23 17:08:47",
+    "mode": "INDUCTIVE",
+    "llm_model": "llama3.2:3b",
+    "gnn_accuracy": 0.9925000785990505,
+    "gnn_macro_f1": 0.8414101254675138,
+    "gnn_weighted_f1": 0.9925579130645127,
+    "n_flows": 140,
+    "n_escalated": 32,
+    "n_parsed": 83,
+    "mean_hallucination_score": 0.06506024096385543,
+    "mean_rouge_l": 0.201410843373494,
+    "mean_bert_f1": 0.7699915662650603,
+    "self_bleu": 0.7409
+  },
+  "flows": [
+    {
+      "flow_idx": 2208985,
+      "true_class": "Bot",
+      "pred_class": "Bot",
+      "correct": true,
+      "confidence": 0.9720833897590637,
+      "hybrid": 0.8285618424415588,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 63,
+        "rouge_l": 0.1176,
+        "bert_f1": 0.7357
+      },
+      "parsed_output": {
+        "predicted_class": "Bot",
+        "rationale": "The prediction is based on the similarity to Precedent_1, which has a high similarity score of 1.0 and matches the L7_PROTO value of 131.7, as well as the TCP_FLAGS value of 219.0. These features are also present in the query flow with similar values.",
+        "counterfactual": "Changing the L7_PROTO feature from its current RAW VALUE of 131.7 to a different value would change the prediction.",
+        "confidence_level": 0.9721,
+        "confidence_justification": "The classifier confidence is 0.9721 and the hybrid score is 0.8286, indicating high confidence in this classification.",
+        "evidence_list": [
+          {
+            "claim": "Matches Precedent_1",
+            "source": "L7_PROTO",
+            "value": 131.7
+          },
+          {
+            "claim": "Matches Precedent_3",
+            "source": "TCP_FLAGS",
+            "value": 219.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1941512,
+      "true_class": "Bot",
+      "pred_class": "Bot",
+      "correct": true,
+      "confidence": 0.9722301959991455,
+      "hybrid": 0.8286635279655457,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 51,
+        "rouge_l": 0.2162,
+        "bert_f1": 0.7614
+      },
+      "parsed_output": {
+        "predicted_class": "Bot",
+        "rationale": "The prediction is based on the similarity to Precedent_1 and Precedent_2, which both have high l7_proto values of 131.7 and tcp_flags of 219.0. These features are also present in the query flow with similar raw values.",
+        "counterfactual": "Changing the value of CLIENT_TCP_FLAGS from 219.0 to a different value would change the prediction.",
+        "confidence_level": 0.9722,
+        "confidence_justification": "The classifier_confidence is 0.9722 and the hybrid_score is 0.8287, indicating high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity to Precedent_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "L7_PROTO value of 131.7",
+            "source": "L7_PROTO",
+            "value": 131.7
+          },
+          {
+            "claim": "TCP_FLAGS value of 219.0",
+            "source": "TCP_FLAGS",
+            "value": 219.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2776387,
+      "true_class": "Bot",
+      "pred_class": "Bot",
+      "correct": true,
+      "confidence": 0.9719253778457642,
+      "hybrid": 0.828451931476593,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 60,
+        "rouge_l": 0.1446,
+        "bert_f1": 0.7357
+      },
+      "parsed_output": {
+        "predicted_class": "Bot",
+        "rationale": "The prediction is based on the high value of L7_PROTO (131.7) and TCP_FLAGS (219.0), which are both indicative of a bot's behavior. Additionally, the similarity scores with PRECEDENT_1 and PRECEDENT_2 suggest that this flow is likely to be from a bot.",
+        "counterfactual": "Changing the value of L7_PROTO from its current raw value of 131.7 to 0 would likely change the prediction.",
+        "confidence_level": 0.9719,
+        "confidence_justification": "The classifier confidence of 0.9719 and hybrid score of 0.8285 indicate a high level of confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "High L7_PROTO value",
+            "source": "L7_PROTO",
+            "value": 131.7
+          },
+          {
+            "claim": "High TCP_FLAGS value",
+            "source": "TCP_FLAGS",
+            "value": 219.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2887668,
+      "true_class": "Bot",
+      "pred_class": "Bot",
+      "correct": true,
+      "confidence": 0.9727187752723694,
+      "hybrid": 0.8290071487426758,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 58,
+        "rouge_l": 0.122,
+        "bert_f1": 0.7382
+      },
+      "parsed_output": {
+        "predicted_class": "Bot",
+        "rationale": "The prediction is based on the similarity to Precedent_1, which has a high l7_proto value of 131.7 and a low tcp_flags value of 219. These features are also present in the query flow with values of 131.7 and 219 respectively.",
+        "counterfactual": "Changing the L7_PROTO feature from its current raw value of 131.7 to 0 would likely change the prediction.",
+        "confidence_level": 0.9727,
+        "confidence_justification": "The classifier_confidence is 0.9727 and the hybrid_score is 0.8290, indicating a high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity to Precedent_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "L7_PROTO feature value",
+            "source": "L7_PROTO",
+            "value": 131.7
+          },
+          {
+            "claim": "tcp_flags feature value",
+            "source": "tcp_flags",
+            "value": 219
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 683422,
+      "true_class": "Bot",
+      "pred_class": "Bot",
+      "correct": true,
+      "confidence": 0.9719305038452148,
+      "hybrid": 0.8284547924995422,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 55,
+        "rouge_l": 0.1519,
+        "bert_f1": 0.7394
+      },
+      "parsed_output": {
+        "predicted_class": "Bot",
+        "rationale": "The prediction is based on the high value of L7_PROTO (131.7) and TCP_FLAGS (219.0), which are both indicative of a bot's behavior. Additionally, the similarity scores with PRECEDENT_1 and PRECEDENT_2 suggest that this flow is likely to be from a bot.",
+        "counterfactual": "Changing the value of L7_PROTO from 131.7 to 0.0 would significantly alter the prediction.",
+        "confidence_level": 0.9719,
+        "confidence_justification": "The classifier confidence is 0.9719 and the hybrid score is 0.8285, indicating a high level of confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "High L7_PROTO value",
+            "source": "L7_PROTO",
+            "value": 131.7
+          },
+          {
+            "claim": "High TCP_FLAGS value",
+            "source": "TCP_FLAGS",
+            "value": 219.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2814940,
+      "true_class": "Bot",
+      "pred_class": "Bot",
+      "correct": true,
+      "confidence": 0.9592490792274475,
+      "hybrid": 0.8196864128112793,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.2,
+        "details": [
+          "H3 FAIL: ungrounded sources: ['flow raw values', 'flow raw values', 'flow raw values']"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 44,
+        "rouge_l": 0.2632,
+        "bert_f1": 0.8108
+      },
+      "parsed_output": {
+        "predicted_class": "Bot",
+        "rationale": "The prediction is based on the similarity with Precedent_1, which has a high similarity score of 1.0 and matches the flow characteristics such as TCP_WIN_MAX_IN=8192.0, FLOW_DURATION_MILLISECONDS=4294748.0, and MIN_TTL=128.0.",
+        "counterfactual": "Changing the value of MIN_TTL from 128.0 to a higher value would likely change the prediction.",
+        "confidence_level": 0.9592,
+        "confidence_justification": "The classifier confidence is 0.9592 and the hybrid score is 0.8197, indicating high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "matches flow characteristics",
+            "source": "FLOW RAW VALUES",
+            "value": "8192.0"
+          },
+          {
+            "claim": "high FLOW_DURATION_MILLISECONDS",
+            "source": "FLOW RAW VALUES",
+            "value": "4294748.0"
+          },
+          {
+            "claim": "low MIN_TTL",
+            "source": "FLOW RAW VALUES",
+            "value": "128.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2775030,
+      "true_class": "Bot",
+      "pred_class": "Bot",
+      "correct": true,
+      "confidence": 0.962378740310669,
+      "hybrid": 0.8217664361000061,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 47,
+        "rouge_l": 0.1714,
+        "bert_f1": 0.7702
+      },
+      "parsed_output": {
+        "predicted_class": "Bot",
+        "rationale": "The prediction is based on the similarity with Precedent_1, where L7_PROTO has a raw value of 131.7, and features such as TCP_FLAGS (raw value 219.0) and L4_SRC_PORT (raw value 64409.0) are present in both flows.",
+        "counterfactual": "Changing the L7_PROTO feature to a different value would alter the prediction.",
+        "confidence_level": 0.9624,
+        "confidence_justification": "The classifier_confidence is 0.9624 and the hybrid_score is 0.8218, indicating high confidence in this classification.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with Precedent_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "L7_PROTO feature",
+            "source": "L7_PROTO",
+            "value": 131.7
+          },
+          {
+            "claim": "TCP_FLAGS feature",
+            "source": "TCP_FLAGS",
+            "value": 219.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 56007,
+      "true_class": "Bot",
+      "pred_class": "Bot",
+      "correct": true,
+      "confidence": 0.9690921306610107,
+      "hybrid": 0.8264687061309814,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 52,
+        "rouge_l": 0.1667,
+        "bert_f1": 0.7649
+      },
+      "parsed_output": {
+        "predicted_class": "Bot",
+        "rationale": "The prediction is based on the similarity to the precedents, where TCP flags were present in all three cases (219.0), and the low flow duration milliseconds (0.0). This suggests that the traffic is likely a botnet.",
+        "counterfactual": "Changing the raw value of FLOW_DURATION_Milliseconds from 0.0 to any other value would change the prediction.",
+        "confidence_level": 0.9691,
+        "confidence_justification": "The classifier confidence is 0.9691 and the hybrid score is 0.8265, indicating a high level of confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "The presence of TCP flags (219.0) suggests that the traffic is likely a botnet.",
+            "source": "TCP_FLAGS",
+            "value": "219.0"
+          },
+          {
+            "claim": "The low flow duration milliseconds (0.0) supports the idea that the traffic is a botnet.",
+            "source": "FLOW_DURATION_MILLISECONDS",
+            "value": "0.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 232508,
+      "true_class": "Bot",
+      "pred_class": "Bot",
+      "correct": true,
+      "confidence": 0.9673854112625122,
+      "hybrid": 0.8252747058868408,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 61,
+        "rouge_l": 0.1667,
+        "bert_f1": 0.7879
+      },
+      "parsed_output": {
+        "predicted_class": "Bot",
+        "rationale": "The prediction is based on the high value of L7_PROTO (131.7) and L4_DST_PORT (8080.0), which are important features for the Bot class. These values indicate a protocol version and port number commonly associated with botnet traffic.",
+        "counterfactual": "Changing the RAW VALUE of L4_SRC_PORT from 49598.0 to 0 would likely change the prediction, as this feature is also important for the Bot class.",
+        "confidence_level": 0.9674,
+        "confidence_justification": "The classifier confidence is 0.9674 and the hybrid score is 0.8253, indicating a high level of confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "High L7_PROTO value indicates protocol version commonly associated with botnet traffic",
+            "source": "L7_PROTO",
+            "value": "131.7"
+          },
+          {
+            "claim": "High L4_DST_PORT value indicates port number commonly associated with botnet traffic",
+            "source": "L4_DST_PORT",
+            "value": "8080.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2021907,
+      "true_class": "Bot",
+      "pred_class": "Bot",
+      "correct": true,
+      "confidence": 0.9735905528068542,
+      "hybrid": 0.8296164274215698,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 50,
+        "rouge_l": 0.2432,
+        "bert_f1": 0.7763
+      },
+      "parsed_output": {
+        "predicted_class": "Bot",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, where L7_PROTO has a raw value of 131.7 and TCP_FLAGS has a raw value of 219.0, which are both relevant features in this flow.",
+        "counterfactual": "Changing the RAW VALUE of MIN_IP_PKT_LEN from 40.0 to a different value would likely change the prediction.",
+        "confidence_level": 0.9736,
+        "confidence_justification": "The classifier confidence is 0.9736 and the hybrid score is 0.8296, indicating high confidence in this classification.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "L7_PROTO",
+            "value": 131.7
+          },
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "TCP_FLAGS",
+            "value": 219.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2055073,
+      "true_class": "Brute Force -Web",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": false,
+      "confidence": 0.6288518309593201,
+      "hybrid": 0.6124910712242126,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 149,
+        "rouge_l": 0.14,
+        "bert_f1": 0.7928
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 2674776,
+      "true_class": "Brute Force -Web",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": false,
+      "confidence": 0.5596950650215149,
+      "hybrid": 0.5605776906013489,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 1482306,
+      "true_class": "Brute Force -Web",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": false,
+      "confidence": 0.5153151750564575,
+      "hybrid": 0.5108585953712463,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 87380,
+      "true_class": "Brute Force -Web",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": false,
+      "confidence": 0.5568163990974426,
+      "hybrid": 0.5408613085746765,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 2363879,
+      "true_class": "Brute Force -Web",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": false,
+      "confidence": 0.5662177801132202,
+      "hybrid": 0.5456368923187256,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 2257121,
+      "true_class": "Brute Force -Web",
+      "pred_class": "Brute Force -Web",
+      "correct": true,
+      "confidence": 0.5574311017990112,
+      "hybrid": 0.5382872819900513,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 1948194,
+      "true_class": "Brute Force -Web",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": false,
+      "confidence": 0.5608536601066589,
+      "hybrid": 0.547868549823761,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 1089988,
+      "true_class": "Brute Force -Web",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": false,
+      "confidence": 0.5584642291069031,
+      "hybrid": 0.5408743023872375,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 64299,
+      "true_class": "Brute Force -Web",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": false,
+      "confidence": 0.5617769956588745,
+      "hybrid": 0.5426715612411499,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 1739991,
+      "true_class": "Brute Force -Web",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": false,
+      "confidence": 0.567895233631134,
+      "hybrid": 0.5463932752609253,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 1807668,
+      "true_class": "Brute Force -XSS",
+      "pred_class": "Brute Force -XSS",
+      "correct": true,
+      "confidence": 0.8370156288146973,
+      "hybrid": 0.739757776260376,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'Bot'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 39,
+        "rouge_l": 0.3095,
+        "bert_f1": 0.838
+      },
+      "parsed_output": {
+        "predicted_class": "Brute Force -XSS",
+        "rationale": "The prediction is based on the high similarity with PRECEDENT_1 and PRECEDENT_2, which both have similar feature values such as SRC_TO_DST_AVG_THROUGHPUT=516656000.0 and DST_TO_SRC_AVG_THROUGHPUT=1553799936.0.",
+        "counterfactual": "Changing the RAW VALUE of NUM_PKTS_512_TO_1024_BYTES from 51.0 to a different value would change the prediction.",
+        "confidence_level": 0.837,
+        "confidence_justification": "The classifier confidence is 0.8370 and the hybrid score is 0.7398, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "High SRC_TO_DST_AVG_THROUGHPUT",
+            "source": "SRC_TO_DST_AVG_THROUGHPUT",
+            "value": "516656000.0"
+          },
+          {
+            "claim": "Low NUM_PKTS_512_TO_1024_BYTES",
+            "source": "NUM_PKTS_512_TO_1024_BYTES",
+            "value": "51.0"
+          },
+          {
+            "claim": "High DST_TO_SRC_AVG_THROUGHPUT",
+            "source": "DST_TO_SRC_AVG_THROUGHPUT",
+            "value": "1553799936.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1316939,
+      "true_class": "Brute Force -XSS",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": false,
+      "confidence": 0.5671785473823547,
+      "hybrid": 0.5478044748306274,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 569730,
+      "true_class": "Brute Force -XSS",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": false,
+      "confidence": 0.5637527108192444,
+      "hybrid": 0.5429386496543884,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 1015962,
+      "true_class": "Brute Force -XSS",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": false,
+      "confidence": 0.5569339990615845,
+      "hybrid": 0.540655255317688,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 2845397,
+      "true_class": "Brute Force -XSS",
+      "pred_class": "Brute Force -XSS",
+      "correct": true,
+      "confidence": 0.8348826766014099,
+      "hybrid": 0.7383009195327759,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'Bot'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 55,
+        "rouge_l": 0.2828,
+        "bert_f1": 0.8094
+      },
+      "parsed_output": {
+        "predicted_class": "Brute Force -XSS",
+        "rationale": "The prediction is based on the similarity of feature values to those in PRECEDENT_1 and PRECEDENT_3, which both have high SRC_TO_DST_AVG_THROUGHPUT (516656000.0) and NUM_PKTS_512_TO_1024_BYTES (51.0) values. These features are also present in the query flow with similar values.",
+        "counterfactual": "Changing the RAW VALUE of NUM_PKTS_512_TO_1024_BYTES from 51.0 to a lower value would likely change the prediction.",
+        "confidence_level": 0.8349,
+        "confidence_justification": "The classifier confidence is 0.8349 and the hybrid score is 0.7383, indicating high confidence in this classification.",
+        "evidence_list": [
+          {
+            "claim": "High SRC_TO_DST_AVG_THROUGHPUT value",
+            "source": "SRC_TO_DST_AVG_THROUGHPUT",
+            "value": "516656000.0"
+          },
+          {
+            "claim": "Low NUM_PKTS_512_TO_1024_BYTES value",
+            "source": "NUM_PKTS_512_TO_1024_BYTES",
+            "value": "51.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1831191,
+      "true_class": "Brute Force -XSS",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": false,
+      "confidence": 0.5605146288871765,
+      "hybrid": 0.5418701171875,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 2017974,
+      "true_class": "Brute Force -XSS",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": false,
+      "confidence": 0.5696942806243896,
+      "hybrid": 0.549248218536377,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 2647019,
+      "true_class": "Brute Force -XSS",
+      "pred_class": "Brute Force -XSS",
+      "correct": true,
+      "confidence": 0.5072969794273376,
+      "hybrid": 0.5067700147628784,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 2365862,
+      "true_class": "Brute Force -XSS",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": false,
+      "confidence": 0.5016680955886841,
+      "hybrid": 0.5012126564979553,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 837448,
+      "true_class": "Brute Force -XSS",
+      "pred_class": "Brute Force -XSS",
+      "correct": true,
+      "confidence": 0.5208941102027893,
+      "hybrid": 0.5304512977600098,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 632181,
+      "true_class": "DDOS attack-HOIC",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": true,
+      "confidence": 0.9804251790046692,
+      "hybrid": 0.8346390724182129,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 123,
+        "rouge_l": 0.1429,
+        "bert_f1": 0.7896
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 243302,
+      "true_class": "DDOS attack-HOIC",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": true,
+      "confidence": 0.9811955690383911,
+      "hybrid": 0.8355262279510498,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 50,
+        "rouge_l": 0.1842,
+        "bert_f1": 0.7678
+      },
+      "parsed_output": {
+        "predicted_class": "DDOS attack-HOIC",
+        "rationale": "The prediction is based on the similarity with Precedent_1 and Precedent_2, which have a high similarity score of 1.0. The flow duration in milliseconds (4294927.0) and tcp flags (219.0) are also indicative of a DDOS attack-HOIC.",
+        "counterfactual": "Changing the value of FLOW_DURATION_MILLISECONDS from 4294927.0 to 0 would likely change the prediction.",
+        "confidence_level": 0.9812,
+        "confidence_justification": "The classifier confidence is 0.9812 and the hybrid score is 0.8355, indicating a high level of confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "High flow duration",
+            "source": "FLOW_DURATION_MILLISECONDS",
+            "value": "4294927.0"
+          },
+          {
+            "claim": "Low tcp flags",
+            "source": "CLIENT_TCP_FLAGS",
+            "value": "219.0"
+          },
+          {
+            "claim": "Similarity with Precedent_1 and Precedent_2",
+            "source": "similarity",
+            "value": "1.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 687326,
+      "true_class": "DDOS attack-HOIC",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": true,
+      "confidence": 0.980276346206665,
+      "hybrid": 0.834402322769165,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'Bot'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 51,
+        "rouge_l": 0.2558,
+        "bert_f1": 0.7921
+      },
+      "parsed_output": {
+        "predicted_class": "DDOS attack-HOIC",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which both have a high similarity score of 1.0. The flow has a high L4_SRC_PORT value of 60650.0, TCP_WIN_MAX_IN value of 65535.0, and FLOW_DURATION_MILLISECONDS value of 4294963.0.",
+        "counterfactual": "Changing the L4_SRC_PORT value from 60650.0 to 0 would likely change the prediction.",
+        "confidence_level": 0.9803,
+        "confidence_justification": "The classifier_confidence is 0.9803 and the hybrid_score is 0.8344, indicating a high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "High L4_SRC_PORT value",
+            "source": "L4_SRC_PORT",
+            "value": "60650.0"
+          },
+          {
+            "claim": "High TCP_WIN_MAX_IN value",
+            "source": "TCP_WIN_MAX_IN",
+            "value": "65535.0"
+          },
+          {
+            "claim": "Long FLOW_DURATION_MILLISECONDS value",
+            "source": "FLOW_DURATION_Milliseconds",
+            "value": "4294963.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1630088,
+      "true_class": "DDOS attack-HOIC",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": true,
+      "confidence": 0.967369019985199,
+      "hybrid": 0.8254402875900269,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 112,
+        "rouge_l": 0.1839,
+        "bert_f1": 0.7901
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 2281846,
+      "true_class": "DDOS attack-HOIC",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": true,
+      "confidence": 0.9656850099563599,
+      "hybrid": 0.8251343965530396,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'Bot'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 61,
+        "rouge_l": 0.2889,
+        "bert_f1": 0.7937
+      },
+      "parsed_output": {
+        "predicted_class": "DDOS attack-HOIC",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which both have a label of DDOS attack-HOIC. The feature L4_SRC_PORT has a raw value of 63992.0, indicating a high port number, while TCP_WIN_MAX_IN has a raw value of 65535.0, suggesting a large maximum window size.",
+        "counterfactual": "Changing the RAW VALUE of PROTOCOL from 6.0 to 5.0 would alter the prediction.",
+        "confidence_level": 0.9657,
+        "confidence_justification": "The classifier_confidence is 0.9657 and the hybrid_score is 0.8251, indicating a high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "High port number",
+            "source": "L4_SRC_PORT",
+            "value": 63992.0
+          },
+          {
+            "claim": "Large maximum window size",
+            "source": "TCP_WIN_MAX_IN",
+            "value": 65535.0
+          },
+          {
+            "claim": "Specific protocol used",
+            "source": "PROTOCOL",
+            "value": 6.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1754909,
+      "true_class": "DDOS attack-HOIC",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": true,
+      "confidence": 0.5172319412231445,
+      "hybrid": 0.5110981464385986,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 2837568,
+      "true_class": "DDOS attack-HOIC",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": true,
+      "confidence": 0.9821091890335083,
+      "hybrid": 0.8357410430908203,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'Bot'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 51,
+        "rouge_l": 0.1558,
+        "bert_f1": 0.7619
+      },
+      "parsed_output": {
+        "predicted_class": "DDOS attack-HOIC",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_3, which both have a high duration in milliseconds (4294956.0) and tcp_flags (219.0). These features are also present in the query flow, indicating a potential DDOS attack.",
+        "counterfactual": "Changing the value of FLOW_DURATION_MILLISECONDS from 4294956.0 to 1000.0 would likely change the prediction.",
+        "confidence_level": 0.9821,
+        "confidence_justification": "The classifier confidence is 0.9821 and the hybrid score is 0.8357, indicating a high level of confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "High duration in milliseconds",
+            "source": "FLOW_DURATION_MILLISECONDS",
+            "value": 4294956.0
+          },
+          {
+            "claim": "High tcp_flags value",
+            "source": "TCP_FLAGS",
+            "value": 219.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1193235,
+      "true_class": "DDOS attack-HOIC",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": true,
+      "confidence": 0.9717028737068176,
+      "hybrid": 0.8284901976585388,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'Bot'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 49,
+        "rouge_l": 0.2466,
+        "bert_f1": 0.7599
+      },
+      "parsed_output": {
+        "predicted_class": "DDOS attack-HOIC",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which both have a high similarity score of 1.0 and label as DDOS attack-HOIC. The flow has a similar duration in milliseconds (4294964) to PRECEDENT_1 (4294920).",
+        "counterfactual": "Changing the TCP flags from 219.0 to 223.0 would change the prediction.",
+        "confidence_level": 0.9717,
+        "confidence_justification": "The classifier confidence is 0.9717 and the hybrid score is 0.8285, indicating a high level of confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "High similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": "1.0"
+          },
+          {
+            "claim": "Similar flow duration in milliseconds to PRECEDENT_1",
+            "source": "FLOW_DURATION_MILLISECONDS",
+            "value": "4294964"
+          },
+          {
+            "claim": "High similarity with PRECEDENT_2",
+            "source": "similarity",
+            "value": "1.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2573677,
+      "true_class": "DDOS attack-HOIC",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": true,
+      "confidence": 0.962300717830658,
+      "hybrid": 0.8222182989120483,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 48,
+        "rouge_l": 0.2963,
+        "bert_f1": 0.8035
+      },
+      "parsed_output": {
+        "predicted_class": "DDOS attack-HOIC",
+        "rationale": "The prediction is based on the high similarity to PRECEDENT_1, which has a label of DDOS attack-HOIC, and features such as TCP_WIN_MAX_IN=65535.0 and L4_SRC_PORT=63427.0, which are also present in the query flow.",
+        "counterfactual": "Changing the value of L4_SRC_PORT from 63427.0 to a different port would likely change the prediction.",
+        "confidence_level": 0.9623,
+        "confidence_justification": "The classifier confidence is 0.9623 and the hybrid score is 0.8222, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "High similarity to PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "Presence of TCP_WIN_MAX_IN=65535.0 and L4_SRC_PORT=63427.0 in the query flow",
+            "source": "TCP_WIN_MAX_IN, L4_SRC_PORT",
+            "value": 65535.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 381205,
+      "true_class": "DDOS attack-HOIC",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": true,
+      "confidence": 0.9808321595191956,
+      "hybrid": 0.8355182409286499,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'Bot'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 50,
+        "rouge_l": 0.1622,
+        "bert_f1": 0.7567
+      },
+      "parsed_output": {
+        "predicted_class": "DDOS attack-HOIC",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which both have a high similarity score of 1.0. The flow duration in milliseconds (4294937.0) and tcp flags (219.0) are also indicative of a DDOS attack-HOIC.",
+        "counterfactual": "Changing the flow duration from 4294937.0 to 0 would likely change the prediction.",
+        "confidence_level": 0.9808,
+        "confidence_justification": "The classifier confidence is 0.9808 and the hybrid score is 0.8355, indicating a high level of confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "High flow duration",
+            "source": "FLOW_DURATION_MILLISECONDS",
+            "value": 4294937.0
+          },
+          {
+            "claim": "High tcp flags",
+            "source": "CLIENT_TCP_FLAGS",
+            "value": 219.0
+          },
+          {
+            "claim": "Similarity with PRECEDENT_1 and PRECEDENT_2",
+            "source": "similarity",
+            "value": 1.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2961203,
+      "true_class": "DDOS attack-LOIC-UDP",
+      "pred_class": "DDOS attack-LOIC-UDP",
+      "correct": true,
+      "confidence": 0.9475811719894409,
+      "hybrid": 0.9612990021705627,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 95,
+        "rouge_l": 0.1642,
+        "bert_f1": 0.788
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 1643757,
+      "true_class": "DDOS attack-LOIC-UDP",
+      "pred_class": "DDOS attack-LOIC-UDP",
+      "correct": true,
+      "confidence": 0.9539291858673096,
+      "hybrid": 0.9657425880432129,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'Bot'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 58,
+        "rouge_l": 0.3158,
+        "bert_f1": 0.789
+      },
+      "parsed_output": {
+        "predicted_class": "DDOS attack-LOIC-UDP",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which both have a label of DDOS attack-LOIC-UDP. The flow has high in_bytes (6345480.0) and in_pkts (105758.0), similar to PRECEDENT_1. Additionally, the duration_ms is 4193414, which is also present in PRECEDENT_1.",
+        "counterfactual": "Changing the value of NUM_PKTS_UP_TO_128_BYTES from 105758.0 to a lower value would likely change the prediction.",
+        "confidence_level": 0.9657,
+        "confidence_justification": "The classifier_confidence is 0.9539 and the hybrid_score is 0.9657, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "High in_bytes",
+            "source": "IN_BYTES",
+            "value": "6345480.0"
+          },
+          {
+            "claim": "High in_pkts",
+            "source": "IN_PKTS",
+            "value": "105758.0"
+          },
+          {
+            "claim": "Long duration_ms",
+            "source": "DURATION_IN",
+            "value": "101553.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 848277,
+      "true_class": "DDOS attack-LOIC-UDP",
+      "pred_class": "DDOS attack-LOIC-UDP",
+      "correct": true,
+      "confidence": 0.9537615180015564,
+      "hybrid": 0.9656252264976501,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 111,
+        "rouge_l": 0.1622,
+        "bert_f1": 0.8031
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 808994,
+      "true_class": "DDOS attack-LOIC-UDP",
+      "pred_class": "DDOS attack-LOIC-UDP",
+      "correct": true,
+      "confidence": 0.9505179524421692,
+      "hybrid": 0.9633547067642212,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'Bot'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 64,
+        "rouge_l": 0.1895,
+        "bert_f1": 0.7468
+      },
+      "parsed_output": {
+        "predicted_class": "DDOS attack-LOIC-UDP",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which both have a label of DDOS attack-LOIC-UDP. The flow has a high in_bytes value of 7169940.0, similar to PRECEDENT_1's in_bytes value of 487. Additionally, the flow has a duration_ms value of 4188739, similar to PRECEDENT_1's duration_ms value of 4294943.",
+        "counterfactual": "Changing the in_bytes value from 7169940.0 to 0 would likely change the prediction.",
+        "confidence_level": 0.9634,
+        "confidence_justification": "The classifier_confidence is 0.9505 and the hybrid_score is 0.9634, indicating a high confidence level.",
+        "evidence_list": [
+          {
+            "claim": "High in_bytes value",
+            "source": "IN_BYTES",
+            "value": 7169940.0
+          },
+          {
+            "claim": "Similar duration_ms value",
+            "source": "DURATION_IN",
+            "value": 106227.0
+          },
+          {
+            "claim": "High in_pkts value",
+            "source": "IN_PKTS",
+            "value": 119499.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2840027,
+      "true_class": "DDOS attack-LOIC-UDP",
+      "pred_class": "DDOS attack-LOIC-UDP",
+      "correct": true,
+      "confidence": 0.9560361504554749,
+      "hybrid": 0.9672174453735352,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 53,
+        "rouge_l": 0.3636,
+        "bert_f1": 0.8171
+      },
+      "parsed_output": {
+        "predicted_class": "DDOS attack-LOIC-UDP",
+        "rationale": "The prediction is based on the high similarity with PRECEDENT_1, which has a label of DDOS attack-LOIC-UDP, and features such as DURATION_IN (99349.0), IN_BYTES (4303320.0), and NUM_PKTS_UP_TO_128_BYTES (71722.0) that are indicative of a large amount of traffic.",
+        "counterfactual": "Changing the value of DURATION_IN from 99349.0 to a lower value would likely decrease the prediction.",
+        "confidence_level": 0.9672,
+        "confidence_justification": "The classifier_confidence is 0.9560 and the hybrid_score is 0.9672, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "High similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": "1.0"
+          },
+          {
+            "claim": "Large amount of traffic",
+            "source": "DURATION_IN",
+            "value": "99349.0"
+          },
+          {
+            "claim": "High in_bytes value",
+            "source": "IN_BYTES",
+            "value": "4303320.0"
+          },
+          {
+            "claim": "Low NUM_PKTS_UP_TO_128_BYTES value",
+            "source": "NUM_PKTS_UP_TO_128_BYTES",
+            "value": "71722.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 131652,
+      "true_class": "DDOS attack-LOIC-UDP",
+      "pred_class": "DDOS attack-LOIC-UDP",
+      "correct": true,
+      "confidence": 0.9422644376754761,
+      "hybrid": 0.9575772881507874,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'Bot'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 54,
+        "rouge_l": 0.0976,
+        "bert_f1": 0.7001
+      },
+      "parsed_output": {
+        "predicted_class": "DDOS attack-LOIC-UDP",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which both have a high similarity score of 1.0. The flow has a high in_bytes value of 6517440.0, which is similar to the in_bytes values in PRECEDENT_1 (1663) and PRECEDENT_2 (3135).",
+        "counterfactual": "Changing the in_bytes value from 6517440.0 to 3120 would change the prediction.",
+        "confidence_level": 0.9576,
+        "confidence_justification": "The classifier_confidence is 0.9423 and the hybrid_score is 0.9576, indicating a high confidence level.",
+        "evidence_list": [
+          {
+            "claim": "High in_bytes value",
+            "source": "IN_BYTES",
+            "value": "6517440.0"
+          },
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": "1.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 450410,
+      "true_class": "DDOS attack-LOIC-UDP",
+      "pred_class": "DDOS attack-LOIC-UDP",
+      "correct": true,
+      "confidence": 0.9422417879104614,
+      "hybrid": 0.9575614333152771,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 119,
+        "rouge_l": 0.2025,
+        "bert_f1": 0.8152
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 3011064,
+      "true_class": "DDOS attack-LOIC-UDP",
+      "pred_class": "DDOS attack-LOIC-UDP",
+      "correct": true,
+      "confidence": 0.9419487118721008,
+      "hybrid": 0.9573562741279602,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 51,
+        "rouge_l": 0.1667,
+        "bert_f1": 0.7586
+      },
+      "parsed_output": {
+        "predicted_class": "DDOS attack-LOIC-UDP",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which share similar characteristics such as high in_bytes (5964240.0) and max_ttl (127). Additionally, the presence of DURATION_IN (99476.0) and MAX_IP_PKT_LEN (60.0) supports this classification.",
+        "counterfactual": "Changing the value of MAX_IP_PKT_LEN from 60.0 to a higher value would likely change the prediction.",
+        "confidence_level": 0.9574,
+        "confidence_justification": "The classifier_confidence is 0.9419 and the hybrid_score is 0.9574, indicating high confidence in this classification.",
+        "evidence_list": [
+          {
+            "claim": "High in_bytes",
+            "source": "IN_BYTES",
+            "value": 5964240
+          },
+          {
+            "claim": "Similarity with PRECEDENT_1 and PRECEDENT_2",
+            "source": "similarity",
+            "value": 1.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 3043933,
+      "true_class": "DDOS attack-LOIC-UDP",
+      "pred_class": "DDOS attack-LOIC-UDP",
+      "correct": true,
+      "confidence": 0.9507902264595032,
+      "hybrid": 0.9635453224182129,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 51,
+        "rouge_l": 0.15,
+        "bert_f1": 0.7571
+      },
+      "parsed_output": {
+        "predicted_class": "DDOS attack-LOIC-UDP",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, which has a high similarity score of 1.0 and matches the host H600, as well as the feature MAX_IP_PKT_LEN with a raw value of 60.0, indicating a potential UDP attack.",
+        "counterfactual": "Changing the MAX_IP_PKT_LEN from 60.0 to 61.0 would likely change the prediction.",
+        "confidence_level": 0.9635,
+        "confidence_justification": "The classifier_confidence is 0.9508 and the hybrid_score is 0.9635, indicating a high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "High similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": "1.0"
+          },
+          {
+            "claim": "Feature MAX_IP_PKT_LEN has a raw value of 60.0",
+            "source": "MAX_IP_PKT_LEN",
+            "value": "60.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 963634,
+      "true_class": "DDOS attack-LOIC-UDP",
+      "pred_class": "DDOS attack-LOIC-UDP",
+      "correct": true,
+      "confidence": 0.9531709551811218,
+      "hybrid": 0.965211808681488,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'Bot'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 42,
+        "rouge_l": 0.1538,
+        "bert_f1": 0.7526
+      },
+      "parsed_output": {
+        "predicted_class": "DDOS attack-LOIC-UDP",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_3, which both have a high duration in bytes (99469.0) and packets (114177.0), indicating a potential LOIC-UDP attack.",
+        "counterfactual": "Changing the value of IN_BYTES from 6850620.0 to 0 would likely change the prediction.",
+        "confidence_level": 0.9652,
+        "confidence_justification": "The classifier confidence is 0.9532 and the hybrid score is 0.9652, indicating a high level of confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "High duration in bytes",
+            "source": "DURATION_IN",
+            "value": "99469.0"
+          },
+          {
+            "claim": "High packets",
+            "source": "IN_PKTS",
+            "value": "114177.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2677416,
+      "true_class": "DDoS attacks-LOIC-HTTP",
+      "pred_class": "DDoS attacks-LOIC-HTTP",
+      "correct": true,
+      "confidence": 0.9721444249153137,
+      "hybrid": 0.828583836555481,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'Bot'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 66,
+        "rouge_l": 0.1414,
+        "bert_f1": 0.7448
+      },
+      "parsed_output": {
+        "predicted_class": "DDoS attacks-LOIC-HTTP",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which both have a high similarity score of 1.0. The flow has a low FLOW_DURATION_MILLISECONDS value of 0.0, indicating no packet loss or delay. Additionally, the TCP_FLAGS value of 223.0 is consistent with the flags seen in PRECEDENT_1 and PRECEDENT_2.",
+        "counterfactual": "Changing the FLOW_DURATION_Milliseconds value from 0.0 to a non-zero value would likely change the prediction.",
+        "confidence_level": 0.9721,
+        "confidence_justification": "The classifier_confidence is 0.9721 and the hybrid_score is 0.8286, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Low FLOW_DURATION_Milliseconds value",
+            "source": "FLOW_DURATION_MILLISECONDS",
+            "value": "0.0"
+          },
+          {
+            "claim": "High TCP_FLAGS value",
+            "source": "TCP_FLAGS",
+            "value": "223.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 3140375,
+      "true_class": "DDoS attacks-LOIC-HTTP",
+      "pred_class": "DDoS attacks-LOIC-HTTP",
+      "correct": true,
+      "confidence": 0.981991708278656,
+      "hybrid": 0.8354970216751099,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'Bot'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 53,
+        "rouge_l": 0.1481,
+        "bert_f1": 0.7425
+      },
+      "parsed_output": {
+        "predicted_class": "DDoS attacks-LOIC-HTTP",
+        "rationale": "The prediction is based on the similarity to Precedent_1 and Precedent_2, which both have a high similarity score of 1.0. The flow has a long packet length (1004.0) and a low TCP flag value (222.0), indicating potential malicious activity.",
+        "counterfactual": "If the LONGEST_FLOW_PKT had a raw value of 500.0, it would change the prediction.",
+        "confidence_level": 0.8355,
+        "confidence_justification": "The classifier confidence is 0.9820 and the hybrid score is 0.8355, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Longest flow packet length",
+            "source": "LONGEST_FLOW_PKT",
+            "value": "1004.0"
+          },
+          {
+            "claim": "Low TCP flag value",
+            "source": "CLIENT_TCP_FLAGS",
+            "value": "222.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 806213,
+      "true_class": "DDoS attacks-LOIC-HTTP",
+      "pred_class": "DDoS attacks-LOIC-HTTP",
+      "correct": true,
+      "confidence": 0.9790267944335938,
+      "hybrid": 0.8334258794784546,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'Bot'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 46,
+        "rouge_l": 0.24,
+        "bert_f1": 0.7857
+      },
+      "parsed_output": {
+        "predicted_class": "DDoS attacks-LOIC-HTTP",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which both have a high similarity score of 1.0. The flow features L4_SRC_PORT=61322.0 and TCP_FLAGS=223.0 also support this classification.",
+        "counterfactual": "Changing the value of MIN_TTL from 127.0 to any other value would likely change the prediction.",
+        "confidence_level": 0.979,
+        "confidence_justification": "The classifier_confidence is 0.9790 and the hybrid_score is 0.8334, indicating a high confidence in this classification.",
+        "evidence_list": [
+          {
+            "claim": "This flow resembles a DDoS attack",
+            "source": "L4_SRC_PORT",
+            "value": 61322.0
+          },
+          {
+            "claim": "The flow has a high number of TCP flags",
+            "source": "TCP_FLAGS",
+            "value": 223.0
+          },
+          {
+            "claim": "This is not a legitimate flow",
+            "source": "classifier_confidence",
+            "value": 0.979
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2825473,
+      "true_class": "DDoS attacks-LOIC-HTTP",
+      "pred_class": "DDoS attacks-LOIC-HTTP",
+      "correct": true,
+      "confidence": 0.9725316762924194,
+      "hybrid": 0.8288896083831787,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 54,
+        "rouge_l": 0.2299,
+        "bert_f1": 0.8085
+      },
+      "parsed_output": {
+        "predicted_class": "DDoS attacks-LOIC-HTTP",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, which has a high similarity score of 1.0 and matches the host H1979, L4_SRC_PORT=64700.0, TCP_FLAGS=223.0, and other features. These similarities indicate that the flow is likely part of a LOIC-HTTP attack.",
+        "counterfactual": "Changing the value of TCP_WIN_MAX_IN from 8192.0 to 0 would significantly impact the prediction.",
+        "confidence_level": 0.9725,
+        "confidence_justification": "The classifier confidence of 0.9725 and hybrid score of 0.8289 indicate a high level of confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "This flow is likely part of a LOIC-HTTP attack",
+            "source": "L4_SRC_PORT",
+            "value": 64700.0
+          },
+          {
+            "claim": "The flow has similar TCP flags to PRECEDENT_1",
+            "source": "TCP_FLAGS",
+            "value": 223.0
+          },
+          {
+            "claim": "The flow has a high L4_SRC_PORT value",
+            "source": "L4_SRC_PORT",
+            "value": 64700.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2317438,
+      "true_class": "DDoS attacks-LOIC-HTTP",
+      "pred_class": "DDoS attacks-LOIC-HTTP",
+      "correct": true,
+      "confidence": 0.9704426527023315,
+      "hybrid": 0.8274316787719727,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 56,
+        "rouge_l": 0.1687,
+        "bert_f1": 0.7676
+      },
+      "parsed_output": {
+        "predicted_class": "DDoS attacks-LOIC-HTTP",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_2, which has a high duration_ms (4294951) and l7_proto (7.0), as well as the feature L4_SRC_PORT having a raw value of 65264.0. These features are also present in the query flow, indicating a potential DDoS attack.",
+        "counterfactual": "Changing the MIN_TTL from 127.0 to 128.0 would likely change the prediction.",
+        "confidence_level": 0.9704,
+        "confidence_justification": "The classifier_confidence is 0.9704 and the hybrid_score is 0.8274, indicating a high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "High duration_ms",
+            "source": "duration_ms",
+            "value": 4294951
+          },
+          {
+            "claim": "L7_proto = 7.0",
+            "source": "l7_proto",
+            "value": 7.0
+          },
+          {
+            "claim": "L4_SRC_PORT = 65264.0",
+            "source": "L4_SRC_PORT",
+            "value": 65264.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2497833,
+      "true_class": "DDoS attacks-LOIC-HTTP",
+      "pred_class": "DDoS attacks-LOIC-HTTP",
+      "correct": true,
+      "confidence": 0.9746522903442383,
+      "hybrid": 0.8303731083869934,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 42,
+        "rouge_l": 0.1972,
+        "bert_f1": 0.7757
+      },
+      "parsed_output": {
+        "predicted_class": "DDoS attacks-LOIC-HTTP",
+        "rationale": "The prediction is based on the similarity of feature values, including L4_SRC_PORT=63647.0 and MIN_TTL=127.0, which are present in PRECEDENT_1 and PRECEDENT_3. These features indicate a potential DDoS attack.",
+        "counterfactual": "Changing the value of MIN_TTL from 127.0 to 128.0 would likely change the prediction.",
+        "confidence_level": 0.9747,
+        "confidence_justification": "The classifier confidence is 0.9747 and the hybrid score is 0.8304, indicating a high level of confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity to PRECEDENT_1",
+            "source": "L4_SRC_PORT",
+            "value": 63647.0
+          },
+          {
+            "claim": "Similarity to PRECEDENT_3",
+            "source": "MIN_TTL",
+            "value": 127.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1247682,
+      "true_class": "DDoS attacks-LOIC-HTTP",
+      "pred_class": "DDoS attacks-LOIC-HTTP",
+      "correct": true,
+      "confidence": 0.9805684089660645,
+      "hybrid": 0.8345012664794922,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'Bot'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 51,
+        "rouge_l": 0.075,
+        "bert_f1": 0.7228
+      },
+      "parsed_output": {
+        "predicted_class": "DDoS attacks-LOIC-HTTP",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which both have a high duration_ms (4294964 and 4294686) and l7_proto of 7.0. These features are also present in the current flow with duration_ms=4294951 and l7_proto=7.0.",
+        "counterfactual": "Changing the MAX_TTL from 127 to a higher value would likely change the prediction.",
+        "confidence_level": 0.9806,
+        "confidence_justification": "The classifier_confidence is 0.9806 and the hybrid_score is 0.8345, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "High duration_ms",
+            "source": "duration_ms",
+            "value": 4294951
+          },
+          {
+            "claim": "l7_proto=7.0",
+            "source": "l7_proto",
+            "value": 7.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1276581,
+      "true_class": "DDoS attacks-LOIC-HTTP",
+      "pred_class": "DDoS attacks-LOIC-HTTP",
+      "correct": true,
+      "confidence": 0.9796460270881653,
+      "hybrid": 0.8338581323623657,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 67,
+        "rouge_l": 0.102,
+        "bert_f1": 0.7612
+      },
+      "parsed_output": {
+        "predicted_class": "DDoS attacks-LOIC-HTTP",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, which has a high similarity score of 1.0 and matches the feature L7_proto=7.178 in the query flow. Additionally, the feature MIN_TTL=127 has a raw value of 127.0, which is consistent with PRECEDENT_1. These features contribute to the classifier confidence of 0.9796 and hybrid score of 0.8339.",
+        "counterfactual": "Changing the L4_SRC_PORT from 60424.0 to 0 would likely change the prediction.",
+        "confidence_level": 0.9796,
+        "confidence_justification": "The classifier confidence of 0.9796 and hybrid score of 0.8339 justify this prediction.",
+        "evidence_list": [
+          {
+            "claim": "This is a claim about the query flow",
+            "source": "L4_SRC_PORT",
+            "value": "60424.0"
+          },
+          {
+            "claim": "This is a claim about the query flow",
+            "source": "TCP_FLAGS",
+            "value": "223.0"
+          },
+          {
+            "claim": "This is a claim about the classifier confidence and hybrid score",
+            "source": "classifier_confidence",
+            "value": "0.9796"
+          },
+          {
+            "claim": "This is a claim about the classifier confidence and hybrid score",
+            "source": "hybrid_score",
+            "value": "0.8339"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2012918,
+      "true_class": "DDoS attacks-LOIC-HTTP",
+      "pred_class": "DDoS attacks-LOIC-HTTP",
+      "correct": true,
+      "confidence": 0.976520836353302,
+      "hybrid": 0.8316777944564819,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 43,
+        "rouge_l": 0.2432,
+        "bert_f1": 0.7926
+      },
+      "parsed_output": {
+        "predicted_class": "DDoS attacks-LOIC-HTTP",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, which has a high similarity score of 1.0 and shares similar features such as L4_SRC_PORT=62919.0, TCP_FLAGS=223.0, and MIN_TTL=127.0.",
+        "counterfactual": "Changing the value of MIN_TTL from 127.0 to any other value would likely change the prediction.",
+        "confidence_level": 0.9765,
+        "confidence_justification": "The classifier confidence is 0.9765 and the hybrid score is 0.8317, indicating a high level of confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "L4_SRC_PORT=62919.0",
+            "source": "L4_SRC_PORT",
+            "value": 62919.0
+          },
+          {
+            "claim": "TCP_FLAGS=223.0",
+            "source": "TCP_FLAGS",
+            "value": 223.0
+          },
+          {
+            "claim": "MIN_TTL=127.0",
+            "source": "MIN_TTL",
+            "value": 127.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2148715,
+      "true_class": "DDoS attacks-LOIC-HTTP",
+      "pred_class": "DDoS attacks-LOIC-HTTP",
+      "correct": true,
+      "confidence": 0.9810827970504761,
+      "hybrid": 0.83486407995224,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 48,
+        "rouge_l": 0.2564,
+        "bert_f1": 0.7845
+      },
+      "parsed_output": {
+        "predicted_class": "DDoS attacks-LOIC-HTTP",
+        "rationale": "The prediction is based on the similarity of feature values, including L4_SRC_PORT=60484.0 and TCP_FLAGS=223.0, which are present in PRECEDENT_1 and PRECEDENT_2. These features are also present in the query flow with similar values.",
+        "counterfactual": "Changing the value of CLIENT_TCP_FLAGS from 222.0 to a different value would change the prediction.",
+        "confidence_level": 0.9811,
+        "confidence_justification": "The classifier confidence is 0.9811 and the hybrid score is 0.8349, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity of feature values",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "L4_SRC_PORT value",
+            "source": "L4_SRC_PORT",
+            "value": 60484.0
+          },
+          {
+            "claim": "TCP_FLAGS value",
+            "source": "TCP_FLAGS",
+            "value": 223.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2826123,
+      "true_class": "DoS attacks-GoldenEye",
+      "pred_class": "DoS attacks-GoldenEye",
+      "correct": true,
+      "confidence": 0.9510135650634766,
+      "hybrid": 0.8154408931732178,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 104,
+        "rouge_l": 0.163,
+        "bert_f1": 0.7994
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 834898,
+      "true_class": "DoS attacks-GoldenEye",
+      "pred_class": "DoS attacks-GoldenEye",
+      "correct": true,
+      "confidence": 0.9376717209815979,
+      "hybrid": 0.8045533895492554,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'Bot'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 47,
+        "rouge_l": 0.1389,
+        "bert_f1": 0.7591
+      },
+      "parsed_output": {
+        "predicted_class": "DoS attacks-GoldenEye",
+        "rationale": "The prediction is based on the similarity to Precedent_1 and Precedent_2, which both have a duration of 0 milliseconds, indicating no packet transmission. This feature is supported by L4_SRC_PORT with a raw value of 35842.0.",
+        "counterfactual": "Changing the L4_SRC_PORT from 35842.0 to 0 would likely change the prediction.",
+        "confidence_level": 0.9377,
+        "confidence_justification": "The classifier confidence is 0.9377 and the hybrid score is 0.8046, indicating a high level of confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity to Precedent_1",
+            "source": "similarity",
+            "value": "1.0"
+          },
+          {
+            "claim": "L4_SRC_PORT with raw value 35842.0",
+            "source": "L4_SRC_PORT",
+            "value": "35842.0"
+          },
+          {
+            "claim": "Precedent_2 similarity to GoldenEye",
+            "source": "similarity",
+            "value": "1.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2697502,
+      "true_class": "DoS attacks-GoldenEye",
+      "pred_class": "DoS attacks-GoldenEye",
+      "correct": true,
+      "confidence": 0.9458206295967102,
+      "hybrid": 0.8114603757858276,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 113,
+        "rouge_l": 0.1961,
+        "bert_f1": 0.7927
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 2982438,
+      "true_class": "DoS attacks-GoldenEye",
+      "pred_class": "DoS attacks-GoldenEye",
+      "correct": true,
+      "confidence": 0.9578096270561218,
+      "hybrid": 0.8187351822853088,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 50,
+        "rouge_l": 0.2892,
+        "bert_f1": 0.7951
+      },
+      "parsed_output": {
+        "predicted_class": "DoS attacks-GoldenEye",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which have a high similarity score of 1.0. The feature L4_SRC_PORT has a raw value of 40832.0, while FLOW_DURATION_Milliseconds has a raw value of 4294702.0.",
+        "counterfactual": "Changing the value of MAX_IP_PKT_LEN from 1024.0 to 512.0 would likely change the prediction.",
+        "confidence_level": 0.9578,
+        "confidence_justification": "The classifier confidence is 0.9578 and the hybrid score is 0.8187, indicating a high level of confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "High similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": "1.0"
+          },
+          {
+            "claim": "L4_SRC_PORT has a high raw value",
+            "source": "L4_SRC_PORT",
+            "value": "40832.0"
+          },
+          {
+            "claim": "FLOW_DURATION_MILLISECONDS has a long duration",
+            "source": "FLOW_DURATION_Milliseconds",
+            "value": "4294702.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 985953,
+      "true_class": "DoS attacks-GoldenEye",
+      "pred_class": "DoS attacks-GoldenEye",
+      "correct": true,
+      "confidence": 0.9369916319847107,
+      "hybrid": 0.8058384656906128,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 105,
+        "rouge_l": 0.1972,
+        "bert_f1": 0.7957
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 1035997,
+      "true_class": "DoS attacks-GoldenEye",
+      "pred_class": "DoS attacks-GoldenEye",
+      "correct": true,
+      "confidence": 0.9483441114425659,
+      "hybrid": 0.8120913505554199,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 107,
+        "rouge_l": 0.1884,
+        "bert_f1": 0.8097
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 580135,
+      "true_class": "DoS attacks-GoldenEye",
+      "pred_class": "DoS attacks-GoldenEye",
+      "correct": true,
+      "confidence": 0.9472306370735168,
+      "hybrid": 0.8113335967063904,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 58,
+        "rouge_l": 0.2247,
+        "bert_f1": 0.7707
+      },
+      "parsed_output": {
+        "predicted_class": "DoS attacks-GoldenEye",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which have a high similarity score of 1.0. The feature L4_SRC_PORT has a raw value of 37344.0, FLOW_DURATION_Milliseconds has a raw value of 4294702.0, and TCP_FLAGS has a raw value of 31.0.",
+        "counterfactual": "Changing the raw value of FLOW_DURATION_Milliseconds from 4294702.0 to 0 would likely change the prediction.",
+        "confidence_level": 0.9472,
+        "confidence_justification": "The classifier confidence is 0.9472 and the hybrid score is 0.8113, indicating a high level of confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "The flow has characteristics typical of DoS attacks",
+            "source": "FLOW_DURATION_MILLISECONDS",
+            "value": "4294702"
+          },
+          {
+            "claim": "The flow has a high number of packets and bytes",
+            "source": "L4_SRC_PORT",
+            "value": "37344.0"
+          },
+          {
+            "claim": "The flow has a specific TCP flag pattern",
+            "source": "TCP_FLAGS",
+            "value": "31.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 259891,
+      "true_class": "DoS attacks-GoldenEye",
+      "pred_class": "DoS attacks-GoldenEye",
+      "correct": true,
+      "confidence": 0.9494840502738953,
+      "hybrid": 0.8154650926589966,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 114,
+        "rouge_l": 0.1507,
+        "bert_f1": 0.7692
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 1004980,
+      "true_class": "DoS attacks-GoldenEye",
+      "pred_class": "DoS attacks-GoldenEye",
+      "correct": true,
+      "confidence": 0.9571317434310913,
+      "hybrid": 0.8183114528656006,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 54,
+        "rouge_l": 0.1481,
+        "bert_f1": 0.7391
+      },
+      "parsed_output": {
+        "predicted_class": "DoS attacks-GoldenEye",
+        "rationale": "The prediction is based on the similarity of feature values to those in PRECEDENT_1 and PRECEDENT_3, with a focus on ICMP_TYPE (53504.0), MIN_TTL (63.0), and L7_PROTO (7.0). These features are also present in PRECEDENT_2, but with different values.",
+        "counterfactual": "Changing the value of MIN_TTL from 63.0 to a higher value would likely change the prediction.",
+        "confidence_level": 0.9571,
+        "confidence_justification": "The classifier confidence is 0.9571 and the hybrid score is 0.8183, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity to PRECEDENT_1",
+            "source": "ICMP_TYPE",
+            "value": "53504.0"
+          },
+          {
+            "claim": "Similarity to PRECEDENT_3",
+            "source": "MIN_TTL",
+            "value": "63.0"
+          },
+          {
+            "claim": "Hybrid score of 0.8183",
+            "source": "hybrid_score",
+            "value": "0.8183"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 236960,
+      "true_class": "DoS attacks-GoldenEye",
+      "pred_class": "DoS attacks-GoldenEye",
+      "correct": true,
+      "confidence": 0.94623863697052,
+      "hybrid": 0.8105827569961548,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 116,
+        "rouge_l": 0.1935,
+        "bert_f1": 0.8017
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 200750,
+      "true_class": "DoS attacks-Hulk",
+      "pred_class": "DoS attacks-Hulk",
+      "correct": true,
+      "confidence": 0.9712315201759338,
+      "hybrid": 0.8280881643295288,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 52,
+        "rouge_l": 0.3191,
+        "bert_f1": 0.8228
+      },
+      "parsed_output": {
+        "predicted_class": "DoS attacks-Hulk",
+        "rationale": "The prediction is based on the similarity of feature values to those in PRECEDENT_1, PRECEDENT_2 and PRECEDENT_3, with high importance scores for CLIENT_TCP_FLAGS, NUM_PKTS_512_TO_1024_BYTES and MAX_IP_PKT_LEN. These features have raw values of 27.0, 5.0 and 987.0 respectively.",
+        "counterfactual": "Changing the value of MAX_IP_PKT_LEN from 987.0 to a lower value would decrease the prediction.",
+        "confidence_level": 0.9712,
+        "confidence_justification": "The classifier confidence is 0.9712, and the hybrid score is 0.8281, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity to PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "High importance of CLIENT_TCP_FLAGS",
+            "source": "CLIENT_TCP_FLAGS",
+            "value": 27.0
+          },
+          {
+            "claim": "Low importance of NUM_PKTS_512_TO_1024_BYTES",
+            "source": "NUM_PKTS_512_TO_1024_BYTES",
+            "value": 5.0
+          },
+          {
+            "claim": "High value of MAX_IP_PKT_LEN",
+            "source": "MAX_IP_PKT_LEN",
+            "value": 987.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1704900,
+      "true_class": "DoS attacks-Hulk",
+      "pred_class": "DoS attacks-Hulk",
+      "correct": true,
+      "confidence": 0.9776216745376587,
+      "hybrid": 0.8327459096908569,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'Bot'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 53,
+        "rouge_l": 0.15,
+        "bert_f1": 0.7528
+      },
+      "parsed_output": {
+        "predicted_class": "DoS attacks-Hulk",
+        "rationale": "The prediction is based on the similarity to Precedent_1 and Precedent_2, which both have a high duration in milliseconds (4294748.0) and a similar l7_proto value of 7.0. Additionally, the ICMP_TYPE has a raw value of 48128.0, indicating a potential DoS attack.",
+        "counterfactual": "Changing the FLOW_DURATION_MILLISECONDS from 4294748.0 to 0 would likely change the prediction.",
+        "confidence_level": 0.9776,
+        "confidence_justification": "The classifier_confidence is 0.9776 and the hybrid_score is 0.8327, indicating a high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "High duration in milliseconds",
+            "source": "FLOW_DURATION_MILLISECONDS",
+            "value": "4294748.0"
+          },
+          {
+            "claim": "ICMP_TYPE value of 48128.0",
+            "source": "ICMP_TYPE",
+            "value": "48128.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 146436,
+      "true_class": "DoS attacks-Hulk",
+      "pred_class": "DoS attacks-Hulk",
+      "correct": true,
+      "confidence": 0.9736636281013489,
+      "hybrid": 0.8297135829925537,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 45,
+        "rouge_l": 0.2222,
+        "bert_f1": 0.7782
+      },
+      "parsed_output": {
+        "predicted_class": "DoS attacks-Hulk",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, where CLIENT_TCP_FLAGS=27.0 and MIN_TTL=63.0. These features are also present in the query flow, which had a duration of 4294842ms and 1323 bytes incoming.",
+        "counterfactual": "Changing the value of MAX_TTL from 63.0 to 127.0 would change the prediction.",
+        "confidence_level": 0.9737,
+        "confidence_justification": "The classifier confidence is 0.9737, and the hybrid score is 0.8297, indicating a high level of confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "CLIENT_TCP_FLAGS=27.0",
+            "source": "CLIENT_TCP_FLAGS",
+            "value": 27.0
+          },
+          {
+            "claim": "MIN_TTL=63.0",
+            "source": "MIN_TTL",
+            "value": 63.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 751876,
+      "true_class": "DoS attacks-Hulk",
+      "pred_class": "DoS attacks-Hulk",
+      "correct": true,
+      "confidence": 0.9779840111732483,
+      "hybrid": 0.8326902389526367,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'Bot'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 49,
+        "rouge_l": 0.275,
+        "bert_f1": 0.7868
+      },
+      "parsed_output": {
+        "predicted_class": "DoS attacks-Hulk",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which both have a high similarity score of 1.0. The feature L4_SRC_PORT has a raw value of 48522.0, while MIN_TTL has a raw value of 63.0.",
+        "counterfactual": "Changing the MAX_IP_PKT_LEN from 987.0 to 1000.0 would likely change the prediction.",
+        "confidence_level": 0.978,
+        "confidence_justification": "The classifier_confidence is 0.9780 and the hybrid_score is 0.8327, indicating a high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "L4_SRC_PORT has a raw value of 48522.0",
+            "source": "L4_SRC_PORT",
+            "value": 48522.0
+          },
+          {
+            "claim": "MIN_TTL has a raw value of 63.0",
+            "source": "MIN_TTL",
+            "value": 63.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 180248,
+      "true_class": "DoS attacks-Hulk",
+      "pred_class": "DoS attacks-Hulk",
+      "correct": true,
+      "confidence": 0.9777332544326782,
+      "hybrid": 0.8325138092041016,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 96,
+        "rouge_l": 0.2206,
+        "bert_f1": 0.811
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 1973186,
+      "true_class": "DoS attacks-Hulk",
+      "pred_class": "DoS attacks-Hulk",
+      "correct": true,
+      "confidence": 0.9753089547157288,
+      "hybrid": 0.830893337726593,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 67,
+        "rouge_l": 0.2581,
+        "bert_f1": 0.7815
+      },
+      "parsed_output": {
+        "predicted_class": "DoS attacks-Hulk",
+        "rationale": "The prediction is based on the similarity of feature values to those in PRECEDENT_1, which had a high similarity score and label of DoS attacks-Hulk. The flow duration milliseconds (4294795.0) and max ip packet length (987.0) are also indicative of a DoS attack. Additionally, the l4 src port (50214.0) is consistent with typical ports used in DoS attacks.",
+        "counterfactual": "Changing the L4_SRC_PORT to 80 would change the prediction.",
+        "confidence_level": 0.9753,
+        "confidence_justification": "The classifier confidence of 0.9753 and hybrid score of 0.8309 indicate a high level of confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "High flow duration milliseconds",
+            "source": "FLOW_DURATION_MILLISECONDS",
+            "value": "4294795.0"
+          },
+          {
+            "claim": "Low max ip packet length",
+            "source": "MAX_IP_PKT_LEN",
+            "value": "987.0"
+          },
+          {
+            "claim": "High l4 src port",
+            "source": "L4_SRC_PORT",
+            "value": "50214.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 104576,
+      "true_class": "DoS attacks-Hulk",
+      "pred_class": "DoS attacks-Hulk",
+      "correct": true,
+      "confidence": 0.9787534475326538,
+      "hybrid": 0.8334539532661438,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 43,
+        "rouge_l": 0.2,
+        "bert_f1": 0.7516
+      },
+      "parsed_output": {
+        "predicted_class": "DoS attacks-Hulk",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_3, where the feature MAX_IP_PKT_LEN has a raw value of 987.0, and the feature PROTOCOL has a raw value of 6.0.",
+        "counterfactual": "Changing the raw value of MAX_IP_PKT_LEN from 987.0 to 1000.0 would change the prediction.",
+        "confidence_level": 0.9788,
+        "confidence_justification": "The classifier_confidence is 0.9788 and the hybrid_score is 0.8335, indicating a high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_3",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "Feature MAX_IP_PKT_LEN has a raw value of 987.0",
+            "source": "MAX_IP_PKT_LEN",
+            "value": 987.0
+          },
+          {
+            "claim": "Feature PROTOCOL has a raw value of 6.0",
+            "source": "PROTOCOL",
+            "value": 6.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2039177,
+      "true_class": "DoS attacks-Hulk",
+      "pred_class": "DoS attacks-Hulk",
+      "correct": true,
+      "confidence": 0.9722098708152771,
+      "hybrid": 0.8287451267242432,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'Bot'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 51,
+        "rouge_l": 0.1538,
+        "bert_f1": 0.7433
+      },
+      "parsed_output": {
+        "predicted_class": "DoS attacks-Hulk",
+        "rationale": "The prediction is based on the similarity to PRECEDENT_1 and PRECEDENT_2, which both have a high similarity score of 1.0. The flow has a long duration (4294780 ms) and high in_bytes (2592), indicating a potential DoS attack.",
+        "counterfactual": "If the LONGEST_FLOW_PKT value changed from 987.0 to 1000.0, it would change the prediction.",
+        "confidence_level": 0.9722,
+        "confidence_justification": "The classifier_confidence is 0.9722 and hybrid_score is 0.8287, indicating a high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "High in_bytes",
+            "source": "in_bytes",
+            "value": "2592"
+          },
+          {
+            "claim": "Long duration",
+            "source": "duration_ms",
+            "value": "4294780"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 855799,
+      "true_class": "DoS attacks-Hulk",
+      "pred_class": "DoS attacks-Hulk",
+      "correct": true,
+      "confidence": 0.974219799041748,
+      "hybrid": 0.8302716612815857,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 104,
+        "rouge_l": 0.2074,
+        "bert_f1": 0.7978
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 1424166,
+      "true_class": "DoS attacks-Hulk",
+      "pred_class": "DoS attacks-Hulk",
+      "correct": true,
+      "confidence": 0.9786919951438904,
+      "hybrid": 0.8334249258041382,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 46,
+        "rouge_l": 0.1892,
+        "bert_f1": 0.7751
+      },
+      "parsed_output": {
+        "predicted_class": "DoS attacks-Hulk",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, where the L4_SRC_PORT has a raw value of 38364.0, and the FLOW_DURATION_Milliseconds has a raw value of 4294655.0. These features are also present in the query flow.",
+        "counterfactual": "Changing the L4_SRC_PORT to 0 would likely change the prediction.",
+        "confidence_level": 0.9787,
+        "confidence_justification": "The classifier_confidence is 0.9787 and the hybrid_score is 0.8334, indicating a high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "FLOW_DURATION_MILLISECONDS",
+            "value": 4294655.0
+          },
+          {
+            "claim": "L4_SRC_PORT similar to PRECEDENT_1",
+            "source": "L4_SRC_PORT",
+            "value": 38364.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2927549,
+      "true_class": "DoS attacks-SlowHTTPTest",
+      "pred_class": "DoS attacks-SlowHTTPTest",
+      "correct": true,
+      "confidence": 0.9690564274787903,
+      "hybrid": 0.8264946937561035,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 63,
+        "rouge_l": 0.2366,
+        "bert_f1": 0.7639
+      },
+      "parsed_output": {
+        "predicted_class": "DoS attacks-SlowHTTPTest",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which have a high similarity score of 1.0. The feature LONGEST_FLOW_PKT has a raw value of 60.0, indicating a long flow packet, while DURATION_OUT has a raw value of 156.0, suggesting a slow response time.",
+        "counterfactual": "Changing the RAW VALUE of MIN_IP_PKT_LEN from 40.0 to a higher value would likely change the prediction.",
+        "confidence_level": 0.9691,
+        "confidence_justification": "The classifier confidence is 0.9691 and the hybrid score is 0.8265, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Longest flow packet duration",
+            "source": "LONGEST_FLOW_PKT",
+            "value": 60.0
+          },
+          {
+            "claim": "Duration of the flow",
+            "source": "DURATION_OUT",
+            "value": 156.0
+          },
+          {
+            "claim": "Minimum IP packet length",
+            "source": "MIN_IP_PKT_LEN",
+            "value": 40.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2778311,
+      "true_class": "DoS attacks-SlowHTTPTest",
+      "pred_class": "DoS attacks-SlowHTTPTest",
+      "correct": true,
+      "confidence": 0.8939542174339294,
+      "hybrid": 0.7739125490188599,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 56,
+        "rouge_l": 0.1687,
+        "bert_f1": 0.7797
+      },
+      "parsed_output": {
+        "predicted_class": "DoS attacks-SlowHTTPTest",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, where L4_SRC_PORT has a raw value of 40338.0 and FLOW_DURATION_MILLISECONDS has a raw value of 4294795.0. These values are also present in the current flow, indicating a potential SlowHTTPTest attack.",
+        "counterfactual": "Changing the L4_SRC_PORT from its current RAW VALUE of 40338.0 to 0 would likely change the prediction.",
+        "confidence_level": 0.894,
+        "confidence_justification": "The classifier_confidence is 0.8940 and the hybrid_score is 0.7739, indicating a high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": "1.0"
+          },
+          {
+            "claim": "L4_SRC_PORT has a raw value of 40338.0",
+            "source": "L4_SRC_PORT",
+            "value": "40338.0"
+          },
+          {
+            "claim": "FLOW_DURATION_MILLISECONDS has a raw value of 4294795.0",
+            "source": "FLOW_DURATION_Milliseconds",
+            "value": "4294795.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1100264,
+      "true_class": "DoS attacks-SlowHTTPTest",
+      "pred_class": "DoS attacks-SlowHTTPTest",
+      "correct": true,
+      "confidence": 0.9608014822006226,
+      "hybrid": 0.8206884264945984,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 46,
+        "rouge_l": 0.2059,
+        "bert_f1": 0.7142
+      },
+      "parsed_output": {
+        "predicted_class": "DoS attacks-SlowHTTPTest",
+        "rationale": "The prediction is based on the longest flow packet (60.0), duration out (94.0), and max IP packet length (60.0) features, which are all above their respective threshold values.",
+        "counterfactual": "Changing the max IP packet length feature from 60.0 to a lower value would likely decrease the prediction.",
+        "confidence_level": 0.9608,
+        "confidence_justification": "The classifier confidence is 0.9608 and the hybrid score is 0.8207, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Longest flow packet feature",
+            "source": "LONGEST_FLOW_PKT",
+            "value": 60.0
+          },
+          {
+            "claim": "Duration out feature",
+            "source": "DURATION_OUT",
+            "value": 94.0
+          },
+          {
+            "claim": "Max IP packet length feature",
+            "source": "MAX_IP_PKT_LEN",
+            "value": 60.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 552687,
+      "true_class": "DoS attacks-SlowHTTPTest",
+      "pred_class": "DoS attacks-SlowHTTPTest",
+      "correct": true,
+      "confidence": 0.9678267240524292,
+      "hybrid": 0.8256263732910156,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": true,
+        "hallucination_score": 0.2,
+        "details": [
+          "H4 FAIL: numeric mismatches: ['LONGEST_FLOW_PKT: cited=156.0, actual=60.0']"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 47,
+        "rouge_l": 0.1667,
+        "bert_f1": 0.7652
+      },
+      "parsed_output": {
+        "predicted_class": "DoS attacks-SlowHTTPTest",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, where LONGEST_FLOW_PKT has a raw value of 60.0, and TCP_FLAGS has a raw value of 22.0. These values are also present in the query flow.",
+        "counterfactual": "Changing the duration_out feature from 156.0 to 150.0 would likely change the prediction.",
+        "confidence_level": 0.9678,
+        "confidence_justification": "The classifier_confidence is 0.9678 and the hybrid_score is 0.8256, indicating a high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": 60.0
+          },
+          {
+            "claim": "Presence of LONGEST_FLOW_PKT in query flow",
+            "source": "LONGEST_FLOW_PKT",
+            "value": 156.0
+          },
+          {
+            "claim": "Presence of TCP_FLAGS in query flow",
+            "source": "TCP_FLAGS",
+            "value": 22.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2761532,
+      "true_class": "DoS attacks-SlowHTTPTest",
+      "pred_class": "DoS attacks-SlowHTTPTest",
+      "correct": true,
+      "confidence": 0.9677028656005859,
+      "hybrid": 0.8255267143249512,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 60,
+        "rouge_l": 0.1609,
+        "bert_f1": 0.7348
+      },
+      "parsed_output": {
+        "predicted_class": "DoS attacks-SlowHTTPTest",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which have a high similarity score of 1.0. The feature LONGEST_FLOW_PKT has a raw value of 60.0, indicating a long flow packet, while DURATION_OUT has a raw value of 125.0, suggesting a long duration.",
+        "counterfactual": "Changing the RAW VALUE of DURATION_OUT from 125.0 to 124.0 would likely change the prediction.",
+        "confidence_level": 0.9677,
+        "confidence_justification": "The classifier_confidence is 0.9677 and the hybrid_score is 0.8255, indicating a high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Longest flow packet duration",
+            "source": "DURATION_OUT",
+            "value": 125.0
+          },
+          {
+            "claim": "Longest flow packet duration",
+            "source": "LONGEST_FLOW_PKT",
+            "value": 60.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1006965,
+      "true_class": "DoS attacks-SlowHTTPTest",
+      "pred_class": "DoS attacks-SlowHTTPTest",
+      "correct": true,
+      "confidence": 0.7271108627319336,
+      "hybrid": 0.6571361422538757,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 70,
+        "rouge_l": 0.2178,
+        "bert_f1": 0.7791
+      },
+      "parsed_output": {
+        "predicted_class": "DoS attacks-SlowHTTPTest",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which have a high similarity score of 1.0. The feature LONGEST_FLOW_PKT has a raw value of 60.0, indicating a long flow packet, while FLOW_DURATION_MILLISECONDS has a raw value of 4294779.0, showing a long duration. These features are also present in PRECEDENT_2.",
+        "counterfactual": "Changing the L4_SRC_PORT feature from its current RAW VALUE of 39166.0 to 0 would likely change the prediction.",
+        "confidence_level": 0.7271,
+        "confidence_justification": "The classifier confidence is 0.7271 and the hybrid score is 0.6571, indicating a high level of confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Long flow packet duration",
+            "source": "FLOW_DURATION_MILLISECONDS",
+            "value": 4294779.0
+          },
+          {
+            "claim": "High L4_SRC_PORT value",
+            "source": "L4_SRC_PORT",
+            "value": 39166.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 117008,
+      "true_class": "DoS attacks-SlowHTTPTest",
+      "pred_class": "DoS attacks-SlowHTTPTest",
+      "correct": true,
+      "confidence": 0.957946240901947,
+      "hybrid": 0.818697452545166,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 102,
+        "rouge_l": 0.1642,
+        "bert_f1": 0.8107
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 1825022,
+      "true_class": "DoS attacks-SlowHTTPTest",
+      "pred_class": "DoS attacks-SlowHTTPTest",
+      "correct": true,
+      "confidence": 0.676377534866333,
+      "hybrid": 0.6216380596160889,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 93,
+        "rouge_l": 0.2222,
+        "bert_f1": 0.8264
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 94231,
+      "true_class": "DoS attacks-SlowHTTPTest",
+      "pred_class": "DoS attacks-SlowHTTPTest",
+      "correct": true,
+      "confidence": 0.9504629373550415,
+      "hybrid": 0.8134652376174927,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 50,
+        "rouge_l": 0.1867,
+        "bert_f1": 0.7603
+      },
+      "parsed_output": {
+        "predicted_class": "DoS attacks-SlowHTTPTest",
+        "rationale": "The prediction is based on the similarity with Precedent_1 and Precedent_2, which have a high similarity score of 1.0. The flow duration milliseconds (4294795.0) and L4 src port (42052.0) are also indicative of SlowHTTPTest attacks.",
+        "counterfactual": "Changing the L4 src port value from 42052.0 to 0 would likely change the prediction.",
+        "confidence_level": 0.9505,
+        "confidence_justification": "The classifier confidence is 0.9505 and the hybrid score is 0.8135, indicating a high level of confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Flow duration milliseconds",
+            "source": "FLOW_DURATION_MILLISECONDS",
+            "value": "4294795.0"
+          },
+          {
+            "claim": "L4 src port",
+            "source": "L4_SRC_PORT",
+            "value": "42052.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1487727,
+      "true_class": "DoS attacks-SlowHTTPTest",
+      "pred_class": "DoS attacks-SlowHTTPTest",
+      "correct": true,
+      "confidence": 0.9318282008171082,
+      "hybrid": 0.8004211187362671,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 59,
+        "rouge_l": 0.1299,
+        "bert_f1": 0.7277
+      },
+      "parsed_output": {
+        "predicted_class": "DoS attacks-SlowHTTPTest",
+        "rationale": "The prediction is based on the similarity with Precedent_1, where the flow duration in milliseconds (4294795) and the L4 source port (41138) are similar to the current flow. These features have high importance scores indicating their significance in the classification.",
+        "counterfactual": "Changing the L4 source port from its raw value of 41138 to a different value would change the prediction.",
+        "confidence_level": 0.9318,
+        "confidence_justification": "The classifier confidence is 0.9318 and the hybrid score is 0.8004, indicating high confidence in this classification.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with Precedent_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "Flow duration in milliseconds (4294795)",
+            "source": "FLOW_DURATION_MILLISECONDS",
+            "value": 4294795
+          },
+          {
+            "claim": "L4 source port (41138)",
+            "source": "L4_SRC_PORT",
+            "value": 41138
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 3060660,
+      "true_class": "DoS attacks-Slowloris",
+      "pred_class": "DoS attacks-Slowloris",
+      "correct": true,
+      "confidence": 0.946332573890686,
+      "hybrid": 0.8115479946136475,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 41,
+        "rouge_l": 0.2857,
+        "bert_f1": 0.832
+      },
+      "parsed_output": {
+        "predicted_class": "DoS attacks-Slowloris",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, where RETRANSMITTED_IN_PKTS=10.0 and FLOW_DURATION_MILLISECONDS=4294936. These values are also present in the query flow, indicating a potential Slowloris attack.",
+        "counterfactual": "Changing the value of L4_SRC_PORT from 49676.0 to 0 would likely change the prediction.",
+        "confidence_level": 0.9463,
+        "confidence_justification": "The classifier_confidence is 0.9463 and hybrid_score is 0.8115, indicating a high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": "1.0"
+          },
+          {
+            "claim": "RETRANSMITTED_IN_PKTS=10.0",
+            "source": "RETRANSMITTED_IN_PKTS",
+            "value": "10.0"
+          },
+          {
+            "claim": "FLOW_DURATION_MILLISECONDS=4294951.0",
+            "source": "FLOW_DURATION_MILLISECONDS",
+            "value": "4294951.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2524861,
+      "true_class": "DoS attacks-Slowloris",
+      "pred_class": "DoS attacks-Slowloris",
+      "correct": true,
+      "confidence": 0.9503769874572754,
+      "hybrid": 0.8141898512840271,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 57,
+        "rouge_l": 0.2472,
+        "bert_f1": 0.7999
+      },
+      "parsed_output": {
+        "predicted_class": "DoS attacks-Slowloris",
+        "rationale": "The prediction is based on the high similarity to PRECEDENT_1, which had a duration of 4294904ms and 232 bytes in, with feature RETRANSMITTED_IN_BYTES having a raw value of 2820.0. Additionally, NUM_PKTS_256_TO_512_BYTES had a raw value of 11.0. These values are indicative of Slowloris attacks.",
+        "counterfactual": "Changing the duration from 0ms to a non-zero value would alter the prediction.",
+        "confidence_level": 0.9504,
+        "confidence_justification": "The classifier confidence is 0.9504 and the hybrid score is 0.8142, indicating high confidence in this classification.",
+        "evidence_list": [
+          {
+            "claim": "High similarity to PRECEDENT_1",
+            "source": "RETRANSMITTED_IN_BYTES",
+            "value": "2820.0"
+          },
+          {
+            "claim": "Similarity to PRECEDENT_2 and PRECEDENT_3",
+            "source": "NUM_PKTS_256_TO_512_BYTES",
+            "value": "11.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2999728,
+      "true_class": "DoS attacks-Slowloris",
+      "pred_class": "DoS attacks-Slowloris",
+      "correct": true,
+      "confidence": 0.9487195611000061,
+      "hybrid": 0.8129412531852722,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 114,
+        "rouge_l": 0.1528,
+        "bert_f1": 0.7873
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 641925,
+      "true_class": "DoS attacks-Slowloris",
+      "pred_class": "DoS attacks-Slowloris",
+      "correct": true,
+      "confidence": 0.9323312044143677,
+      "hybrid": 0.8008249998092651,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 57,
+        "rouge_l": 0.1667,
+        "bert_f1": 0.7656
+      },
+      "parsed_output": {
+        "predicted_class": "DoS attacks-Slowloris",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, where L4_SRC_PORT has a raw value of 37646.0 and FLOW_DURATION_Milliseconds has a raw value of 4294811.0. These values are also present in the current flow, indicating a potential Slowloris attack.",
+        "counterfactual": "Changing the L4_SRC_PORT from its current RAW VALUE (37646.0) to a different port would likely change the prediction.",
+        "confidence_level": 0.9323,
+        "confidence_justification": "The classifier_confidence is 0.9323 and the hybrid_score is 0.8008, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "High L4_SRC_PORT value",
+            "source": "L4_SRC_PORT",
+            "value": "37646.0"
+          },
+          {
+            "claim": "Long FLOW_DURATION_Milliseconds value",
+            "source": "FLOW_DURATION_MILLISECONDS",
+            "value": "4294811.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 501028,
+      "true_class": "DoS attacks-Slowloris",
+      "pred_class": "DoS attacks-Slowloris",
+      "correct": true,
+      "confidence": 0.9509392380714417,
+      "hybrid": 0.814609706401825,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 133,
+        "rouge_l": 0.1505,
+        "bert_f1": 0.8146
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 1373378,
+      "true_class": "DoS attacks-Slowloris",
+      "pred_class": "DoS attacks-Slowloris",
+      "correct": true,
+      "confidence": 0.9499107003211975,
+      "hybrid": 0.8141117095947266,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 105,
+        "rouge_l": 0.1963,
+        "bert_f1": 0.8042
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 505626,
+      "true_class": "DoS attacks-Slowloris",
+      "pred_class": "DoS attacks-Slowloris",
+      "correct": true,
+      "confidence": 0.9511865973472595,
+      "hybrid": 0.8147926330566406,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 64,
+        "rouge_l": 0.1505,
+        "bert_f1": 0.7437
+      },
+      "parsed_output": {
+        "predicted_class": "DoS attacks-Slowloris",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which have a high similarity score of 1.0. The feature L4_SRC_PORT has a raw value of 45932.0, indicating a potential source port issue. Additionally, the longest flow packet length is 282.0, which may indicate a slowloris attack.",
+        "counterfactual": "Changing the L4_SRC_PORT from its current value of 45932.0 to 0 would likely change the prediction.",
+        "confidence_level": 0.9512,
+        "confidence_justification": "The classifier confidence is 0.9512 and the hybrid score is 0.8148, indicating a high level of confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": "1.0"
+          },
+          {
+            "claim": "L4_SRC_PORT has a high raw value",
+            "source": "L4_SRC_PORT",
+            "value": "45932.0"
+          },
+          {
+            "claim": "Longest flow packet length is 282.0",
+            "source": "LONGEST_FLOW_PKT",
+            "value": "282.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 581980,
+      "true_class": "DoS attacks-Slowloris",
+      "pred_class": "DoS attacks-Slowloris",
+      "correct": true,
+      "confidence": 0.9509350657463074,
+      "hybrid": 0.8146066665649414,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.4,
+        "details": [
+          "H3 FAIL: ungrounded sources: ['flow raw values', 'flow raw values']",
+          "H5 FAIL: cited classes not in precedents: {'Bot'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 68,
+        "rouge_l": 0.1474,
+        "bert_f1": 0.7587
+      },
+      "parsed_output": {
+        "predicted_class": "DoS attacks-Slowloris",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which both have a high similarity score of 1.0. The flow has a long duration (4294795 ms) and a large number of in_bytes (2455), indicating a potential DoS attack. Additionally, the flow has a low l7_proto value of 7.0, which is consistent with Slowloris attacks.",
+        "counterfactual": "Changing the L4_SRC_PORT from 44910.0 to 0 would likely change the prediction.",
+        "confidence_level": 0.9509,
+        "confidence_justification": "The classifier_confidence of 0.9509 and hybrid_score of 0.8146 indicate a high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Long duration and large number of in_bytes",
+            "source": "FLOW RAW VALUES",
+            "value": "4294795"
+          },
+          {
+            "claim": "Low l7_proto value",
+            "source": "FLOW RAW VALUES",
+            "value": "7.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2079580,
+      "true_class": "DoS attacks-Slowloris",
+      "pred_class": "DoS attacks-Slowloris",
+      "correct": true,
+      "confidence": 0.948988676071167,
+      "hybrid": 0.8133629560470581,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 133,
+        "rouge_l": 0.1685,
+        "bert_f1": 0.7974
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 1655967,
+      "true_class": "DoS attacks-Slowloris",
+      "pred_class": "DoS attacks-Slowloris",
+      "correct": true,
+      "confidence": 0.9469617009162903,
+      "hybrid": 0.8109591007232666,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'Bot'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 37,
+        "rouge_l": 0.1875,
+        "bert_f1": 0.7656
+      },
+      "parsed_output": {
+        "predicted_class": "DoS attacks-Slowloris",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which both have a long flow packet length of 60.0, indicating a potential Slowloris attack.",
+        "counterfactual": "If MAX_IP_PKT_LEN were to be 59.0, it would change the prediction.",
+        "confidence_level": 0.947,
+        "confidence_justification": "The classifier confidence is 0.9470 and the hybrid score is 0.8110, indicating a high level of confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Longest flow packet length",
+            "source": "LONGEST_FLOW_PKT",
+            "value": 60.0
+          },
+          {
+            "claim": "Max IP packet length",
+            "source": "MAX_IP_PKT_LEN",
+            "value": 60.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 594740,
+      "true_class": "FTP-BruteForce",
+      "pred_class": "FTP-BruteForce",
+      "correct": true,
+      "confidence": 0.942872166633606,
+      "hybrid": 0.8081877827644348,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 50,
+        "rouge_l": 0.1622,
+        "bert_f1": 0.7668
+      },
+      "parsed_output": {
+        "predicted_class": "FTP-BruteForce",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, where LONGEST_FLOW_PKT has a raw value of 60.0 and TCP_FLAGS has a raw value of 22.0. These features are also present in the query flow with similar values.",
+        "counterfactual": "Changing the duration_out feature from 218.0 to 200.0 would likely change the prediction.",
+        "confidence_level": 0.9429,
+        "confidence_justification": "The classifier_confidence is 0.9429 and the hybrid_score is 0.8082, indicating a high confidence in this classification.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "Feature LONGEST_FLOW_PKT has a raw value of 60.0",
+            "source": "LONGEST_FLOW_PKT",
+            "value": 60.0
+          },
+          {
+            "claim": "Feature TCP_FLAGS has a raw value of 22.0",
+            "source": "TCP_FLAGS",
+            "value": 22.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2830593,
+      "true_class": "FTP-BruteForce",
+      "pred_class": "FTP-BruteForce",
+      "correct": true,
+      "confidence": 0.9136683344841003,
+      "hybrid": 0.7878092527389526,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 62,
+        "rouge_l": 0.2737,
+        "bert_f1": 0.7948
+      },
+      "parsed_output": {
+        "predicted_class": "FTP-BruteForce",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which have a high similarity score of 1.0 and label as FTP-BruteForce. The feature L4_SRC_PORT has a raw value of 33578.0, LONGEST_FLOW_PKT has a raw value of 60.0, and FLOW_DURATION_MILLISECONDS has a raw value of 4294763.0.",
+        "counterfactual": "Changing the RAW VALUE of FLOW_DURATION_Milliseconds from 4294763.0 to 0 would likely change the prediction.",
+        "confidence_level": 0.9137,
+        "confidence_justification": "The classifier_confidence is 0.9137 and hybrid_score is 0.7878, indicating a high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "RAW VALUE of L4_SRC_PORT",
+            "source": "L4_SRC_PORT",
+            "value": 33578.0
+          },
+          {
+            "claim": "RAW VALUE of LONGEST_FLOW_PKT",
+            "source": "LONGEST_FLOW_PKT",
+            "value": 60.0
+          },
+          {
+            "claim": "RAW VALUE of FLOW_DURATION_MILLISECONDS",
+            "source": "FLOW_DURATION_Milliseconds",
+            "value": 4294763.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 383721,
+      "true_class": "FTP-BruteForce",
+      "pred_class": "FTP-BruteForce",
+      "correct": true,
+      "confidence": 0.950712263584137,
+      "hybrid": 0.8136793375015259,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 58,
+        "rouge_l": 0.2022,
+        "bert_f1": 0.7839
+      },
+      "parsed_output": {
+        "predicted_class": "FTP-BruteForce",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, which has a high similarity score of 1.0 and shares similar characteristics such as duration_ms=4294923 and tcp_flags=219. Additionally, the feature FLOW_DURATION_MILLISECONDS has a raw value of 4294748.0, indicating a long flow duration.",
+        "counterfactual": "Changing the RAW VALUE of TCP_WIN_MAX_OUT from 0.0 to a non-zero value would likely change the prediction.",
+        "confidence_level": 0.9507,
+        "confidence_justification": "The classifier_confidence is 0.9507 and the hybrid_score is 0.8137, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": "1.0"
+          },
+          {
+            "claim": "Long flow duration",
+            "source": "FLOW_DURATION_MILLISECONDS",
+            "value": 4294748.0
+          },
+          {
+            "claim": "Low TCP WIN MAX OUT",
+            "source": "TCP_WIN_MAX_OUT",
+            "value": 0.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 165848,
+      "true_class": "FTP-BruteForce",
+      "pred_class": "FTP-BruteForce",
+      "correct": true,
+      "confidence": 0.954803466796875,
+      "hybrid": 0.8165868520736694,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 58,
+        "rouge_l": 0.1463,
+        "bert_f1": 0.7588
+      },
+      "parsed_output": {
+        "predicted_class": "FTP-BruteForce",
+        "rationale": "The prediction is based on the similarity to Precedent_3, which has a high duration out value of 235.0 and a low tcp_flags value of 219. These features are also present in the query flow with values of 235.0 and 22 respectively.",
+        "counterfactual": "Changing the raw value of FLOW_DURATION_MILLISECONDS from 4294732.0 to a lower value would likely change the prediction.",
+        "confidence_level": 0.9548,
+        "confidence_justification": "The classifier confidence is 0.9548 and the hybrid score is 0.8166, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity to Precedent_3",
+            "source": "similarity",
+            "value": "1.0"
+          },
+          {
+            "claim": "Flow duration out value",
+            "source": "DURATION_OUT",
+            "value": "235.0"
+          },
+          {
+            "claim": "Tcp flags value",
+            "source": "tcp_flags",
+            "value": "22"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2286707,
+      "true_class": "FTP-BruteForce",
+      "pred_class": "FTP-BruteForce",
+      "correct": true,
+      "confidence": 0.9483649134635925,
+      "hybrid": 0.8120343685150146,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 58,
+        "rouge_l": 0.1667,
+        "bert_f1": 0.7797
+      },
+      "parsed_output": {
+        "predicted_class": "FTP-BruteForce",
+        "rationale": "The prediction is based on the similarity of the query flow to the precedent flows, with a focus on features such as DURATION_OUT (RAW VALUE: 219.0) and FLOW_DURATION_Milliseconds (RAW VALUE: 4294748.0). These values are indicative of a prolonged connection attempt, characteristic of brute-force attacks.",
+        "counterfactual": "Changing the value of LONGEST_FLOW_PKT from 60.0 to 120.0 would likely alter the prediction.",
+        "confidence_level": 0.9484,
+        "confidence_justification": "The classifier confidence is 0.9484, and the hybrid score is 0.8120, indicating a strong prediction of FTP-BruteForce.",
+        "evidence_list": [
+          {
+            "claim": "Characteristics of brute-force attacks",
+            "source": "FLOW_DURATION_Milliseconds",
+            "value": 4294748
+          },
+          {
+            "claim": "Prolonged connection attempts",
+            "source": "DURATION_OUT",
+            "value": 219.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1596456,
+      "true_class": "FTP-BruteForce",
+      "pred_class": "FTP-BruteForce",
+      "correct": true,
+      "confidence": 0.9250198006629944,
+      "hybrid": 0.7956697344779968,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 39,
+        "rouge_l": 0.3188,
+        "bert_f1": 0.7951
+      },
+      "parsed_output": {
+        "predicted_class": "FTP-BruteForce",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, where LONGEST_FLOW_PKT has a raw value of 60.0, and L4_SRC_PORT has a raw value of 60828.0.",
+        "counterfactual": "Changing the value of MAX_IP_PKT_LEN from 60.0 to 61.0 would likely change the prediction.",
+        "confidence_level": 0.925,
+        "confidence_justification": "The classifier_confidence is 0.9250 and the hybrid_score is 0.7957, indicating a high level of confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "LONGEST_FLOW_PKT has a raw value of 60.0",
+            "source": "LONGEST_FLOW_PKT",
+            "value": 60.0
+          },
+          {
+            "claim": "L4_SRC_PORT has a raw value of 60828.0",
+            "source": "L4_SRC_PORT",
+            "value": 60828.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2571804,
+      "true_class": "FTP-BruteForce",
+      "pred_class": "FTP-BruteForce",
+      "correct": true,
+      "confidence": 0.9269257187843323,
+      "hybrid": 0.7970041632652283,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'Bot'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 59,
+        "rouge_l": 0.2472,
+        "bert_f1": 0.778
+      },
+      "parsed_output": {
+        "predicted_class": "FTP-BruteForce",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which both have a high similarity score of 1.0 and label as FTP-BruteForce. The feature LONGEST_FLOW_PKT has a raw value of 60.0, indicating a long flow packet, which is consistent with the characteristics of FTP-BruteForce attacks.",
+        "counterfactual": "Changing the MAX_IP_PKT_LEN from 60.0 to 30.0 would likely change the prediction.",
+        "confidence_level": 0.9269,
+        "confidence_justification": "The classifier_confidence is 0.9269 and the hybrid_score is 0.7970, indicating a high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Longest flow packet",
+            "source": "LONGEST_FLOW_PKT",
+            "value": 60.0
+          },
+          {
+            "claim": "Max IP packet length",
+            "source": "MAX_IP_PKT_LEN",
+            "value": 60.0
+          },
+          {
+            "claim": "Duration out",
+            "source": "DURATION_OUT",
+            "value": 188.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2636248,
+      "true_class": "FTP-BruteForce",
+      "pred_class": "FTP-BruteForce",
+      "correct": true,
+      "confidence": 0.9397633671760559,
+      "hybrid": 0.8060452938079834,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 56,
+        "rouge_l": 0.2025,
+        "bert_f1": 0.7747
+      },
+      "parsed_output": {
+        "predicted_class": "FTP-BruteForce",
+        "rationale": "The prediction is based on the similarity of the flow characteristics to PRECEDENT_1, which had a high duration and TCP flags value, as well as the neighborhood attack count being similar. The raw values for DURATION_OUT, FLOW_DURATION_MILLISECONDS, and TCP_FLAGS support this conclusion.",
+        "counterfactual": "Changing the value of DURATION_OUT from 250.0 to 1000.0 would likely change the prediction.",
+        "confidence_level": 0.9398,
+        "confidence_justification": "The classifier confidence is 0.9398 and the hybrid score is 0.8060, indicating a strong prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity to PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "High DURATION_OUT value",
+            "source": "DURATION_OUT",
+            "value": 250.0
+          },
+          {
+            "claim": "Similarity to PRECEDENT_3",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "High TCP_FLAGS value",
+            "source": "TCP_FLAGS",
+            "value": 22.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 500856,
+      "true_class": "FTP-BruteForce",
+      "pred_class": "FTP-BruteForce",
+      "correct": true,
+      "confidence": 0.9395912885665894,
+      "hybrid": 0.8058812022209167,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 48,
+        "rouge_l": 0.1351,
+        "bert_f1": 0.7421
+      },
+      "parsed_output": {
+        "predicted_class": "FTP-BruteForce",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which have a high similarity score of 1.0. The feature L4_SRC_PORT has a raw value of 59420.0, indicating a potential brute-force attack.",
+        "counterfactual": "Changing the RAW VALUE of L4_SRC_PORT from 59420.0 to 0 would likely change the prediction.",
+        "confidence_level": 0.9396,
+        "confidence_justification": "The classifier confidence is 0.9396 and the hybrid score is 0.8059, indicating a high level of confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "RAW VALUE of L4_SRC_PORT",
+            "source": "L4_SRC_PORT",
+            "value": 59420.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 565137,
+      "true_class": "FTP-BruteForce",
+      "pred_class": "FTP-BruteForce",
+      "correct": true,
+      "confidence": 0.934748649597168,
+      "hybrid": 0.8025471568107605,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 63,
+        "rouge_l": 0.0723,
+        "bert_f1": 0.7368
+      },
+      "parsed_output": {
+        "predicted_class": "FTP-BruteForce",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which have a high similarity score of 1.0. The flow duration in milliseconds (4294732) and longest packet size (60) are also indicative of a brute-force attack. These features were identified as most important in the TOP FEATURES section.",
+        "counterfactual": "Changing the longest packet size from 60 to 120 would likely change the prediction.",
+        "confidence_level": 0.9347,
+        "confidence_justification": "The classifier confidence is 0.9347 and the hybrid score is 0.8025, indicating a high level of confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "High flow duration",
+            "source": "FLOW_DURATION_MILLISECONDS",
+            "value": 4294732
+          },
+          {
+            "claim": "Longest packet size",
+            "source": "LONGEST_FLOW_PKT",
+            "value": 60
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 680891,
+      "true_class": "Infilteration",
+      "pred_class": "Infilteration",
+      "correct": true,
+      "confidence": 0.949504017829895,
+      "hybrid": 0.8127447366714478,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 64,
+        "rouge_l": 0.1739,
+        "bert_f1": 0.7771
+      },
+      "parsed_output": {
+        "predicted_class": "Infilteration",
+        "rationale": "The prediction is based on the similarity of the query flow to the flows in PRECEDENT_1, PRECEDENT_2, and PRECEDENT_3, which all have a similar duration_ms (0) and in_bytes (40). The feature MAX_IP_PKT_LEN has a raw value of 44.0, indicating that the packet length is within normal limits.",
+        "counterfactual": "Changing the RAW VALUE of MAX_TTL from 0.0 to a non-zero value would likely change the prediction.",
+        "confidence_level": 0.9495,
+        "confidence_justification": "The classifier_confidence is 0.9495 and the hybrid_score is 0.8127, indicating high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity to PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "Normal packet length",
+            "source": "MAX_IP_PKT_LEN",
+            "value": 44.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2342892,
+      "true_class": "Infilteration",
+      "pred_class": "Infilteration",
+      "correct": true,
+      "confidence": 0.6133410334587097,
+      "hybrid": 0.5774126052856445,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 1509713,
+      "true_class": "Infilteration",
+      "pred_class": "Infilteration",
+      "correct": true,
+      "confidence": 0.653188943862915,
+      "hybrid": 0.6053066849708557,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 126,
+        "rouge_l": 0.1463,
+        "bert_f1": 0.7968
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 582345,
+      "true_class": "Infilteration",
+      "pred_class": "Benign",
+      "correct": false,
+      "confidence": 0.590038001537323,
+      "hybrid": 0.5611265301704407,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 1360445,
+      "true_class": "Infilteration",
+      "pred_class": "Infilteration",
+      "correct": true,
+      "confidence": 0.9474286437034607,
+      "hybrid": 0.8113064765930176,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 57,
+        "rouge_l": 0.2697,
+        "bert_f1": 0.7844
+      },
+      "parsed_output": {
+        "predicted_class": "Infilteration",
+        "rationale": "The prediction is based on the feature LONGEST_FLOW_PKT with a raw value of 44.0, L4_DST_PORT with a raw value of 9009.0, and MAX_IP_PKT_LEN with a raw value of 44.0. These features are similar to PRECEDENT_1 and PRECEDENT_2, which also had these values.",
+        "counterfactual": "Changing the RAW VALUE of L4_DST_PORT from 9009.0 to 8080 would likely change the prediction.",
+        "confidence_level": 0.9474,
+        "confidence_justification": "The classifier confidence is 0.9474 and the hybrid score is 0.8113, indicating a high level of confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity to PRECEDENT_1",
+            "source": "LONGEST_FLOW_PKT",
+            "value": "44.0"
+          },
+          {
+            "claim": "Similarity to PRECEDENT_2",
+            "source": "L4_DST_PORT",
+            "value": "9009.0"
+          },
+          {
+            "claim": "Similarity to PRECEDENT_3",
+            "source": "MAX_IP_PKT_LEN",
+            "value": "44.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1913739,
+      "true_class": "Infilteration",
+      "pred_class": "Infilteration",
+      "correct": true,
+      "confidence": 0.6183124780654907,
+      "hybrid": 0.5808925628662109,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 1605286,
+      "true_class": "Infilteration",
+      "pred_class": "Benign",
+      "correct": false,
+      "confidence": 0.5501054525375366,
+      "hybrid": 0.5331480503082275,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 1811184,
+      "true_class": "Infilteration",
+      "pred_class": "Benign",
+      "correct": false,
+      "confidence": 0.49906471371650696,
+      "hybrid": 0.4975564479827881,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 3004972,
+      "true_class": "Infilteration",
+      "pred_class": "Infilteration",
+      "correct": true,
+      "confidence": 0.888380765914917,
+      "hybrid": 0.7699733972549438,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 49,
+        "rouge_l": 0.2857,
+        "bert_f1": 0.7976
+      },
+      "parsed_output": {
+        "predicted_class": "Infilteration",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_3, where the feature MAX_TTL has a raw value of 0.0, and the features FLOW_DURATION_MILLISECONDS and MAX_IP_PKT_LEN have raw values of 4294951.0 and 44.0 respectively.",
+        "counterfactual": "Changing the RAW VALUE of MAX_TTL from 0.0 to any other value would change the prediction.",
+        "confidence_level": 0.8884,
+        "confidence_justification": "The classifier_confidence is 0.8884 and the hybrid_score is 0.7700, indicating a high level of confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_3",
+            "source": "similarity",
+            "value": "1.0"
+          },
+          {
+            "claim": "RAW VALUE of FLOW_DURATION_MILLISECONDS",
+            "source": "FLOW_DURATION_MILLISECONDS",
+            "value": "4294951.0"
+          },
+          {
+            "claim": "RAW VALUE of MAX_IP_PKT_LEN",
+            "source": "MAX_IP_PKT_LEN",
+            "value": "44.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1411621,
+      "true_class": "Infilteration",
+      "pred_class": "Benign",
+      "correct": false,
+      "confidence": 0.6597836017608643,
+      "hybrid": 0.6099303960800171,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 66,
+        "rouge_l": 0.1935,
+        "bert_f1": 0.7662
+      },
+      "parsed_output": {
+        "predicted_class": "Benign",
+        "rationale": "The prediction is based on the similarity to Precedent_3, which has a high similarity score of 0.995 and label of Benign. The feature L4_SRC_PORT has a raw value of 59416.0, which may indicate a legitimate connection. The feature CLIENT_TCP_FLAGS has a raw value of 222.0, indicating a typical TCP flag pattern.",
+        "counterfactual": "Changing the raw value of L4_SRC_PORT from 59416.0 to 0 would likely change the prediction.",
+        "confidence_level": 0.6598,
+        "confidence_justification": "The classifier confidence is 0.6598 and the hybrid score is 0.6099, indicating a strong prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity to Precedent_3",
+            "source": "similarity",
+            "value": "0.995"
+          },
+          {
+            "claim": "L4_SRC_PORT raw value",
+            "source": "L4_SRC_PORT",
+            "value": "59416.0"
+          },
+          {
+            "claim": "CLIENT_TCP_FLAGS raw value",
+            "source": "CLIENT_TCP_FLAGS",
+            "value": "222.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 6197,
+      "true_class": "SQL Injection",
+      "pred_class": "SQL Injection",
+      "correct": true,
+      "confidence": 0.48890388011932373,
+      "hybrid": 0.4942265748977661,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 310919,
+      "true_class": "SQL Injection",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": false,
+      "confidence": 0.45191776752471924,
+      "hybrid": 0.4650397300720215,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 1920407,
+      "true_class": "SQL Injection",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": false,
+      "confidence": 0.4522221088409424,
+      "hybrid": 0.46566087007522583,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 2374763,
+      "true_class": "SQL Injection",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": false,
+      "confidence": 0.44841328263282776,
+      "hybrid": 0.46217378973960876,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 666616,
+      "true_class": "SQL Injection",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": false,
+      "confidence": 0.560522735118866,
+      "hybrid": 0.5417488813400269,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 2803170,
+      "true_class": "SQL Injection",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": false,
+      "confidence": 0.5630321502685547,
+      "hybrid": 0.542399525642395,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 1756852,
+      "true_class": "SQL Injection",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": false,
+      "confidence": 0.46275854110717773,
+      "hybrid": 0.4722710847854614,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 2490336,
+      "true_class": "SQL Injection",
+      "pred_class": "SQL Injection",
+      "correct": true,
+      "confidence": 0.5973345637321472,
+      "hybrid": 0.568061351776123,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 618689,
+      "true_class": "SQL Injection",
+      "pred_class": "SQL Injection",
+      "correct": true,
+      "confidence": 0.7933245301246643,
+      "hybrid": 0.7034971714019775,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 74,
+        "rouge_l": 0.1263,
+        "bert_f1": 0.7402
+      },
+      "parsed_output": {
+        "predicted_class": "SQL Injection",
+        "rationale": "The prediction is based on the presence of TCP flags (219.0) in the flow, which is a common indicator of SQL injection attacks. Additionally, the low DNS query ID value (0.0) suggests that the attack may not be related to DNS queries. These features are supported by Precedent_1 and Precedent_2, which also classified the traffic as SQL injection.",
+        "counterfactual": "Changing the TCP flags value from 219.0 to a different value would likely change the prediction.",
+        "confidence_level": 0.7933,
+        "confidence_justification": "The classifier confidence is 0.7933, and the hybrid score is 0.7035, indicating a high level of confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "The flow contains TCP flags (219.0) which is a common indicator of SQL injection attacks.",
+            "source": "TCP_FLAGS",
+            "value": "219.0"
+          },
+          {
+            "claim": "The DNS query ID value is 0.0, suggesting that the attack may not be related to DNS queries.",
+            "source": "DNS_QUERY_ID",
+            "value": "0.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 3119116,
+      "true_class": "SQL Injection",
+      "pred_class": "DDOS attack-HOIC",
+      "correct": false,
+      "confidence": 0.5327455401420593,
+      "hybrid": 0.5234106779098511,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 3017913,
+      "true_class": "SSH-Bruteforce",
+      "pred_class": "SSH-Bruteforce",
+      "correct": true,
+      "confidence": 0.9537757039070129,
+      "hybrid": 0.8301041126251221,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 131,
+        "rouge_l": 0.1013,
+        "bert_f1": 0.7833
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 2929482,
+      "true_class": "SSH-Bruteforce",
+      "pred_class": "SSH-Bruteforce",
+      "correct": true,
+      "confidence": 0.9676093459129333,
+      "hybrid": 0.8254632353782654,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 123,
+        "rouge_l": 0.1401,
+        "bert_f1": 0.7805
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 2653458,
+      "true_class": "SSH-Bruteforce",
+      "pred_class": "SSH-Bruteforce",
+      "correct": true,
+      "confidence": 0.9598482251167297,
+      "hybrid": 0.8200348615646362,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'Bot'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 51,
+        "rouge_l": 0.16,
+        "bert_f1": 0.7449
+      },
+      "parsed_output": {
+        "predicted_class": "SSH-Bruteforce",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, where L4_SRC_PORT has a raw value of 34840.0 and L7_PROTO has a raw value of 92.0, both of which are relevant features in this flow.",
+        "counterfactual": "Changing the L4_SRC_PORT from its current RAW VALUE of 34840.0 to 0 would likely change the prediction.",
+        "confidence_level": 0.9598,
+        "confidence_justification": "The classifier_confidence is 0.9598 and the hybrid_score is 0.8200, indicating a high level of confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "This flow exhibits characteristics similar to those seen in SSH-Bruteforce attacks.",
+            "source": "L4_SRC_PORT",
+            "value": "34840.0"
+          },
+          {
+            "claim": "The L7_PROTO has a value of 92.0, which is consistent with the protocol used in SSH-Bruteforce attacks.",
+            "source": "L7_PROTO",
+            "value": "92.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 2772787,
+      "true_class": "SSH-Bruteforce",
+      "pred_class": "SSH-Bruteforce",
+      "correct": true,
+      "confidence": 0.9665008783340454,
+      "hybrid": 0.8246893882751465,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 50,
+        "rouge_l": 0.3291,
+        "bert_f1": 0.8162
+      },
+      "parsed_output": {
+        "predicted_class": "SSH-Bruteforce",
+        "rationale": "The prediction is based on the high similarity to PRECEDENT_1, which has a label of SSH-Bruteforce, and features such as L7_PROTO with a raw value of 92.0 and TCP_FLAGS with a raw value of 27.0.",
+        "counterfactual": "Changing the raw value of SRC_TO_DST_AVG_THROUGHPUT from 24928000.0 to 0.0 would likely change the prediction.",
+        "confidence_level": 0.9665,
+        "confidence_justification": "The classifier confidence is 0.9665 and the hybrid score is 0.8247, indicating a high level of confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "High similarity to PRECEDENT_1",
+            "source": "similarity",
+            "value": "1.0"
+          },
+          {
+            "claim": "L7_PROTO with raw value 92.0",
+            "source": "L7_PROTO",
+            "value": "92.0"
+          },
+          {
+            "claim": "TCP_FLAGS with raw value 27.0",
+            "source": "TCP_FLAGS",
+            "value": "27.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 561600,
+      "true_class": "SSH-Bruteforce",
+      "pred_class": "SSH-Bruteforce",
+      "correct": true,
+      "confidence": 0.9639013409614563,
+      "hybrid": 0.822870671749115,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 93,
+        "rouge_l": 0.144,
+        "bert_f1": 0.7945
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 861476,
+      "true_class": "SSH-Bruteforce",
+      "pred_class": "SSH-Bruteforce",
+      "correct": true,
+      "confidence": 0.9662808775901794,
+      "hybrid": 0.8245353102684021,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 136,
+        "rouge_l": 0.1503,
+        "bert_f1": 0.7768
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 2999144,
+      "true_class": "SSH-Bruteforce",
+      "pred_class": "SSH-Bruteforce",
+      "correct": true,
+      "confidence": 0.9612990617752075,
+      "hybrid": 0.8210506439208984,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 48,
+        "rouge_l": 0.1867,
+        "bert_f1": 0.7792
+      },
+      "parsed_output": {
+        "predicted_class": "SSH-Bruteforce",
+        "rationale": "The prediction is based on the high value of L7_PROTO (92.0) and LONGEST_FLOW_PKT (1028.0), which are indicative of a brute-force attack. Additionally, the similarity scores with PRECEDENT_1 and PRECEDENT_2 also support this classification.",
+        "counterfactual": "Changing the RAW VALUE of L4_SRC_PORT from 59430.0 to 0 would likely change the prediction.",
+        "confidence_level": 0.9613,
+        "confidence_justification": "The classifier_confidence is 0.9613 and the hybrid_score is 0.8211, indicating high confidence in this classification.",
+        "evidence_list": [
+          {
+            "claim": "High L7_PROTO value indicates a brute-force attack",
+            "source": "L7_PROTO",
+            "value": "92.0"
+          },
+          {
+            "claim": "Longest flow packet size is indicative of a brute-force attack",
+            "source": "LONGEST_FLOW_PKT",
+            "value": "1028.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1024566,
+      "true_class": "SSH-Bruteforce",
+      "pred_class": "SSH-Bruteforce",
+      "correct": true,
+      "confidence": 0.9674409627914429,
+      "hybrid": 0.8253462314605713,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 49,
+        "rouge_l": 0.3014,
+        "bert_f1": 0.7932
+      },
+      "parsed_output": {
+        "predicted_class": "SSH-Bruteforce",
+        "rationale": "The prediction is based on the high similarity to PRECEDENT_1, which has a label of SSH-Bruteforce, and features such as L7_PROTO with a raw value of 92.0 and TCP_FLAGS with a raw value of 27.0.",
+        "counterfactual": "Changing the L4_SRC_PORT from 49992.0 to any other value would likely change the prediction.",
+        "confidence_level": 0.9674,
+        "confidence_justification": "The classifier confidence is 0.9674 and the hybrid score is 0.8253, indicating a high level of confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "High similarity to PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "L7_PROTO with raw value 92.0",
+            "source": "L7_PROTO",
+            "value": 92.0
+          },
+          {
+            "claim": "TCP_FLAGS with raw value 27.0",
+            "source": "TCP_FLAGS",
+            "value": 27.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1492594,
+      "true_class": "SSH-Bruteforce",
+      "pred_class": "SSH-Bruteforce",
+      "correct": true,
+      "confidence": 0.9642477035522461,
+      "hybrid": 0.8231117129325867,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 54,
+        "rouge_l": 0.2278,
+        "bert_f1": 0.7761
+      },
+      "parsed_output": {
+        "predicted_class": "SSH-Bruteforce",
+        "rationale": "The prediction is based on the similarity to PRECEDENT_1, which has a high similarity score of 1.0 and matches feature L7_PROTO with a raw value of 92.0, as well as TCP_FLAGS with a raw value of 27.0.",
+        "counterfactual": "Changing the raw value of FLOW_DURATION_MILLISECONDS from 0.0 to any non-zero value would likely change the prediction.",
+        "confidence_level": 0.9642,
+        "confidence_justification": "The classifier confidence is 0.9642 and the hybrid score is 0.8231, indicating a high level of confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "This flow is likely an SSH-Bruteforce attack",
+            "source": "L7_PROTO",
+            "value": "92.0"
+          },
+          {
+            "claim": "The flow has a high number of TCP flags set",
+            "source": "TCP_FLAGS",
+            "value": "27.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 161052,
+      "true_class": "SSH-Bruteforce",
+      "pred_class": "SSH-Bruteforce",
+      "correct": true,
+      "confidence": 0.9586776494979858,
+      "hybrid": 0.8192164301872253,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'Bot'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 56,
+        "rouge_l": 0.125,
+        "bert_f1": 0.7663
+      },
+      "parsed_output": {
+        "predicted_class": "SSH-Bruteforce",
+        "rationale": "The prediction is based on the similarity to Precedent_1 and Precedent_2, which both have L7_PROTO with a raw value of 92.0 and TCP_FLAGS with a raw value of 27.0. These features are also present in the query flow with the same values.",
+        "counterfactual": "Changing the L4_SRC_PORT from 34088.0 to any other value would likely change the prediction.",
+        "confidence_level": 0.9587,
+        "confidence_justification": "The classifier_confidence is 0.9587 and the hybrid_score is 0.8192, indicating a high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity to Precedent_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "L7_PROTO with raw value 92.0",
+            "source": "L7_PROTO",
+            "value": 92.0
+          },
+          {
+            "claim": "TCP_FLAGS with raw value 27.0",
+            "source": "TCP_FLAGS",
+            "value": 27.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    }
+  ]
+}

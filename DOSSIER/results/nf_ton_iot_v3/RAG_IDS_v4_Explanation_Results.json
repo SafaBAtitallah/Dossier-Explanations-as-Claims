@@ -1,0 +1,4057 @@
+{
+  "metadata": {
+    "generated_at": "2026-06-23 16:27:48",
+    "mode": "INDUCTIVE",
+    "llm_model": "llama3.2:3b",
+    "gnn_accuracy": 0.9658579629875067,
+    "gnn_macro_f1": 0.9799554526433646,
+    "gnn_weighted_f1": 0.9660584573193516,
+    "n_flows": 90,
+    "n_escalated": 4,
+    "n_parsed": 73,
+    "mean_hallucination_score": 0.03835616438356164,
+    "mean_rouge_l": 0.20486164383561645,
+    "mean_bert_f1": 0.7781356164383563,
+    "self_bleu": 0.7342
+  },
+  "flows": [
+    {
+      "flow_idx": 518815,
+      "true_class": "Backdoor",
+      "pred_class": "Backdoor",
+      "correct": true,
+      "confidence": 0.9897144436836243,
+      "hybrid": 0.8520346879959106,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 43,
+        "rouge_l": 0.1842,
+        "bert_f1": 0.7975
+      },
+      "parsed_output": {
+        "predicted_class": "Backdoor",
+        "rationale": "The prediction is based on the similarity with Precedent_1, which has a high similarity score of 1.0 and shares similar characteristics such as ICMP_IPV4_TYPE=144.0, FLOW_START_MILLISECONDS=1556527710208.0, and FLOW_END_MILLISECONDS=1556527710208.0.",
+        "counterfactual": "Changing the value of FLOW_START_MILLISECONDS from 1556527710208.0 to a different timestamp would likely change the prediction.",
+        "confidence_level": 0.9897,
+        "confidence_justification": "The classifier confidence is 0.9897 and the hybrid score is 0.8520, indicating high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with Precedent_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "ICMP_IPV4_TYPE=144.0",
+            "source": "ICMP_IPV4_TYPE",
+            "value": 144.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 850296,
+      "true_class": "Backdoor",
+      "pred_class": "Backdoor",
+      "correct": true,
+      "confidence": 0.9888710379600525,
+      "hybrid": 0.8528790473937988,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "H4 INFO: skipped 1 excluded/mismatch cols"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 63,
+        "rouge_l": 0.1978,
+        "bert_f1": 0.7707
+      },
+      "parsed_output": {
+        "predicted_class": "Backdoor",
+        "rationale": "The prediction is based on the similarity with Precedent_1 and Precedent_2, which have a high similarity score of 1.0. The feature FLOW_START_MILLISECONDS has a raw value of 1556495335424.0, indicating a long flow duration. Additionally, ICMP_IPV4_TYPE has a raw value of 144.0, suggesting an ICMP packet type.",
+        "counterfactual": "Changing the RAW VALUE of FLOW_END_MILLISECONDS from 1556495335424.0 to a different timestamp would likely change the prediction.",
+        "confidence_level": 0.9889,
+        "confidence_justification": "The classifier confidence is 0.9889 and the hybrid score is 0.8529, indicating high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Long flow duration",
+            "source": "FLOW_END_MILLISECONDS",
+            "value": 1556495335424.0
+          },
+          {
+            "claim": "ICMP packet type",
+            "source": "ICMP_IPV4_TYPE",
+            "value": 144.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 699992,
+      "true_class": "Backdoor",
+      "pred_class": "Backdoor",
+      "correct": true,
+      "confidence": 0.9897595643997192,
+      "hybrid": 0.8532072305679321,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 65,
+        "rouge_l": 0.1136,
+        "bert_f1": 0.7205
+      },
+      "parsed_output": {
+        "predicted_class": "Backdoor",
+        "rationale": "The prediction is based on the similarity with Precedent_1 and Precedent_2, which both have a high similarity score of 1.0. The feature MAX_TTL has a raw value of 128.0, indicating a maximum transmission unit size. This suggests that the flow may be using a large packet size, which is consistent with backdoor activity.",
+        "counterfactual": "Changing the MAX_TTL from 128.0 to 64.0 would likely change the prediction.",
+        "confidence_level": 0.9898,
+        "confidence_justification": "The classifier_confidence is 0.9898 and hybrid_score is 0.8532, indicating a high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "High MAX_TTL value",
+            "source": "MAX_TTL",
+            "value": "128.0"
+          },
+          {
+            "claim": "High classifier_confidence",
+            "source": "classifier_confidence",
+            "value": "0.9898"
+          },
+          {
+            "claim": "High hybrid_score",
+            "source": "hybrid_score",
+            "value": "0.8532"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1382291,
+      "true_class": "Backdoor",
+      "pred_class": "Backdoor",
+      "correct": true,
+      "confidence": 0.983333170413971,
+      "hybrid": 0.8523852229118347,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 54,
+        "rouge_l": 0.1728,
+        "bert_f1": 0.8001
+      },
+      "parsed_output": {
+        "predicted_class": "Backdoor",
+        "rationale": "The prediction is based on the similarity with Precedent_1, where ICMP_IPV4_TYPE has a raw value of 144.0, and the high importance scores of FLOW_END_MILLISECONDS and FLOW_START_MILLISECONDS. These features are also present in the query flow with similar values.",
+        "counterfactual": "Changing the RAW VALUE of FLOW_END_MILLISECONDS from 1556447887360.0 to a different timestamp would change the prediction.",
+        "confidence_level": 0.9833,
+        "confidence_justification": "The classifier confidence is 0.9833 and the hybrid score is 0.8524, indicating high confidence in this classification.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with Precedent_1",
+            "source": "similarity",
+            "value": "1.0"
+          },
+          {
+            "claim": "ICMP_IPV4_TYPE has a raw value of 144.0",
+            "source": "ICMP_IPV4_TYPE",
+            "value": "144.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 701448,
+      "true_class": "Backdoor",
+      "pred_class": "Backdoor",
+      "correct": true,
+      "confidence": 0.9898802042007446,
+      "hybrid": 0.8514909744262695,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 55,
+        "rouge_l": 0.2338,
+        "bert_f1": 0.7857
+      },
+      "parsed_output": {
+        "predicted_class": "Backdoor",
+        "rationale": "The prediction is based on the high similarity scores with Precedent_1 and Precedent_2, which both have a label of Backdoor. The feature MAX_TTL has a raw value of 128.0, and L7_PROTO has a raw value of 131.0.",
+        "counterfactual": "Changing the RAW VALUE of FLOW_START_MILLISECONDS from [epoch timestamp] to a different epoch would likely change the prediction.",
+        "confidence_level": 0.9899,
+        "confidence_justification": "The classifier_confidence is 0.9899 and the hybrid_score is 0.8515, indicating high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "High similarity with Precedent_1",
+            "source": "similarity",
+            "value": "1.0"
+          },
+          {
+            "claim": "Similarity with Precedent_2",
+            "source": "similarity",
+            "value": "1.0"
+          },
+          {
+            "claim": "High MAX_TTL value",
+            "source": "MAX_TTL",
+            "value": "128.0"
+          },
+          {
+            "claim": "High L7_PROTO value",
+            "source": "L7_PROTO",
+            "value": "131.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1030586,
+      "true_class": "Backdoor",
+      "pred_class": "Backdoor",
+      "correct": true,
+      "confidence": 0.9895289540290833,
+      "hybrid": 0.8520543575286865,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 63,
+        "rouge_l": 0.0682,
+        "bert_f1": 0.6897
+      },
+      "parsed_output": {
+        "predicted_class": "Backdoor",
+        "rationale": "The prediction is based on the similarity with Precedent_1 and Precedent_2, which both have a high similarity score of 1.0. The flow has a low l7_proto value of 131.0, which is also present in Precedents. Additionally, the flow has a low min_ttl value of 128, which is consistent with the Precedents.",
+        "counterfactual": "Changing the l7_proto value from 131.0 to 91.0 would change the prediction.",
+        "confidence_level": 0.9895,
+        "confidence_justification": "The classifier_confidence is 0.9895 and the hybrid_score is 0.8521, indicating a high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "low l7_proto value",
+            "source": "l7_proto",
+            "value": 131.0
+          },
+          {
+            "claim": "low min_ttl value",
+            "source": "min_ttl",
+            "value": 128
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 245173,
+      "true_class": "Backdoor",
+      "pred_class": "Backdoor",
+      "correct": true,
+      "confidence": 0.9884254932403564,
+      "hybrid": 0.852752685546875,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": true,
+        "hallucination_score": 0.2,
+        "details": [
+          "H4 FAIL: numeric mismatches: ['L7_PROTO: cited=7.0, actual=131.0']",
+          "H4 INFO: skipped 1 excluded/mismatch cols"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 49,
+        "rouge_l": 0.1081,
+        "bert_f1": 0.746
+      },
+      "parsed_output": {
+        "predicted_class": "Backdoor",
+        "rationale": "The prediction is based on the similarity with Precedent_3, which has a high duration_ms (174) and l7_proto (7.0), indicating potential malicious activity. Additionally, the similarity with Precedent_1 and Precedent_2 also supports this classification.",
+        "counterfactual": "Changing the value of FLOW_START_MILLISECONDS from 1556486029312.0 to a different timestamp would likely change the prediction.",
+        "confidence_level": 0.9884,
+        "confidence_justification": "The classifier_confidence is 0.9884 and hybrid_score is 0.8528, indicating high confidence in this classification.",
+        "evidence_list": [
+          {
+            "claim": "High duration_ms",
+            "source": "FLOW_START_MILLISECONDS",
+            "value": 1556486029312.0
+          },
+          {
+            "claim": "Low l7_proto",
+            "source": "L7_PROTO",
+            "value": 7.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 75003,
+      "true_class": "Backdoor",
+      "pred_class": "Backdoor",
+      "correct": true,
+      "confidence": 0.9892488718032837,
+      "hybrid": 0.853018045425415,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "H4 INFO: skipped 2 excluded/mismatch cols"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 54,
+        "rouge_l": 0.2683,
+        "bert_f1": 0.7837
+      },
+      "parsed_output": {
+        "predicted_class": "Backdoor",
+        "rationale": "The prediction is based on the similarity with Precedent_1 and Precedent_2, which both have a high similarity score of 1.0. The flow features FLOW_START_MILLISECONDS and FLOW_END_MILLISECONDS also contribute to this classification. Their raw values are 1556505165824.0 and 1556505165824.0 respectively.",
+        "counterfactual": "Changing the value of ICMP_IPV4_TYPE from 144.0 to a different value would change the prediction.",
+        "confidence_level": 0.9892,
+        "confidence_justification": "The classifier_confidence is 0.9892 and the hybrid_score is 0.8530, indicating high confidence in this classification.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with Precedent_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "Flow feature FLOW_START_MILLISECONDS",
+            "source": "FLOW_START_MILLISECONDS",
+            "value": 1556505165824.0
+          },
+          {
+            "claim": "Flow feature FLOW_END_MILLISECONDS",
+            "source": "FLOW_END_MILLISECONDS",
+            "value": 1556505165824.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 678399,
+      "true_class": "Backdoor",
+      "pred_class": "Backdoor",
+      "correct": true,
+      "confidence": 0.9870914220809937,
+      "hybrid": 0.8529201745986938,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.2,
+        "details": [
+          "H3 FAIL: ungrounded sources: ['[epoch timestamp]']"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 59,
+        "rouge_l": 0.1505,
+        "bert_f1": 0.7908
+      },
+      "parsed_output": {
+        "predicted_class": "Backdoor",
+        "rationale": "The prediction is based on the similarity with Precedent_1, which has a high similarity score of 1.0 and shares similar characteristics such as ICMP_IPV4_TYPE=144.0 and FLOW_END_MILLISECONDS=[1556527710208.0]. Additionally, the feature L7_PROTO=7.0 in Precedent_1 is also present in the query flow with a value of 7.0.",
+        "counterfactual": "Changing the RAW VALUE of ICMP_IPV4_TYPE from 144.0 to 145.0 would likely change the prediction.",
+        "confidence_level": 0.9871,
+        "confidence_justification": "The classifier confidence is 0.9871 and the hybrid score is 0.8529, indicating a high level of confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with Precedent_1",
+            "source": "similarity",
+            "value": "1.0"
+          },
+          {
+            "claim": "ICMP_IPV4_TYPE=144.0",
+            "source": "ICMP_IPV4_TYPE",
+            "value": 144.0
+          },
+          {
+            "claim": "FLOW_END_MILLISECONDS=[1556527710208.0]",
+            "source": "[epoch timestamp]",
+            "value": "[1556527710208.0]"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 903579,
+      "true_class": "Backdoor",
+      "pred_class": "Backdoor",
+      "correct": true,
+      "confidence": 0.9869642853736877,
+      "hybrid": 0.8534851670265198,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.2,
+        "details": [
+          "H3 FAIL: ungrounded sources: ['[epoch timestamp]']"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 73,
+        "rouge_l": 0.1443,
+        "bert_f1": 0.7533
+      },
+      "parsed_output": {
+        "predicted_class": "Backdoor",
+        "rationale": "The prediction is based on the similarity with Precedent_1 and Precedent_2, which have a high similarity score of 1.0. The feature FLOW_END_MILLISECONDS has a raw value of [epoch timestamp] which is not cited as a numeric value in evidence_list. The feature MAX_TTL has a raw value of 128.0, which is also present in the flow raw values.",
+        "counterfactual": "Changing the value of FLOW_END_MILLISECONDS from [epoch timestamp] to a different epoch would change the prediction.",
+        "confidence_level": 0.987,
+        "confidence_justification": "The classifier_confidence is 0.9870 and hybrid_score is 0.8535, indicating high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with Precedent_1",
+            "source": "similarity",
+            "value": "1.0"
+          },
+          {
+            "claim": "Feature FLOW_END_MILLISECONDS has a raw value of [epoch timestamp]",
+            "source": "[epoch timestamp]",
+            "value": "[epoch timestamp]"
+          },
+          {
+            "claim": "Feature MAX_TTL has a raw value of 128.0",
+            "source": "MAX_TTL",
+            "value": "128.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 943707,
+      "true_class": "ddos",
+      "pred_class": "ddos",
+      "correct": true,
+      "confidence": 0.9847801923751831,
+      "hybrid": 0.837934672832489,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'dos'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 54,
+        "rouge_l": 0.2588,
+        "bert_f1": 0.7882
+      },
+      "parsed_output": {
+        "predicted_class": "ddos",
+        "rationale": "The prediction is based on the high importance score of TCP_WIN_MAX_IN (29200.0) and L7_PROTO (91.0), which are both indicative of a DDoS attack. Additionally, the similarity scores with Precedent_1 and Precedent_3 are 1.0, further supporting this classification.",
+        "counterfactual": "Changing the RAW VALUE of MIN_IP_PKT_LEN from 0.0 to a non-zero value would likely change the prediction.",
+        "confidence_level": 0.9848,
+        "confidence_justification": "The classifier_confidence is 0.9848 and hybrid_score is 0.8379, indicating high confidence in this classification.",
+        "evidence_list": [
+          {
+            "claim": "High importance scores of TCP_WIN_MAX_IN and L7_PROTO",
+            "source": "TCP_WIN_MAX_IN",
+            "value": "29200.0"
+          },
+          {
+            "claim": "Similarity score with Precedent_1 is 1.0",
+            "source": "similarity",
+            "value": "1.0"
+          },
+          {
+            "claim": "Similarity score with Precedent_3 is 1.0",
+            "source": "similarity",
+            "value": "1.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 258430,
+      "true_class": "ddos",
+      "pred_class": "ddos",
+      "correct": true,
+      "confidence": 0.9916111826896667,
+      "hybrid": 0.843034029006958,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'dos'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 48,
+        "rouge_l": 0.2,
+        "bert_f1": 0.7858
+      },
+      "parsed_output": {
+        "predicted_class": "ddos",
+        "rationale": "The prediction is based on the similarity to Precedent_1, which has a label of ddos, and features such as L7_PROTO with a raw value of 91.0 and MAX_TTL with a raw value of 64.0.",
+        "counterfactual": "Changing the L4_DST_PORT from 443.0 to any other port would likely change the prediction.",
+        "confidence_level": 0.9916,
+        "confidence_justification": "The classifier_confidence is 0.9916 and the hybrid_score is 0.8430, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "High similarity to Precedent_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "L7_PROTO with a raw value of 91.0",
+            "source": "L7_PROTO",
+            "value": 91.0
+          },
+          {
+            "claim": "MAX_TTL with a raw value of 64.0",
+            "source": "MAX_TTL",
+            "value": 64.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 939668,
+      "true_class": "ddos",
+      "pred_class": "ddos",
+      "correct": true,
+      "confidence": 0.9667002558708191,
+      "hybrid": 0.8281880617141724,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'dos'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 40,
+        "rouge_l": 0.3333,
+        "bert_f1": 0.8497
+      },
+      "parsed_output": {
+        "predicted_class": "ddos",
+        "rationale": "The prediction is based on the high similarity to PRECEDENT_3 with a label of ddos, citing feature names and their RAW VALUES: RETRANSMITTED_IN_BYTES=1895.0, RETRANSMITTED_IN_PKTS=3.0, ICMP_IPV4_TYPE=103.0.",
+        "counterfactual": "Changing the value of RETRANSMITTED_IN_bytes from 1895.0 to a lower value would decrease the prediction.",
+        "confidence_level": 0.9667,
+        "confidence_justification": "The classifier_confidence is 0.9667 and hybrid_score is 0.8282, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "High similarity to PRECEDENT_3 with a label of ddos",
+            "source": "similarity",
+            "value": 0.991
+          },
+          {
+            "claim": "Feature RETRANSMITTED_IN_BYTES has a RAW VALUE of 1895.0",
+            "source": "RETRANSMITTED_IN_BYTES",
+            "value": 1895.0
+          },
+          {
+            "claim": "Feature RETRANSMITTED_IN_PKTS has a RAW VALUE of 3.0",
+            "source": "RETRANSMITTED_IN_PKTS",
+            "value": 3.0
+          },
+          {
+            "claim": "Feature ICMP_IPV4_TYPE has a RAW VALUE of 103.0",
+            "source": "ICMP_IPV4_TYPE",
+            "value": 103.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1176446,
+      "true_class": "ddos",
+      "pred_class": "ddos",
+      "correct": true,
+      "confidence": 0.9918687343597412,
+      "hybrid": 0.8432148694992065,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'dos'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 46,
+        "rouge_l": 0.2821,
+        "bert_f1": 0.8128
+      },
+      "parsed_output": {
+        "predicted_class": "ddos",
+        "rationale": "The prediction is based on the high similarity to PRECEDENT_1 (similarity=1.0, label=ddos) and features such as TCP_WIN_MAX_IN with a raw value of 29200.0 and L7_PROTO with a raw value of 91.0.",
+        "counterfactual": "Changing the RAW VALUE of MIN_IP_PKT_LEN from 52.0 to 51.0 would likely change the prediction.",
+        "confidence_level": 0.9919,
+        "confidence_justification": "The classifier_confidence is 0.9919 and hybrid_score is 0.8432, indicating high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "High similarity to PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "TCP_WIN_MAX_IN with a raw value of 29200.0",
+            "source": "TCP_WIN_MAX_IN",
+            "value": 29200.0
+          },
+          {
+            "claim": "L7_PROTO with a raw value of 91.0",
+            "source": "L7_PROTO",
+            "value": 91.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1332949,
+      "true_class": "ddos",
+      "pred_class": "ddos",
+      "correct": true,
+      "confidence": 0.9920269846916199,
+      "hybrid": 0.8434104919433594,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'dos'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 53,
+        "rouge_l": 0.2651,
+        "bert_f1": 0.7981
+      },
+      "parsed_output": {
+        "predicted_class": "ddos",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, which has a label of ddos, and features such as MAX_IP_PKT_LEN (raw_value=1406.0) and TCP_FLAGS (raw_value=26.0). These values are also present in the FLOW RAW VALUES section.",
+        "counterfactual": "Changing the value of MAX_TTL from its current raw_value=64.0 to a higher value would likely change the prediction.",
+        "confidence_level": 0.992,
+        "confidence_justification": "The classifier_confidence is 0.9920 and hybrid_score is 0.8434, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "Feature MAX_IP_PKT_LEN",
+            "source": "MAX_IP_PKT_LEN",
+            "value": 1406.0
+          },
+          {
+            "claim": "Feature TCP_FLAGS",
+            "source": "TCP_FLAGS",
+            "value": 26.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 283475,
+      "true_class": "ddos",
+      "pred_class": "ddos",
+      "correct": true,
+      "confidence": 0.9762892127037048,
+      "hybrid": 0.8319129943847656,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'dos'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 51,
+        "rouge_l": 0.1944,
+        "bert_f1": 0.7449
+      },
+      "parsed_output": {
+        "predicted_class": "ddos",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which both have a label of ddos. The feature MAX_TTL has a raw value of 64.0, which may indicate a potential DDoS attack.",
+        "counterfactual": "Changing the RAW VALUE of MIN_TTL from 64.0 to a lower value would likely change the prediction.",
+        "confidence_level": 0.9763,
+        "confidence_justification": "The classifier_confidence is 0.9763 and the hybrid_score is 0.8319, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "RAW VALUE of MAX_TTL",
+            "source": "MAX_TTL",
+            "value": 64.0
+          },
+          {
+            "claim": "RAW VALUE of MIN_TTL",
+            "source": "MIN_TTL",
+            "value": 64.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1056195,
+      "true_class": "ddos",
+      "pred_class": "ddos",
+      "correct": true,
+      "confidence": 0.9915391802787781,
+      "hybrid": 0.842860996723175,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'dos'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 46,
+        "rouge_l": 0.2703,
+        "bert_f1": 0.8097
+      },
+      "parsed_output": {
+        "predicted_class": "ddos",
+        "rationale": "The prediction is based on the high similarity to PRECEDENT_1 (similarity=1.0, label=ddos) and features such as TCP_WIN_MAX_IN with a raw value of 29200.0, indicating a potential DDoS attack.",
+        "counterfactual": "Changing the raw value of FLOW_START_MILLISECONDS from [1556239089664.0] to a different epoch timestamp would likely change the prediction.",
+        "confidence_level": 0.9915,
+        "confidence_justification": "The classifier confidence is 0.9915 and the hybrid score is 0.8429, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "High similarity to PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "TCP_WIN_MAX_IN with a raw value of 29200.0",
+            "source": "TCP_WIN_MAX_IN",
+            "value": 29200.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 98073,
+      "true_class": "ddos",
+      "pred_class": "ddos",
+      "correct": true,
+      "confidence": 0.7970720529556274,
+      "hybrid": 0.7064225077629089,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'dos'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 59,
+        "rouge_l": 0.2247,
+        "bert_f1": 0.8089
+      },
+      "parsed_output": {
+        "predicted_class": "ddos",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, which has a high similarity score of 1.0 and shares similar characteristics such as L4_DST_PORT=80.0 and TCP_WIN_MAX_IN=29200.0. These features are also present in the query flow, indicating a potential DDoS attack.",
+        "counterfactual": "Changing the value of FLOW_END_MILLISECONDS from its current RAW VALUE to a different timestamp would likely change the prediction.",
+        "confidence_level": 0.7971,
+        "confidence_justification": "The classifier confidence is 0.7971 and the hybrid score is 0.7064, indicating a high level of confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "L4_DST_PORT=80.0",
+            "source": "L4_DST_PORT",
+            "value": 80.0
+          },
+          {
+            "claim": "TCP_WIN_MAX_IN=29200.0",
+            "source": "TCP_WIN_MAX_IN",
+            "value": 29200.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1158861,
+      "true_class": "ddos",
+      "pred_class": "ddos",
+      "correct": true,
+      "confidence": 0.992913544178009,
+      "hybrid": 0.843971312046051,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H4 INFO: skipped 1 excluded/mismatch cols",
+          "H5 FAIL: cited classes not in precedents: {'dos'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 74,
+        "rouge_l": 0.1224,
+        "bert_f1": 0.7773
+      },
+      "parsed_output": {
+        "predicted_class": "ddos",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, which has a high similarity score of 1.0 and shares similar flow characteristics such as TCP flags and l7 protocol. Additionally, the feature FLOW_START_MILLISECONDS has a raw value of 1556225327104.0, indicating a recent flow start time. These features contribute to the confidence in the ddos prediction.",
+        "counterfactual": "Changing the RAW VALUE of FLOW_END_MILLISECONDS from [epoch timestamp] to a different epoch timestamp would likely change the prediction.",
+        "confidence_level": 0.9929,
+        "confidence_justification": "The classifier_confidence is 0.9929 and hybrid_score is 0.8440, indicating high confidence in the ddos prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "FLOW_START_MILLISECONDS has a recent flow start time",
+            "source": "FLOW_START_MILLISECONDS",
+            "value": 1556225327104.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 70811,
+      "true_class": "ddos",
+      "pred_class": "ddos",
+      "correct": true,
+      "confidence": 0.9635453820228577,
+      "hybrid": 0.8229923248291016,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": false,
+        "hallucination_score": 0.2,
+        "details": [
+          "H5 FAIL: cited classes not in precedents: {'dos'}"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 47,
+        "rouge_l": 0.3077,
+        "bert_f1": 0.81
+      },
+      "parsed_output": {
+        "predicted_class": "ddos",
+        "rationale": "The prediction is based on the high importance score of TCP_WIN_MAX_IN (4.2706) with a raw value of 29200.0, and the low value of MIN_IP_PKT_LEN (0.0). These features suggest a potential DDoS attack.",
+        "counterfactual": "Changing the RAW VALUE of CLIENT_TCP_FLAGS from 2.0 to 1.0 would likely change the prediction.",
+        "confidence_level": 0.9635,
+        "confidence_justification": "The classifier confidence is 0.9635 and the hybrid score is 0.8230, indicating a high level of confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "High importance score of TCP_WIN_MAX_IN",
+            "source": "TCP_WIN_MAX_IN",
+            "value": "29200.0"
+          },
+          {
+            "claim": "Low value of MIN_IP_PKT_LEN",
+            "source": "MIN_IP_PKT_LEN",
+            "value": "0.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 293876,
+      "true_class": "dos",
+      "pred_class": "dos",
+      "correct": true,
+      "confidence": 0.9943150877952576,
+      "hybrid": 0.8453059196472168,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 56,
+        "rouge_l": 0.1928,
+        "bert_f1": 0.7574
+      },
+      "parsed_output": {
+        "predicted_class": "dos",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, which has a high similarity score of 1.0 and shares similar features such as MAX_TTL=234.0 and MIN_TTL=234.0. Additionally, the feature L7_PROTO=0.0 is also present in both the predicted flow and PRECEDENT_1.",
+        "counterfactual": "Changing the value of MAX_TTL from 234.0 to a different value would likely change the prediction.",
+        "confidence_level": 0.9943,
+        "confidence_justification": "The classifier confidence is 0.9943, and the hybrid score is 0.8453, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "Shared feature MAX_TTL",
+            "source": "MAX_TTL",
+            "value": 234.0
+          },
+          {
+            "claim": "Shared feature MIN_TTL",
+            "source": "MIN_TTL",
+            "value": 234.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 317812,
+      "true_class": "dos",
+      "pred_class": "dos",
+      "correct": true,
+      "confidence": 0.9604293704032898,
+      "hybrid": 0.8207425475120544,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 111,
+        "rouge_l": 0.1667,
+        "bert_f1": 0.8043
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 838512,
+      "true_class": "dos",
+      "pred_class": "dos",
+      "correct": true,
+      "confidence": 0.995402455329895,
+      "hybrid": 0.8461034297943115,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 64,
+        "rouge_l": 0.1839,
+        "bert_f1": 0.7471
+      },
+      "parsed_output": {
+        "predicted_class": "dos",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which both have a high similarity score of 1.0. The feature L7_PROTO has a raw value of 0.0, while MAX_TTL and MIN_TTL have a raw value of 234.0. These values are consistent across the three precedents.",
+        "counterfactual": "Changing the RAW VALUE of MAX_TTL from 234.0 to a different value would likely change the prediction.",
+        "confidence_level": 0.9954,
+        "confidence_justification": "The classifier_confidence is 0.9954 and hybrid_score is 0.8461, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "The feature L7_PROTO has a raw value of 0.0",
+            "source": "L7_PROTO",
+            "value": 0.0
+          },
+          {
+            "claim": "The feature MAX_TTL has a raw value of 234.0",
+            "source": "MAX_TTL",
+            "value": 234.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 388317,
+      "true_class": "dos",
+      "pred_class": "dos",
+      "correct": true,
+      "confidence": 0.9953085780143738,
+      "hybrid": 0.846038281917572,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 69,
+        "rouge_l": 0.1319,
+        "bert_f1": 0.7549
+      },
+      "parsed_output": {
+        "predicted_class": "dos",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, where L7_PROTO has a raw value of 0.0 and MAX_TTL has a raw value of 234.0, which are also present in the FLOW RAW VALUES. These features contribute to the high classifier confidence of 0.9953 and hybrid score of 0.8460.",
+        "counterfactual": "Changing the MAX_TTL feature from its current raw value of 234.0 to a lower value would likely decrease the prediction.",
+        "confidence_level": 0.9953,
+        "confidence_justification": "The classifier confidence of 0.9953 and hybrid score of 0.8460 justify this prediction.",
+        "evidence_list": [
+          {
+            "claim": "The flow has a high number of in_pkts (100) and out_pkts (0), indicating a potential denial-of-service attack.",
+            "source": "L7_PROTO",
+            "value": "0.0"
+          },
+          {
+            "claim": "The flow has a low number of out_bytes (0) and a high number of in_bytes (4000), suggesting that the traffic is being sent to the target without any response.",
+            "source": "MAX_TTL",
+            "value": "234.0"
+          },
+          {
+            "claim": "The flow has a high number of in_pkts (100) and out_pkts (0), indicating a potential denial-of-service attack.",
+            "source": "MIN_TTL",
+            "value": "234.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 821405,
+      "true_class": "dos",
+      "pred_class": "dos",
+      "correct": true,
+      "confidence": 0.9854815602302551,
+      "hybrid": 0.8386697769165039,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 63,
+        "rouge_l": 0.2889,
+        "bert_f1": 0.7977
+      },
+      "parsed_output": {
+        "predicted_class": "dos",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, which has a high similarity score of 1.0 and labels the class as 'dos'. Additionally, features such as L4_SRC_PORT (raw value: 4176.0) and CLIENT_TCP_FLAGS (raw value: 2.0) have high importance scores, indicating their relevance to the prediction.",
+        "counterfactual": "Changing the raw value of SERVER_TCP_FLAGS from 20.0 to a different value would likely change the prediction.",
+        "confidence_level": 0.9855,
+        "confidence_justification": "The classifier confidence is 0.9855 and the hybrid score is 0.8387, indicating high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": "1.0"
+          },
+          {
+            "claim": "High importance of L4_SRC_PORT",
+            "source": "L4_SRC_PORT",
+            "value": 4176.0
+          },
+          {
+            "claim": "High importance of CLIENT_TCP_FLAGS",
+            "source": "CLIENT_TCP_FLAGS",
+            "value": 2.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 784071,
+      "true_class": "dos",
+      "pred_class": "dos",
+      "correct": true,
+      "confidence": 0.9934462904930115,
+      "hybrid": 0.8448482751846313,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 65,
+        "rouge_l": 0.1573,
+        "bert_f1": 0.7493
+      },
+      "parsed_output": {
+        "predicted_class": "dos",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, where L7_PROTO has a raw value of 0.0 and MIN_TTL has a raw value of 234.0, which are also present in the FLOW RAW VALUES. Additionally, the high neighborhood_attack_count of host:H2 (7) and host:H3 (6) suggests an attack pattern similar to dos.",
+        "counterfactual": "Changing the MAX_TTL from 234.0 to a lower value would likely decrease the prediction.",
+        "confidence_level": 0.9934,
+        "confidence_justification": "The classifier_confidence is 0.9934 and hybrid_score is 0.8448, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "L7_PROTO",
+            "value": "0.0"
+          },
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "MIN_TTL",
+            "value": "234.0"
+          },
+          {
+            "claim": "High neighborhood_attack_count",
+            "source": "neighborhood_attack_count",
+            "value": "7"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 875943,
+      "true_class": "dos",
+      "pred_class": "dos",
+      "correct": true,
+      "confidence": 0.994062602519989,
+      "hybrid": 0.8452551960945129,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 56,
+        "rouge_l": 0.241,
+        "bert_f1": 0.7662
+      },
+      "parsed_output": {
+        "predicted_class": "dos",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, which has a high label of dos. The feature L4_SRC_PORT has a raw value of 300.0, and CLIENT_TCP_FLAGS has a raw value of 2.0. These values are also present in the query flow.",
+        "counterfactual": "Changing the raw value of L4_SRC_PORT from 300.0 to 400.0 would change the prediction.",
+        "confidence_level": 0.9941,
+        "confidence_justification": "The classifier_confidence is 0.9941 and hybrid_score is 0.8453, indicating a high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "L4_SRC_PORT has a raw value of 300.0",
+            "source": "L4_SRC_PORT",
+            "value": 300.0
+          },
+          {
+            "claim": "CLIENT_TCP_FLAGS has a raw value of 2.0",
+            "source": "CLIENT_TCP_FLAGS",
+            "value": 2.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 747667,
+      "true_class": "dos",
+      "pred_class": "dos",
+      "correct": true,
+      "confidence": 0.9943729639053345,
+      "hybrid": 0.8453412055969238,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 58,
+        "rouge_l": 0.1205,
+        "bert_f1": 0.7588
+      },
+      "parsed_output": {
+        "predicted_class": "dos",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, which has a high similarity score of 1.0 and shares similar characteristics such as MAX_TTL=234.0 and L7_PROTO=0.0. Additionally, the feature MIN_TTL also shows a raw value of 234.0, further supporting the prediction.",
+        "counterfactual": "Changing the RAW VALUE of MAX_TTL from 234.0 to a different value would likely change the prediction.",
+        "confidence_level": 0.9944,
+        "confidence_justification": "The classifier confidence is 0.9944 and the hybrid score is 0.8453, indicating high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "MAX_TTL=234.0",
+            "source": "MAX_TTL",
+            "value": 234.0
+          },
+          {
+            "claim": "L7_PROTO=0.0",
+            "source": "L7_PROTO",
+            "value": 0.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1038486,
+      "true_class": "dos",
+      "pred_class": "dos",
+      "correct": true,
+      "confidence": 0.9672728776931763,
+      "hybrid": 0.8255959153175354,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 58,
+        "rouge_l": 0.2439,
+        "bert_f1": 0.79
+      },
+      "parsed_output": {
+        "predicted_class": "dos",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, which has a high similarity score of 1.0 and a label of dos. Additionally, features such as PROTOCOL (raw value: 17.0) and MIN_IP_PKT_LEN (raw value: 65.0) are important for this classification.",
+        "counterfactual": "Changing the RAW VALUE of FLOW_END_MILLISECONDS from [epoch timestamp] to a different epoch would likely change the prediction.",
+        "confidence_level": 0.9673,
+        "confidence_justification": "The classifier confidence is 0.9673 and the hybrid score is 0.8256, indicating high confidence in this classification.",
+        "evidence_list": [
+          {
+            "claim": "This flow is likely a denial of service attack",
+            "source": "PROTOCOL",
+            "value": "17.0"
+          },
+          {
+            "claim": "The minimum IP packet length is an important feature for this classification",
+            "source": "MIN_IP_PKT_LEN",
+            "value": "65.0"
+          },
+          {
+            "claim": "The classifier confidence and hybrid score support this classification",
+            "source": "classifier_confidence",
+            "value": "0.9673"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 559093,
+      "true_class": "dos",
+      "pred_class": "dos",
+      "correct": true,
+      "confidence": 0.9527912139892578,
+      "hybrid": 0.8154198527336121,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "H4 INFO: skipped 1 excluded/mismatch cols"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 61,
+        "rouge_l": 0.1412,
+        "bert_f1": 0.7597
+      },
+      "parsed_output": {
+        "predicted_class": "dos",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_3, where L7_PROTO has a raw value of 5.0 and FLOW_START_MILLISECONDS also has a raw value of 1556136198144.0, which are both present in the flow. This suggests that the flow is likely a DNS query.",
+        "counterfactual": "Changing the L7_PROTO feature from its current raw value of 5.0 to 0.0 would likely change the prediction.",
+        "confidence_level": 0.9528,
+        "confidence_justification": "The classifier confidence is 0.9528 and the hybrid score is 0.8154, indicating a high level of confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_3",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "L7_PROTO has a raw value of 5.0",
+            "source": "L7_PROTO",
+            "value": 5.0
+          },
+          {
+            "claim": "FLOW_START_MILLISECONDS has a raw value of 1556136198144.0",
+            "source": "FLOW_START_MILLISECONDS",
+            "value": 1556136198144.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 302099,
+      "true_class": "injection",
+      "pred_class": "injection",
+      "correct": true,
+      "confidence": 0.9761217832565308,
+      "hybrid": 0.8317463397979736,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 62,
+        "rouge_l": 0.1136,
+        "bert_f1": 0.7163
+      },
+      "parsed_output": {
+        "predicted_class": "injection",
+        "rationale": "The prediction is based on the similarity to Precedent_1, which has a high similarity score of 1.0 and shares similar flow characteristics such as l7_proto=5.0. Additionally, feature L7_PROTO has a raw value of 5.0 in both the predicted class and Precedent_1, indicating its importance in the prediction.",
+        "counterfactual": "Changing the RAW VALUE of L7_PROTO from 5.0 to 91.0 would likely change the prediction.",
+        "confidence_level": 0.9761,
+        "confidence_justification": "The classifier_confidence is 0.9761 and hybrid_score is 0.8317, indicating high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity to Precedent_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "L7_PROTO has a raw value of 5.0",
+            "source": "l7_proto",
+            "value": 5.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 328097,
+      "true_class": "injection",
+      "pred_class": "injection",
+      "correct": true,
+      "confidence": 0.9953656196594238,
+      "hybrid": 0.8454012870788574,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 109,
+        "rouge_l": 0.1418,
+        "bert_f1": 0.7823
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 836655,
+      "true_class": "injection",
+      "pred_class": "injection",
+      "correct": true,
+      "confidence": 0.9941961765289307,
+      "hybrid": 0.8446254730224609,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 99,
+        "rouge_l": 0.1304,
+        "bert_f1": 0.7746
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 400566,
+      "true_class": "injection",
+      "pred_class": "injection",
+      "correct": true,
+      "confidence": 0.990602970123291,
+      "hybrid": 0.8420612812042236,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 58,
+        "rouge_l": 0.15,
+        "bert_f1": 0.7499
+      },
+      "parsed_output": {
+        "predicted_class": "injection",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which have a high similarity score of 1.0 and are labeled as injection. Additionally, the feature L7_PROTO has a raw value of 7.0, which is consistent across all three flows.",
+        "counterfactual": "Changing the RAW VALUE of L4_DST_PORT from 80.0 to any other value would likely change the prediction.",
+        "confidence_level": 0.9906,
+        "confidence_justification": "The classifier_confidence is 0.9906 and the hybrid_score is 0.8421, indicating a high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "RAW VALUE of L7_PROTO",
+            "source": "L7_PROTO",
+            "value": 7.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 819790,
+      "true_class": "injection",
+      "pred_class": "injection",
+      "correct": true,
+      "confidence": 0.9943788647651672,
+      "hybrid": 0.8447624444961548,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 53,
+        "rouge_l": 0.2051,
+        "bert_f1": 0.7839
+      },
+      "parsed_output": {
+        "predicted_class": "injection",
+        "rationale": "The prediction is based on the high importance of L7_PROTO (91.0) and TCP_WIN_MAX_IN (29200.0), which are both present in the flow raw values, as well as the similarity scores with precedents that have a label of injection.",
+        "counterfactual": "Changing the value of L4_DST_PORT from 443.0 to any other port would likely change the prediction.",
+        "confidence_level": 0.9944,
+        "confidence_justification": "The classifier confidence is 0.9944 and the hybrid score is 0.8448, indicating a high level of confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "High importance of L7_PROTO",
+            "source": "L7_PROTO",
+            "value": "91.0"
+          },
+          {
+            "claim": "High importance of TCP_WIN_MAX_IN",
+            "source": "TCP_WIN_MAX_IN",
+            "value": "29200.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 779558,
+      "true_class": "injection",
+      "pred_class": "injection",
+      "correct": true,
+      "confidence": 0.9907076358795166,
+      "hybrid": 0.8421669006347656,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 64,
+        "rouge_l": 0.2474,
+        "bert_f1": 0.7959
+      },
+      "parsed_output": {
+        "predicted_class": "injection",
+        "rationale": "The prediction of 'injection' is supported by the high importance scores of TCP_WIN_MAX_OUT (1.0814) and L4_DST_PORT (0.9741), with raw values of 26847.0 and 80.0, respectively. These features are also present in the retrieved precedent PRECEDENT_3, which has a similarity score of 1.0.",
+        "counterfactual": "Changing the value of TCP_WIN_MAX_OUT from its current RAW VALUE (26847.0) to a lower value would likely decrease the prediction of 'injection'.",
+        "confidence_level": 0.9907,
+        "confidence_justification": "The classifier confidence is 0.9907 and the hybrid score is 0.8422, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "This flow is likely an injection",
+            "source": "TCP_WIN_MAX_OUT",
+            "value": "26847.0"
+          },
+          {
+            "claim": "The destination port of the flow (80) is consistent with typical injection protocols",
+            "source": "L4_DST_PORT",
+            "value": "80.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 873750,
+      "true_class": "injection",
+      "pred_class": "injection",
+      "correct": true,
+      "confidence": 0.9972907900810242,
+      "hybrid": 0.846633791923523,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 36,
+        "rouge_l": 0.2667,
+        "bert_f1": 0.7995
+      },
+      "parsed_output": {
+        "predicted_class": "injection",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, where L7_PROTO=7.0 and TCP_FLAGS=27.0 are key features contributing to the injection classification.",
+        "counterfactual": "Changing the value of L4_DST_PORT from 80.0 to a different port would alter the prediction.",
+        "confidence_level": 0.9973,
+        "confidence_justification": "The classifier_confidence is 0.9973 and hybrid_score is 0.8466, indicating high confidence in the injection classification.",
+        "evidence_list": [
+          {
+            "claim": "L7_PROTO=7.0",
+            "source": "L7_PROTO",
+            "value": 7.0
+          },
+          {
+            "claim": "TCP_FLAGS=27.0",
+            "source": "TCP_FLAGS",
+            "value": 27.0
+          },
+          {
+            "claim": "L4_DST_PORT=80.0",
+            "source": "L4_DST_PORT",
+            "value": 80.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 745225,
+      "true_class": "injection",
+      "pred_class": "injection",
+      "correct": true,
+      "confidence": 0.9927136301994324,
+      "hybrid": 0.8437364101409912,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 61,
+        "rouge_l": 0.2273,
+        "bert_f1": 0.7842
+      },
+      "parsed_output": {
+        "predicted_class": "injection",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, which has a high similarity score of 1.0 and label 'injection'. Additionally, features such as LONGEST_FLOW_PKT and MAX_IP_PKT_LEN have raw values of 1500.0, indicating potential anomalies. These features contribute to the overall confidence in the prediction.",
+        "counterfactual": "Changing the value of LONGEST_FLOW_PKT from 1500.0 to a lower value would likely decrease the prediction.",
+        "confidence_level": 0.9927,
+        "confidence_justification": "The classifier_confidence is 0.9927 and hybrid_score is 0.8437, indicating high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Anomaly in longest flow packet size",
+            "source": "LONGEST_FLOW_PKT",
+            "value": 1500.0
+          },
+          {
+            "claim": "Anomaly in max IP packet length",
+            "source": "MAX_IP_PKT_LEN",
+            "value": 1500.0
+          },
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1033766,
+      "true_class": "injection",
+      "pred_class": "injection",
+      "correct": true,
+      "confidence": 0.9940780401229858,
+      "hybrid": 0.844560444355011,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 127,
+        "rouge_l": 0.1503,
+        "bert_f1": 0.7827
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 567828,
+      "true_class": "injection",
+      "pred_class": "injection",
+      "correct": true,
+      "confidence": 0.9916291236877441,
+      "hybrid": 0.8427198529243469,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 50,
+        "rouge_l": 0.2759,
+        "bert_f1": 0.8115
+      },
+      "parsed_output": {
+        "predicted_class": "injection",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, where SERVER_TCP_FLAGS=27.0 and L7_PROTO=7.0 are present, as well as NUM_PKTS_512_TO_1024_BYTES=2.0. These features are also present in the query flow, which had a similar duration and packet count.",
+        "counterfactual": "Changing the value of SERVER_TCP_FLAGS from 27.0 to 26.0 would likely change the prediction.",
+        "confidence_level": 0.9916,
+        "confidence_justification": "The classifier confidence is 0.9916, and the hybrid score is 0.8427, indicating a high level of confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "SERVER_TCP_FLAGS",
+            "value": 27.0
+          },
+          {
+            "claim": "Presence of L7_PROTO=7.0",
+            "source": "L7_PROTO",
+            "value": 7.0
+          },
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "NUM_PKTS_512_TO_1024_BYTES",
+            "value": 2.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 609640,
+      "true_class": "mitm",
+      "pred_class": "mitm",
+      "correct": true,
+      "confidence": 0.9936541318893433,
+      "hybrid": 0.8443235754966736,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "H4 INFO: skipped 1 excluded/mismatch cols"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 68,
+        "rouge_l": 0.1505,
+        "bert_f1": 0.7328
+      },
+      "parsed_output": {
+        "predicted_class": "mitm",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which have a high similarity score of 1.0. The feature FLOW_START_MILLISECONDS has a raw value of 1556540555264.0, indicating that the flow started at this time. This suggests that the traffic is likely to be related to a specific event or activity.",
+        "counterfactual": "Changing the RAW VALUE of FLOW_START_Milliseconds from 1556540555264.0 to a different timestamp would change the prediction.",
+        "confidence_level": 0.9937,
+        "confidence_justification": "The classifier confidence is 0.9937 and the hybrid score is 0.8443, indicating high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "RAW VALUE of FLOW_START_MILLISECONDS",
+            "source": "FLOW_START_MILLISECONDS",
+            "value": 1556540555264.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 748137,
+      "true_class": "mitm",
+      "pred_class": "mitm",
+      "correct": true,
+      "confidence": 0.9858009219169617,
+      "hybrid": 0.9467730522155762,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 36,
+        "rouge_l": 0.3333,
+        "bert_f1": 0.8222
+      },
+      "parsed_output": {
+        "predicted_class": "mitm",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, where NUM_PKTS_256_TO_512_BYTES=156.0 and DNS_QUERY_TYPE=28.0, which are relevant features in this flow.",
+        "counterfactual": "Changing the RAW VALUE of PROTOCOL from 17.0 to a different value would alter the prediction.",
+        "confidence_level": 0.9858,
+        "confidence_justification": "The classifier_confidence is 0.9858 and hybrid_score is 0.9468, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "NUM_PKTS_256_TO_512_BYTES",
+            "value": 156.0
+          },
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "DNS_QUERY_TYPE",
+            "value": 28.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 986686,
+      "true_class": "mitm",
+      "pred_class": "mitm",
+      "correct": true,
+      "confidence": 0.9919901490211487,
+      "hybrid": 0.8432042598724365,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 95,
+        "rouge_l": 0.1,
+        "bert_f1": 0.7731
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 804224,
+      "true_class": "mitm",
+      "pred_class": "mitm",
+      "correct": true,
+      "confidence": 0.9828372001647949,
+      "hybrid": 0.8365188241004944,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 63,
+        "rouge_l": 0.1379,
+        "bert_f1": 0.7463
+      },
+      "parsed_output": {
+        "predicted_class": "mitm",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_3, which has a high l7_proto value of 91.0 and a similar flow duration_ms of 1. Additionally, the L4_DST_PORT feature matches with a raw value of 53.0, indicating a potential match for port 53 protocol.",
+        "counterfactual": "Changing the L4_DST_PORT feature from its current RAW VALUE of 53.0 to a different value would likely change the prediction.",
+        "confidence_level": 0.9828,
+        "confidence_justification": "The classifier_confidence is 0.9828 and hybrid_score is 0.8365, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_3",
+            "source": "similarity",
+            "value": "1.0"
+          },
+          {
+            "claim": "L4_DST_PORT feature matches",
+            "source": "L4_DST_PORT",
+            "value": "53.0"
+          },
+          {
+            "claim": "High l7_proto value in PRECEDENT_3",
+            "source": "l7_proto",
+            "value": "91.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1404942,
+      "true_class": "mitm",
+      "pred_class": "mitm",
+      "correct": true,
+      "confidence": 0.9928807020187378,
+      "hybrid": 0.9930086731910706,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 47,
+        "rouge_l": 0.2857,
+        "bert_f1": 0.8172
+      },
+      "parsed_output": {
+        "predicted_class": "mitm",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, where NUM_PKTS_256_TO_512_BYTES=142.0 and FLOW_END_MILLISECONDS=[epoch timestamp] are important features. Additionally, the high values of in_pkts and out_pkts indicate a potential man-in-the-middle attack.",
+        "counterfactual": "Changing the value of FLOW_START_MILLISECONDS from [epoch timestamp] to a different epoch would likely change the prediction.",
+        "confidence_level": 0.993,
+        "confidence_justification": "The classifier_confidence is 0.9929 and hybrid_score is 0.9930, indicating high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "High values of in_pkts and out_pkts",
+            "source": "in_pkts",
+            "value": 2
+          },
+          {
+            "claim": "NUM_PKTS_256_TO_512_BYTES=142.0",
+            "source": "NUM_PKTS_256_TO_512_BYTES",
+            "value": 142.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 835625,
+      "true_class": "mitm",
+      "pred_class": "mitm",
+      "correct": true,
+      "confidence": 0.9895299077033997,
+      "hybrid": 0.8945883512496948,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 33,
+        "rouge_l": 0.3099,
+        "bert_f1": 0.8141
+      },
+      "parsed_output": {
+        "predicted_class": "mitm",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, where NUM_PKTS_256_TO_512_BYTES=98.0 and PROTOCOL=17.0. Additionally, DNS_QUERY_TYPE=28.0 was a contributing feature.",
+        "counterfactual": "Changing the value of NUM_PKTS_256_TO_512_BYTES from 98.0 to 97.0 would likely change the prediction.",
+        "confidence_level": 0.9895,
+        "confidence_justification": "The classifier_confidence is 0.9895 and hybrid_score is 0.8946, indicating high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "Feature NUM_PKTS_256_TO_512_BYTES",
+            "source": "NUM_PKTS_256_TO_512_BYTES",
+            "value": 98.0
+          },
+          {
+            "claim": "Feature PROTOCOL",
+            "source": "PROTOCOL",
+            "value": 17.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1329856,
+      "true_class": "mitm",
+      "pred_class": "mitm",
+      "correct": true,
+      "confidence": 0.9951543807983398,
+      "hybrid": 0.8458026647567749,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "H4 INFO: skipped 1 excluded/mismatch cols"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 58,
+        "rouge_l": 0.1429,
+        "bert_f1": 0.778
+      },
+      "parsed_output": {
+        "predicted_class": "mitm",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_3, where the feature SERVER_TCP_FLAGS has a raw value of 28.0, and the flow duration_ms has a raw value of 88. The classifier confidence of 0.9952 and hybrid score of 0.8458 support this prediction.",
+        "counterfactual": "Changing the raw value of FLOW_END_MILLISECONDS from 1556540555264.0 to a different timestamp would change the prediction.",
+        "confidence_level": 0.9951,
+        "confidence_justification": "The classifier confidence is 0.9952 and the hybrid score is 0.8458, which together justify this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_3",
+            "source": "similarity",
+            "value": 0.97
+          },
+          {
+            "claim": "RAW FLOW_END_MILLISECONDS",
+            "source": "FLOW_END_MILLISECONDS",
+            "value": 88
+          },
+          {
+            "claim": "RAW SERVER_TCP_FLAGS",
+            "source": "SERVER_TCP_FLAGS",
+            "value": 28.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1333219,
+      "true_class": "mitm",
+      "pred_class": "mitm",
+      "correct": true,
+      "confidence": 0.9881637692451477,
+      "hybrid": 0.917746901512146,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 45,
+        "rouge_l": 0.2895,
+        "bert_f1": 0.8133
+      },
+      "parsed_output": {
+        "predicted_class": "mitm",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, where NUM_PKTS_256_TO_512_BYTES=123.0 and DNS_QUERY_TYPE=28.0. These features are also present in the query flow, which had a similar duration and packet count.",
+        "counterfactual": "Changing the RAW VALUE of PROTOCOL from 17.0 to 18.0 would likely change the prediction.",
+        "confidence_level": 0.9882,
+        "confidence_justification": "The classifier confidence is 0.9882, and the hybrid score is 0.9177, indicating a high level of confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "Feature NUM_PKTS_256_TO_512_BYTES present in query flow",
+            "source": "NUM_PKTS_256_TO_512_BYTES",
+            "value": 123.0
+          },
+          {
+            "claim": "Feature DNS_QUERY_TYPE present in query flow",
+            "source": "DNS_QUERY_TYPE",
+            "value": 28.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1425844,
+      "true_class": "mitm",
+      "pred_class": "mitm",
+      "correct": true,
+      "confidence": 0.993396520614624,
+      "hybrid": 0.8440420627593994,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.2,
+        "details": [
+          "H3 FAIL: ungrounded sources: ['[epoch timestamp]']"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 53,
+        "rouge_l": 0.1538,
+        "bert_f1": 0.8021
+      },
+      "parsed_output": {
+        "predicted_class": "mitm",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, where the PROTOCOL has a raw value of 17.0 and FLOW_START_MILLISECONDS has a raw value of [epoch timestamp]. Additionally, the classifier_confidence=0.9934 and hybrid_score=0.8440 support this classification.",
+        "counterfactual": "Changing the PROTOCOL feature from its current RAW VALUE of 17.0 to 0 would likely change the prediction.",
+        "confidence_level": 0.9934,
+        "confidence_justification": "The classifier_confidence is 0.9934 and the hybrid_score is 0.8440, indicating high confidence in this classification.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "PROTOCOL has a raw value of 17.0",
+            "source": "PROTOCOL",
+            "value": 17.0
+          },
+          {
+            "claim": "FLOW_START_MILLISECONDS has a raw value of [epoch timestamp]",
+            "source": "[epoch timestamp]",
+            "value": "[epoch timestamp]"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1240132,
+      "true_class": "mitm",
+      "pred_class": "mitm",
+      "correct": true,
+      "confidence": 0.9865254163742065,
+      "hybrid": 0.852434515953064,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 52,
+        "rouge_l": 0.0845,
+        "bert_f1": 0.7168
+      },
+      "parsed_output": {
+        "predicted_class": "mitm",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, where the PROTOCOL feature has a raw value of 17.0, and also due to the high classifier confidence of 0.9865 and hybrid score of 0.8524.",
+        "counterfactual": "Changing the PROTOCOL feature from its current RAW VALUE of 17.0 to 0 would likely change the prediction.",
+        "confidence_level": 0.9865,
+        "confidence_justification": "The classifier confidence is 0.9865 and the hybrid score is 0.8524, indicating a high level of confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "PROTOCOL feature has a raw value of 17.0",
+            "source": "PROTOCOL",
+            "value": 17.0
+          },
+          {
+            "claim": "High classifier confidence",
+            "source": "classifier_confidence",
+            "value": 0.9865
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 432272,
+      "true_class": "password",
+      "pred_class": "password",
+      "correct": true,
+      "confidence": 0.9796456694602966,
+      "hybrid": 0.8341988921165466,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 55,
+        "rouge_l": 0.2472,
+        "bert_f1": 0.7816
+      },
+      "parsed_output": {
+        "predicted_class": "password",
+        "rationale": "The prediction is based on the high importance of TCP_FLAGS (raw value=27.0) and TCP_WIN_MAX_IN (raw value=29200.0), as well as the low l7_proto (raw value=7.0). These features are also present in the retrieved precedents, which have a similarity score of 1.0.",
+        "counterfactual": "Changing the raw value of TCP_WIN_MAX_OUT from 65535.0 to 65534.0 would likely change the prediction.",
+        "confidence_level": 0.9796,
+        "confidence_justification": "The classifier confidence is 0.9796 and the hybrid score is 0.8342, indicating a high level of confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "The flow contains TCP_FLAGS with a raw value of 27.0",
+            "source": "TCP_FLAGS",
+            "value": "27.0"
+          },
+          {
+            "claim": "The flow contains TCP_WIN_MAX_IN with a raw value of 29200.0",
+            "source": "TCP_WIN_MAX_IN",
+            "value": "29200.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 197661,
+      "true_class": "password",
+      "pred_class": "password",
+      "correct": true,
+      "confidence": 0.7255998849868774,
+      "hybrid": 0.6563965082168579,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 56,
+        "rouge_l": 0.1446,
+        "bert_f1": 0.757
+      },
+      "parsed_output": {
+        "predicted_class": "password",
+        "rationale": "The prediction is based on the similarity to Precedent_1 and Precedent_3, which both have a duration of at least 64ms (FLOW_START_MILLISECONDS=1556315897856.0) and a TCP flags value of 27. Additionally, Precedent_2 has a similar neighborhood size and attack count to the host H6.",
+        "counterfactual": "Changing the FLOW_START_MILLISECONDS from 1556315897856.0 to a lower value would likely change the prediction.",
+        "confidence_level": 0.7256,
+        "confidence_justification": "The classifier confidence is 0.7256 and the hybrid score is 0.6564, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity to Precedent_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "Similarity to Precedent_3",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "Flow duration and TCP flags",
+            "source": "FLOW_START_MILLISECONDS, FLOW_END_MILLISECONDS, tcp_flags",
+            "value": 1556315897856.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 350280,
+      "true_class": "password",
+      "pred_class": "password",
+      "correct": true,
+      "confidence": 0.9645861387252808,
+      "hybrid": 0.8365042209625244,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 43,
+        "rouge_l": 0.1299,
+        "bert_f1": 0.7752
+      },
+      "parsed_output": {
+        "predicted_class": "password",
+        "rationale": "The prediction is based on the similarity to Precendent_1 and Precendent_2, which share similar characteristics such as l7_proto=5.0 and min_ttl=max_ttl=64. The flow's in_bytes=122 and out_bytes=264 also align with these precedents.",
+        "counterfactual": "Changing the FLOW_START_MILLISECONDS from 1556289421312.0 to a different value would alter the prediction.",
+        "confidence_level": 0.9646,
+        "confidence_justification": "The classifier_confidence is 0.9646 and hybrid_score is 0.8365, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity to Precendent_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "Flow characteristics align with Precendent_2",
+            "source": "l7_proto",
+            "value": 5.0
+          },
+          {
+            "claim": "Flow characteristics align with Precendent_3",
+            "source": "min_ttl",
+            "value": 64
+          },
+          {
+            "claim": "Flow characteristics align with Precendent_2",
+            "source": "max_ttl",
+            "value": 64
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 225089,
+      "true_class": "password",
+      "pred_class": "password",
+      "correct": true,
+      "confidence": 0.7499054670333862,
+      "hybrid": 0.6753817796707153,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 118,
+        "rouge_l": 0.1595,
+        "bert_f1": 0.8026
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 867427,
+      "true_class": "password",
+      "pred_class": "password",
+      "correct": true,
+      "confidence": 0.9781798124313354,
+      "hybrid": 0.8331841230392456,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 129,
+        "rouge_l": 0.1714,
+        "bert_f1": 0.8105
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 652635,
+      "true_class": "password",
+      "pred_class": "password",
+      "correct": true,
+      "confidence": 0.9849216341972351,
+      "hybrid": 0.8380981087684631,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 59,
+        "rouge_l": 0.119,
+        "bert_f1": 0.7437
+      },
+      "parsed_output": {
+        "predicted_class": "password",
+        "rationale": "The prediction is based on the similarity to Precedent_1, where L4_DST_PORT has a raw value of 80.0, and the duration_ms is 6 seconds, which is also present in the query flow. Additionally, the classification confidence is high at 0.9849, indicating strong evidence for this prediction.",
+        "counterfactual": "Changing the L4_DST_PORT from 80.0 to a different value would likely change the prediction.",
+        "confidence_level": 0.9831,
+        "confidence_justification": "The classifier confidence is 0.9849 and the hybrid score is 0.8381, indicating strong evidence for this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity to Precedent_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "L4_DST_PORT has a raw value of 80.0",
+            "source": "L4_DST_PORT",
+            "value": 80.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 696421,
+      "true_class": "password",
+      "pred_class": "password",
+      "correct": true,
+      "confidence": 0.7600874900817871,
+      "hybrid": 0.6809186339378357,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 56,
+        "rouge_l": 0.1882,
+        "bert_f1": 0.7852
+      },
+      "parsed_output": {
+        "predicted_class": "password",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_2, where LONGEST_FLOW_PKT has a raw value of 1500.0, and FLOW_START_MILLISECONDS and FLOW_END_MILLISECONDS have the same epoch timestamp. This suggests that the flow had a long duration, which is consistent with password-related traffic.",
+        "counterfactual": "Changing the RAW VALUE of LONGEST_FLOW_PKT from 1500.0 to 1000.0 would likely change the prediction.",
+        "confidence_level": 0.7601,
+        "confidence_justification": "The classifier confidence is 0.7601 and the hybrid score is 0.6809, indicating a strong prediction.",
+        "evidence_list": [
+          {
+            "claim": "Longest flow packet duration",
+            "source": "LONGEST_FLOW_PKT",
+            "value": "1500.0"
+          },
+          {
+            "claim": "Classifier confidence",
+            "source": "classifier_confidence",
+            "value": 0.7601
+          },
+          {
+            "claim": "Hybrid score",
+            "source": "hybrid_score",
+            "value": 0.6809
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 625748,
+      "true_class": "password",
+      "pred_class": "password",
+      "correct": true,
+      "confidence": 0.9812737703323364,
+      "hybrid": 0.8353576064109802,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "H4 INFO: skipped 1 excluded/mismatch cols"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 58,
+        "rouge_l": 0.1882,
+        "bert_f1": 0.7844
+      },
+      "parsed_output": {
+        "predicted_class": "password",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, where FLOW_START_MILLISECONDS has a raw value of 1556300431360.0 and TCP_WIN_MAX_OUT has a raw value of 65535.0. These values are also present in the query flow, indicating a strong match.",
+        "counterfactual": "Changing the value of FLOW_END_MILLISECONDS from its current raw value to a different epoch timestamp would likely change the prediction.",
+        "confidence_level": 0.9813,
+        "confidence_justification": "The classifier confidence is 0.9813 and the hybrid score is 0.8354, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "FLOW_START_MILLISECONDS has a raw value of 1556300431360.0",
+            "source": "FLOW_START_MILLISECONDS",
+            "value": 1556300431360.0
+          },
+          {
+            "claim": "TCP_WIN_MAX_OUT has a raw value of 65535.0",
+            "source": "TCP_WIN_MAX_OUT",
+            "value": 65535.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 659317,
+      "true_class": "password",
+      "pred_class": "password",
+      "correct": true,
+      "confidence": 0.9898055791854858,
+      "hybrid": 0.8413662910461426,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 70,
+        "rouge_l": 0.1923,
+        "bert_f1": 0.7555
+      },
+      "parsed_output": {
+        "predicted_class": "password",
+        "rationale": "The prediction is based on the similarity with Precedent_1 and Precedent_2, which have a high similarity score of 1.0. The feature MAX_IP_PKT_LEN has a raw value of 1500.0, which may indicate a typical IP packet length. Additionally, TCP_WIN_MAX_OUT has a raw value of 65535.0, which could be related to the maximum window size in TCP.",
+        "counterfactual": "Changing the RAW VALUE of MAX_IP_PKT_LEN from 1500.0 to 2000.0 would likely change the prediction.",
+        "confidence_level": 0.9898,
+        "confidence_justification": "The classifier_confidence is 0.9898 and hybrid_score is 0.8414, indicating a high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with Precedent_1",
+            "source": "similarity",
+            "value": "1.0"
+          },
+          {
+            "claim": "RAW VALUE of MAX_IP_PKT_LEN",
+            "source": "MAX_IP_PKT_LEN",
+            "value": "1500.0"
+          },
+          {
+            "claim": "RAW VALUE of TCP_WIN_MAX_OUT",
+            "source": "TCP_WIN_MAX_OUT",
+            "value": "65535.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 62415,
+      "true_class": "password",
+      "pred_class": "password",
+      "correct": true,
+      "confidence": 0.9404995441436768,
+      "hybrid": 0.8067754507064819,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "H4 INFO: skipped 1 excluded/mismatch cols"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 48,
+        "rouge_l": 0.2857,
+        "bert_f1": 0.7799
+      },
+      "parsed_output": {
+        "predicted_class": "password",
+        "rationale": "The prediction is based on the high importance of TCP_WIN_MAX_IN (29200.0) and FLOW_START_MILLISECONDS (1556290469888.0), as well as the low importance of FLOW_END_MILLISECONDS, which suggests that the flow ended shortly after it started.",
+        "counterfactual": "Changing the value of FLOW_START_MILLISECONDS from 1556290469888.0 to a later timestamp would likely change the prediction.",
+        "confidence_level": 0.9405,
+        "confidence_justification": "The classifier confidence is 0.9405 and the hybrid score is 0.8068, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "High importance of TCP_WIN_MAX_IN",
+            "source": "TCP_WIN_MAX_IN",
+            "value": "29200.0"
+          },
+          {
+            "claim": "Early flow start time",
+            "source": "FLOW_START_MILLISECONDS",
+            "value": "1556290469888.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 183983,
+      "true_class": "ransomware",
+      "pred_class": "ransomware",
+      "correct": true,
+      "confidence": 0.8966565728187561,
+      "hybrid": 0.7762152552604675,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 44,
+        "rouge_l": 0.2162,
+        "bert_f1": 0.8115
+      },
+      "parsed_output": {
+        "predicted_class": "ransomware",
+        "rationale": "The prediction is based on the similarity to Precedent_1, which has a high similarity score of 1.0 and shares similar characteristics such as MAX_IP_PKT_LEN=1500.0 and CLIENT_TCP_FLAGS=27.0.",
+        "counterfactual": "Changing the value of FLOW_END_MILLISECONDS from its current RAW VALUE to a different timestamp would change the prediction.",
+        "confidence_level": 0.8967,
+        "confidence_justification": "The classifier confidence is 0.8967 and the hybrid score is 0.7762, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity to Precedent_1",
+            "source": "similarity",
+            "value": "1.0"
+          },
+          {
+            "claim": "MAX_IP_PKT_LEN=1500.0",
+            "source": "MAX_IP_PKT_LEN",
+            "value": 1500.0
+          },
+          {
+            "claim": "CLIENT_TCP_FLAGS=27.0",
+            "source": "CLIENT_TCP_FLAGS",
+            "value": 27.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1247696,
+      "true_class": "ransomware",
+      "pred_class": "ransomware",
+      "correct": true,
+      "confidence": 0.9486716389656067,
+      "hybrid": 0.8139140605926514,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 53,
+        "rouge_l": 0.2597,
+        "bert_f1": 0.8003
+      },
+      "parsed_output": {
+        "predicted_class": "ransomware",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which both have a label of ransomware. The feature ICMP_TYPE has a raw value of 47104.0, and CLIENT_TCP_FLAGS has a raw value of 24.0.",
+        "counterfactual": "Changing the raw value of FLOW_END_MILLISECONDS from [epoch timestamp] to a different epoch timestamp would change the prediction.",
+        "confidence_level": 0.9487,
+        "confidence_justification": "The classifier confidence is 0.9487 and the hybrid score is 0.8139, indicating high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": "1.0"
+          },
+          {
+            "claim": "Feature ICMP_TYPE has a raw value of 47104.0",
+            "source": "ICMP_TYPE",
+            "value": "47104.0"
+          },
+          {
+            "claim": "Feature CLIENT_TCP_FLAGS has a raw value of 24.0",
+            "source": "CLIENT_TCP_FLAGS",
+            "value": "24.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1183557,
+      "true_class": "ransomware",
+      "pred_class": "ransomware",
+      "correct": true,
+      "confidence": 0.9493957161903381,
+      "hybrid": 0.8133126497268677,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 60,
+        "rouge_l": 0.2069,
+        "bert_f1": 0.7927
+      },
+      "parsed_output": {
+        "predicted_class": "ransomware",
+        "rationale": "The prediction is based on the similarity to Precedent_1 and Precedent_3, which both have a high similarity score of 0.989 and 0.976 respectively, and label as ransomware. Additionally, feature TCP_WIN_MAX_IN has a raw value of 65335.0, which may indicate malicious activity.",
+        "counterfactual": "Changing the raw value of FLOW_START_MILLISECONDS from [epoch timestamp] to a different epoch timestamp would likely change the prediction.",
+        "confidence_level": 0.9494,
+        "confidence_justification": "The classifier confidence is 0.9494 and the hybrid score is 0.8133, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity to Precedent_1",
+            "source": "similarity",
+            "value": 0.989
+          },
+          {
+            "claim": "Feature TCP_WIN_MAX_IN has a raw value of 65335.0",
+            "source": "TCP_WIN_MAX_IN",
+            "value": 65335.0
+          },
+          {
+            "claim": "Similarity to Precedent_3",
+            "source": "similarity",
+            "value": 0.976
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 798374,
+      "true_class": "ransomware",
+      "pred_class": "ransomware",
+      "correct": true,
+      "confidence": 0.9369259476661682,
+      "hybrid": 0.8045040965080261,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "H4 INFO: skipped 2 excluded/mismatch cols"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 39,
+        "rouge_l": 0.338,
+        "bert_f1": 0.8106
+      },
+      "parsed_output": {
+        "predicted_class": "ransomware",
+        "rationale": "The prediction is based on the similarity to Precedent_3 with a label of ransomware, citing feature names and their RAW VALUES: FLOW_END_MILLISECONDS=1556425080832.0, FLOW_START_MILLISECONDS=1556425080832.0, CLIENT_TCP_FLAGS=24.0.",
+        "counterfactual": "Changing the value of FLOW_START_Milliseconds from 1556425080832.0 to a different timestamp would change the prediction.",
+        "confidence_level": 0.9369,
+        "confidence_justification": "The classifier_confidence is 0.9369 and hybrid_score is 0.8045, indicating high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity to Precedent_3 with a label of ransomware",
+            "source": "similarity",
+            "value": 0.991
+          },
+          {
+            "claim": "Feature FLOW_END_MILLISECONDS has a RAW VALUE of 1556425080832.0",
+            "source": "FLOW_END_MILLISECONDS",
+            "value": 1556425080832.0
+          },
+          {
+            "claim": "Feature FLOW_START_MILLISECONDS has a RAW VALUE of 1556425080832.0",
+            "source": "FLOW_START_MILLISECONDS",
+            "value": 1556425080832.0
+          },
+          {
+            "claim": "Feature CLIENT_TCP_FLAGS has a value of 24.0",
+            "source": "CLIENT_TCP_FLAGS",
+            "value": 24.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1200147,
+      "true_class": "ransomware",
+      "pred_class": "ransomware",
+      "correct": true,
+      "confidence": 0.8952987194061279,
+      "hybrid": 0.7752704620361328,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 48,
+        "rouge_l": 0.1842,
+        "bert_f1": 0.746
+      },
+      "parsed_output": {
+        "predicted_class": "ransomware",
+        "rationale": "The prediction is based on the similarity to Precedent_1 and Precedent_2, which both have a label of ransomware. The feature MAX_IP_PKT_LEN has a raw value of 1500.0, which may indicate a potential attack vector for ransomware.",
+        "counterfactual": "Changing the MAX_IP_PKT_LEN from 1500.0 to 2000.0 would likely change the prediction.",
+        "confidence_level": 0.8953,
+        "confidence_justification": "The classifier confidence is 0.8953 and the hybrid score is 0.7753, indicating a high level of confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity to Precedent_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "Feature MAX_IP_PKT_LEN has a raw value of 1500.0",
+            "source": "MAX_IP_PKT_LEN",
+            "value": 1500.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 510135,
+      "true_class": "ransomware",
+      "pred_class": "ransomware",
+      "correct": true,
+      "confidence": 0.8882047533988953,
+      "hybrid": 0.7703260779380798,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 57,
+        "rouge_l": 0.2195,
+        "bert_f1": 0.7604
+      },
+      "parsed_output": {
+        "predicted_class": "ransomware",
+        "rationale": "The prediction is based on the similarity to Precedent_1 and Precedent_2, which both have a high similarity score of 1.0 and are labeled as ransomware. Additionally, feature TCP_FLAGS has a raw value of 31.0, which is consistent with the characteristics of ransomware.",
+        "counterfactual": "Changing the raw value of TCP_WIN_MAX_IN from 29200.0 to 0 would likely change the prediction.",
+        "confidence_level": 0.8882,
+        "confidence_justification": "The classifier confidence is 0.8882 and the hybrid score is 0.7703, indicating a high level of confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity to Precedent_1",
+            "source": "similarity",
+            "value": "1.0"
+          },
+          {
+            "claim": "Feature TCP_FLAGS has a raw value of 31.0",
+            "source": "TCP_FLAGS",
+            "value": "31.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 772671,
+      "true_class": "ransomware",
+      "pred_class": "ransomware",
+      "correct": true,
+      "confidence": 0.908906877040863,
+      "hybrid": 0.7848262786865234,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "H4 INFO: skipped 1 excluded/mismatch cols"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 71,
+        "rouge_l": 0.2,
+        "bert_f1": 0.7538
+      },
+      "parsed_output": {
+        "predicted_class": "ransomware",
+        "rationale": "The prediction is based on the similarity to Precedent_1 and Precedent_3, which both have a high similarity score of 1.0. The feature FLOW_START_MILLISECONDS has a raw value of 1556425080832.0, while TCP_WIN_MAX_IN has a raw value of 29200.0. These values are used to calculate the classifier confidence and hybrid score, which indicate a strong prediction.",
+        "counterfactual": "Changing the RAW VALUE of FLOW_START_MILLISECONDS from 1556425080832.0 to a different timestamp would likely change the prediction.",
+        "confidence_level": 0.9089,
+        "confidence_justification": "The classifier confidence is 0.9089 and the hybrid score is 0.7848, indicating a strong prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity to Precedent_1",
+            "source": "similarity",
+            "value": "1.0"
+          },
+          {
+            "claim": "RAW VALUE of FLOW_START_MILLISECONDS",
+            "source": "FLOW_START_MILLISECONDS",
+            "value": "1556425080832.0"
+          },
+          {
+            "claim": "RAW VALUE of TCP_WIN_MAX_IN",
+            "source": "TCP_WIN_MAX_IN",
+            "value": "29200.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1114593,
+      "true_class": "ransomware",
+      "pred_class": "ransomware",
+      "correct": true,
+      "confidence": 0.9254311919212341,
+      "hybrid": 0.7968213558197021,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 60,
+        "rouge_l": 0.1573,
+        "bert_f1": 0.7614
+      },
+      "parsed_output": {
+        "predicted_class": "ransomware",
+        "rationale": "The prediction is based on the similarity to Precedent_1 and Precedent_2, which both have a high similarity score of 0.996 and label as ransomware. Additionally, feature L7_PROTO has a raw value of 10.0, which is consistent with the low l7_proto values in Precedent_1 and Precedent_3.",
+        "counterfactual": "Changing the RAW VALUE of MAX_IP_PKT_LEN from 1500.0 to 1000.0 would likely change the prediction.",
+        "confidence_level": 0.9254,
+        "confidence_justification": "The classifier confidence is 0.9254 and the hybrid score is 0.7968, indicating a high level of confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "High similarity to Precedent_1",
+            "source": "similarity",
+            "value": 0.996
+          },
+          {
+            "claim": "Low l7_proto value",
+            "source": "l7_proto",
+            "value": 10.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 189726,
+      "true_class": "ransomware",
+      "pred_class": "ransomware",
+      "correct": true,
+      "confidence": 0.8949444890022278,
+      "hybrid": 0.7750211954116821,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 51,
+        "rouge_l": 0.2564,
+        "bert_f1": 0.7755
+      },
+      "parsed_output": {
+        "predicted_class": "ransomware",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which both have a label of ransomware. The feature MAX_IP_PKT_LEN has a raw value of 1500.0, which may indicate a potential attack vector for ransomware.",
+        "counterfactual": "Changing the RAW VALUE of CLIENT_TCP_FLAGS from 27.0 to 28.0 would likely change the prediction.",
+        "confidence_level": 0.8949,
+        "confidence_justification": "The classifier confidence is 0.8949 and the hybrid score is 0.7750, indicating a high level of confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "RAW VALUE of MAX_IP_PKT_LEN",
+            "source": "MAX_IP_PKT_LEN",
+            "value": 1500.0
+          },
+          {
+            "claim": "Classifier confidence",
+            "source": "classifier_confidence",
+            "value": 0.8949
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1324517,
+      "true_class": "ransomware",
+      "pred_class": "ransomware",
+      "correct": true,
+      "confidence": 0.9034391641616821,
+      "hybrid": 0.7810097932815552,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 69,
+        "rouge_l": 0.129,
+        "bert_f1": 0.771
+      },
+      "parsed_output": {
+        "predicted_class": "ransomware",
+        "rationale": "The prediction is based on the similarity to Precedent_1, which has a high similarity score of 1.0 and a label of ransomware. Additionally, feature TCP_FLAGS has a raw value of 31.0, which is consistent with the characteristics of ransomware. The flow duration_ms also indicates a short duration, typical of ransomware attacks.",
+        "counterfactual": "Changing the raw value of FLOW_START_MILLISECONDS from 1556428095488.0 to a different epoch timestamp would likely change the prediction.",
+        "confidence_level": 0.9034,
+        "confidence_justification": "The classifier_confidence is 0.9034 and the hybrid_score is 0.7810, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity to Precedent_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "High TCP_FLAGS value",
+            "source": "TCP_FLAGS",
+            "value": 31.0
+          },
+          {
+            "claim": "Short flow duration_ms",
+            "source": "duration_ms",
+            "value": 57
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 182906,
+      "true_class": "scanning",
+      "pred_class": "scanning",
+      "correct": true,
+      "confidence": 0.9769888520240784,
+      "hybrid": 0.8323574066162109,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 138,
+        "rouge_l": 0.1236,
+        "bert_f1": 0.7744
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 1313460,
+      "true_class": "scanning",
+      "pred_class": "Benign",
+      "correct": false,
+      "confidence": 0.683917760848999,
+      "hybrid": 0.6272344589233398,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 57,
+        "rouge_l": 0.1481,
+        "bert_f1": 0.7865
+      },
+      "parsed_output": {
+        "predicted_class": "Benign",
+        "rationale": "The prediction is based on the similarity with Precedent_3, which has a high similarity score of 0.998 and label Benign. Additionally, feature L4_DST_PORT has a raw value of 80.0, indicating that it is likely a common port for benign traffic.",
+        "counterfactual": "Changing the RAW VALUE of FLOW_START_MILLISECONDS from 1556079575040.0 to a different timestamp would not change the prediction.",
+        "confidence_level": 0.6839,
+        "confidence_justification": "The classifier confidence is 0.6839 and the hybrid score is 0.6272, indicating a moderate level of confidence in the benign classification.",
+        "evidence_list": [
+          {
+            "claim": "The feature L4_DST_PORT has a raw value of 80.0",
+            "source": "L4_DST_PORT",
+            "value": "80.0"
+          },
+          {
+            "claim": "The classifier confidence is 0.6839 and the hybrid score is 0.6272",
+            "source": "classifier_confidence, hybrid_score",
+            "value": "0.6839, 0.6272"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 870202,
+      "true_class": "scanning",
+      "pred_class": "scanning",
+      "correct": true,
+      "confidence": 0.6185050010681152,
+      "hybrid": 0.5813637375831604,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 1087994,
+      "true_class": "scanning",
+      "pred_class": "scanning",
+      "correct": true,
+      "confidence": 0.5771273374557495,
+      "hybrid": 0.552402138710022,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 1359336,
+      "true_class": "scanning",
+      "pred_class": "scanning",
+      "correct": true,
+      "confidence": 0.9846291542053223,
+      "hybrid": 0.8376724720001221,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "H4 INFO: skipped 1 excluded/mismatch cols"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 64,
+        "rouge_l": 0.1513,
+        "bert_f1": 0.8069
+      },
+      "parsed_output": {
+        "predicted_class": "scanning",
+        "rationale": "The prediction is based on the similarity to Precedent_1, which has a high similarity score of 1.0 and matches the flow characteristics such as duration_ms=1, in_bytes=44, out_bytes=0, in_pkts=1, out_pkts=0, tcp_flags=2, l7_proto=0.0, min_ttl=0, max_ttl=0, neighborhood_size=16, and neighborhood_attack_count=5. These features are supported by the raw values of FLOW_START_MILLISECONDS=1556076167168.0 and MIN_IP_PKT_LEN=0.0.",
+        "counterfactual": "Changing the value of FLOW_END_MILLISECONDS from 1556076167168.0 to a different timestamp would likely change the prediction.",
+        "confidence_level": 0.9846,
+        "confidence_justification": "The classifier confidence is 0.9846 and the hybrid score is 0.8377, indicating high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "matches flow characteristics",
+            "source": "FLOW_START_MILLISECONDS",
+            "value": "1556076167168.0"
+          },
+          {
+            "claim": "low packet length",
+            "source": "MIN_IP_PKT_LEN",
+            "value": "0.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1048521,
+      "true_class": "scanning",
+      "pred_class": "scanning",
+      "correct": true,
+      "confidence": 0.9882291555404663,
+      "hybrid": 0.8401899933815002,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "H4 INFO: skipped 1 excluded/mismatch cols"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 58,
+        "rouge_l": 0.25,
+        "bert_f1": 0.8014
+      },
+      "parsed_output": {
+        "predicted_class": "scanning",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 and PRECEDENT_2, which both have a duration of 1 millisecond and a similar number of in_bytes (48) and out_bytes (40). These features are supported by the raw values from FLOW RAW VALUES: FLOW_END_MILLISECONDS=1556076691456.0, FLOW_START_MILLISECONDS=1556076691456.0, and MIN_IP_PKT_LEN=0.0.",
+        "counterfactual": "Changing the value of MIN_IP_PKT_LEN to a non-zero value would change the prediction.",
+        "confidence_level": 0.9882,
+        "confidence_justification": "The classifier_confidence is 0.9882, and the hybrid_score is 0.8402, which together justify this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "Similarity with PRECEDENT_2",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "Flow duration of 1 millisecond",
+            "source": "FLOW_START_MILLISECONDS",
+            "value": 1556076691456.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 442102,
+      "true_class": "scanning",
+      "pred_class": "scanning",
+      "correct": true,
+      "confidence": 0.7246112823486328,
+      "hybrid": 0.6556403040885925,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 99,
+        "rouge_l": 0.1606,
+        "bert_f1": 0.7819
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 1401025,
+      "true_class": "scanning",
+      "pred_class": "scanning",
+      "correct": true,
+      "confidence": 0.9728730916976929,
+      "hybrid": 0.8294490575790405,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "H4 INFO: skipped 1 excluded/mismatch cols"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 52,
+        "rouge_l": 0.2105,
+        "bert_f1": 0.7786
+      },
+      "parsed_output": {
+        "predicted_class": "scanning",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, where L7_PROTO has a raw value of 0.0 and FLOW_START_MILLISECONDS also has a raw value of 1556088750080.0, which are similar to the features in the query flow.",
+        "counterfactual": "Changing the raw value of FLOW_START_MILLISECONDS from 1556088750080.0 to a different timestamp would change the prediction.",
+        "confidence_level": 0.9729,
+        "confidence_justification": "The classifier confidence is 0.9729 and the hybrid score is 0.8294, indicating high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "L7_PROTO has a raw value of 0.0",
+            "source": "L7_PROTO",
+            "value": 0.0
+          },
+          {
+            "claim": "FLOW_START_MILLISECONDS has a raw value similar to PRECEDENT_1",
+            "source": "FLOW_START_MILLISECONDS",
+            "value": 1556088750080.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1052110,
+      "true_class": "scanning",
+      "pred_class": "scanning",
+      "correct": true,
+      "confidence": 0.9782946109771729,
+      "hybrid": 0.8332628607749939,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 110,
+        "rouge_l": 0.1757,
+        "bert_f1": 0.8004
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 231304,
+      "true_class": "scanning",
+      "pred_class": "scanning",
+      "correct": true,
+      "confidence": 0.5437595248222351,
+      "hybrid": 0.5290415287017822,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 944789,
+      "true_class": "xss",
+      "pred_class": "xss",
+      "correct": true,
+      "confidence": 0.6215738654136658,
+      "hybrid": 0.5836352705955505,
+      "escalated": true,
+      "llm_source": "none",
+      "hallucination": null,
+      "text_metrics": {},
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 257968,
+      "true_class": "xss",
+      "pred_class": "xss",
+      "correct": true,
+      "confidence": 0.9889726042747498,
+      "hybrid": 0.8407739400863647,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 112,
+        "rouge_l": 0.1088,
+        "bert_f1": 0.7817
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 940820,
+      "true_class": "xss",
+      "pred_class": "xss",
+      "correct": true,
+      "confidence": 0.9819430708885193,
+      "hybrid": 0.8359158039093018,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 55,
+        "rouge_l": 0.1905,
+        "bert_f1": 0.761
+      },
+      "parsed_output": {
+        "predicted_class": "xss",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1, where CLIENT_TCP_FLAGS has a raw value of 27.0 and TCP_WIN_MAX_IN has a raw value of 29200.0. These values are also present in the FLOW RAW VALUES section.",
+        "counterfactual": "Changing the value of TCP_WIN_MAX_IN from its current raw value of 29200.0 to 0 would likely change the prediction.",
+        "confidence_level": 0.9819,
+        "confidence_justification": "The classifier confidence is 0.9819 and the hybrid score is 0.8359, indicating a high level of confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "CLIENT_TCP_FLAGS has a raw value of 27.0",
+            "source": "CLIENT_TCP_FLAGS",
+            "value": 27.0
+          },
+          {
+            "claim": "TCP_WIN_MAX_IN has a raw value of 29200.0",
+            "source": "TCP_WIN_MAX_IN",
+            "value": 29200.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1177655,
+      "true_class": "xss",
+      "pred_class": "xss",
+      "correct": true,
+      "confidence": 0.700319766998291,
+      "hybrid": 0.6387900114059448,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 53,
+        "rouge_l": 0.2093,
+        "bert_f1": 0.7974
+      },
+      "parsed_output": {
+        "predicted_class": "xss",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_2, where the feature DST_TO_SRC_IAT_STDDEV has a raw value of 324.0, and the feature TCP_FLAGS has a raw value of 27.0. These values are also present in FLOW RAW VALUES.",
+        "counterfactual": "Changing the raw value of DST_TO_SRC_IAT_STDDEV from 324.0 to 0.0 would likely change the prediction.",
+        "confidence_level": 0.7003,
+        "confidence_justification": "The classifier confidence is 0.7003 and the hybrid score is 0.6388, indicating a moderate level of confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_2",
+            "source": "similarity",
+            "value": "0.998"
+          },
+          {
+            "claim": "Feature DST_TO_SRC_IAT_STDDEV has a raw value of 324.0 in FLOW RAW VALUES",
+            "source": "DST_TO_SRC_IAT_STDDEV",
+            "value": "324.0"
+          },
+          {
+            "claim": "Feature TCP_FLAGS has a raw value of 27.0 in FLOW RAW VALUES",
+            "source": "TCP_FLAGS",
+            "value": "27.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1330971,
+      "true_class": "xss",
+      "pred_class": "xss",
+      "correct": true,
+      "confidence": 0.6937889456748962,
+      "hybrid": 0.6341637372970581,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 40,
+        "rouge_l": 0.1972,
+        "bert_f1": 0.7733
+      },
+      "parsed_output": {
+        "predicted_class": "xss",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_3, which has a high similarity score of 1.0 and shares similar characteristics such as MAX_IP_PKT_LEN=1500.0 and TCP_FLAGS=27.0.",
+        "counterfactual": "Changing the value of MAX_IP_PKT_LEN from 1500.0 to 1499.0 would likely change the prediction.",
+        "confidence_level": 0.6342,
+        "confidence_justification": "The classifier confidence is 0.6938 and the hybrid score is 0.6342, indicating a moderate level of confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_3",
+            "source": "similarity",
+            "value": "1.0"
+          },
+          {
+            "claim": "MAX_IP_PKT_LEN=1500.0",
+            "source": "MAX_IP_PKT_LEN",
+            "value": 1500.0
+          },
+          {
+            "claim": "TCP_FLAGS=27.0",
+            "source": "TCP_FLAGS",
+            "value": 27.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 283602,
+      "true_class": "xss",
+      "pred_class": "xss",
+      "correct": true,
+      "confidence": 0.9779452681541443,
+      "hybrid": 0.833066999912262,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 130,
+        "rouge_l": 0.122,
+        "bert_f1": 0.7744
+      },
+      "parsed_output": null
+    },
+    {
+      "flow_idx": 1058880,
+      "true_class": "xss",
+      "pred_class": "xss",
+      "correct": true,
+      "confidence": 0.9862561821937561,
+      "hybrid": 0.8389105796813965,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 54,
+        "rouge_l": 0.2772,
+        "bert_f1": 0.8241
+      },
+      "parsed_output": {
+        "predicted_class": "xss",
+        "rationale": "The prediction is based on the similarity with PRECEDENT_1 (similarity=0.997, label=xss) and PRECEDENT_2 (similarity=0.991, label=xss), which share similar characteristics such as DST_TO_SRC_IAT_STDDEV=340.0, SRC_TO_DST_IAT_MAX=746.0, and TCP_FLAGS=27.0. These features are also present in the query flow with the same values.",
+        "counterfactual": "Changing the RAW VALUE of DST_TO_SRC_IAT_STDDEV from 340.0 to a different value would change the prediction.",
+        "confidence_level": 0.9863,
+        "confidence_justification": "The classifier confidence is 0.9863 and the hybrid score is 0.8389, indicating high confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity with PRECEDENT_1",
+            "source": "similarity",
+            "value": 0.997
+          },
+          {
+            "claim": "Feature DST_TO_SRC_IAT_STDDEV",
+            "source": "DST_TO_SRC_IAT_STDDEV",
+            "value": 340.0
+          },
+          {
+            "claim": "Feature SRC_TO_DST_IAT_MAX",
+            "source": "SRC_TO_DST_IAT_MAX",
+            "value": 746.0
+          },
+          {
+            "claim": "Feature TCP_FLAGS",
+            "source": "TCP_FLAGS",
+            "value": 27.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 99160,
+      "true_class": "xss",
+      "pred_class": "xss",
+      "correct": true,
+      "confidence": 0.692965030670166,
+      "hybrid": 0.633662760257721,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 50,
+        "rouge_l": 0.3218,
+        "bert_f1": 0.8142
+      },
+      "parsed_output": {
+        "predicted_class": "xss",
+        "rationale": "The prediction of xss is supported by the high importance scores of DST_TO_SRC_IAT_STDDEV (449.0) and SRC_TO_DST_IAT_MAX (1208.0), as well as the low value of TCP_FLAGS (27.0). These features are indicative of a potential security threat.",
+        "counterfactual": "Changing the RAW VALUE of DST_TO_SRC_IAT_STDDEV from 449.0 to 1000.0 would likely change the prediction.",
+        "confidence_level": 0.693,
+        "confidence_justification": "The classifier confidence is 0.6930 and the hybrid score is 0.6337, indicating a moderate level of confidence in the prediction.",
+        "evidence_list": [
+          {
+            "claim": "high importance scores",
+            "source": "DST_TO_SRC_IAT_STDDEV",
+            "value": "449.0"
+          },
+          {
+            "claim": "low value of TCP_FLAGS",
+            "source": "TCP_FLAGS",
+            "value": "27.0"
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 1158624,
+      "true_class": "xss",
+      "pred_class": "xss",
+      "correct": true,
+      "confidence": 0.9904002547264099,
+      "hybrid": 0.8417834043502808,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": true,
+        "H2_conf_range": true,
+        "H3_feature_grounded": true,
+        "H4_numeric_faithful": true,
+        "H5_prec_label": true,
+        "hallucination_score": 0.0,
+        "details": [
+          "All checks passed"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 64,
+        "rouge_l": 0.1609,
+        "bert_f1": 0.7263
+      },
+      "parsed_output": {
+        "predicted_class": "xss",
+        "rationale": "The prediction is based on the similarity to Precedent_1, which has a high similarity score of 1.0 and a label of xss. The flow's protocol value of 17.0 also aligns with this precedent. Additionally, the flow's DNS query type value of 28.0 matches the DNS query type in Precedent_1.",
+        "counterfactual": "Changing the flow's protocol value from 17.0 to a different value would change the prediction.",
+        "confidence_level": 0.9904,
+        "confidence_justification": "The classifier confidence is 0.9904 and the hybrid score is 0.8418, indicating high confidence in this prediction.",
+        "evidence_list": [
+          {
+            "claim": "Similarity to Precedent_1",
+            "source": "similarity",
+            "value": 1.0
+          },
+          {
+            "claim": "Flow's protocol value matches Precedent_1",
+            "source": "PROTOCOL",
+            "value": 17.0
+          },
+          {
+            "claim": "Flow's DNS query type value matches Precedent_1",
+            "source": "DNS_QUERY_TYPE",
+            "value": 28.0
+          }
+        ],
+        "uncertainty_flag": null
+      }
+    },
+    {
+      "flow_idx": 71919,
+      "true_class": "xss",
+      "pred_class": "xss",
+      "correct": true,
+      "confidence": 0.7163740992546082,
+      "hybrid": 0.6499073505401611,
+      "escalated": false,
+      "llm_source": "ollama",
+      "hallucination": {
+        "H1_label": false,
+        "H2_conf_range": false,
+        "H3_feature_grounded": false,
+        "H4_numeric_faithful": false,
+        "H5_prec_label": false,
+        "hallucination_score": 1.0,
+        "details": [
+          "JSON parse failed \u2014 all checks skipped"
+        ]
+      },
+      "text_metrics": {
+        "length_words": 145,
+        "rouge_l": 0.1264,
+        "bert_f1": 0.7767
+      },
+      "parsed_output": null
+    }
+  ]
+}
