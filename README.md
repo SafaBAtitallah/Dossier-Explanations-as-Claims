@@ -39,11 +39,6 @@ the audit or cannot be parsed are withheld and escalated to an analyst, as are l
    checks (H1 feature grounding, H2 numeric faithfulness, H3 precedent-label consistency). Text-quality
    metrics (ROUGE-L, BERTScore-F1, Self-BLEU, length) are reported but not used for gating.
 
-> **Check names in the code.** The implementation labels the five checks `H1`–`H5`:
-> code `H1_label`→S1, `H2_conf_range`→S2, `H3_feature_grounded`→H1, `H4_numeric_faithful`→H2,
-> `H5_prec_label`→H3. The printed/saved `hallucination_score` averages all five checks; the paper's
-> content-only score equals it × 5/3 for parsed explanations (both gates pass on all of them).
-
 ## Repository structure
 
 ```
