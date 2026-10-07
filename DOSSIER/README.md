@@ -251,7 +251,7 @@ explanations; `hall_all`: over all LLM calls with parse failures scored 1.0.
   title   = {Explanations as Claims: Subgraph-Indexed Retrieval and Grounding Verification
              for Explainable Intrusion Detection},
   author  = {Driss, Maha and Saidam, Wahaj and Ben Atitallah, Safa and Boulila, Wadii},
-  journal = {Machine Learning and Knowledge Extraction},
+  journal = {****},
   year    = {2026},
   note    = {Submitted}
 }
