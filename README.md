@@ -1,8 +1,7 @@
 # DOSSIER: Subgraph-Indexed Retrieval and Grounding Verification for Explainable Intrusion Detection
 
 Code and reported results for the article **"Explanations as Claims: Subgraph-Indexed Retrieval and
-Grounding Verification for Explainable Intrusion Detection"** (submitted to *Machine Learning and
-Knowledge Extraction*, MDPI).
+Grounding Verification for Explainable Intrusion Detection"** (submitted to AI, MDPI).
 
 ## Overview
 
